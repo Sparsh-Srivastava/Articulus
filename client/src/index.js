@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import axios from 'axios'
-
-axios.defaults.baseURL = 'http://localhost:5000/';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,3 +10,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+reportWebVitals();

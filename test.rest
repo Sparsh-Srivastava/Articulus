@@ -1,0 +1,22 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Greatoa",
+    "email": "greatoa@email.com",
+    "password": "1234567"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "js@email.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/api/private/dashboard
+Content-Type: application/json,
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmNhZmQ2ZGExOWQ2MzkyMDNmZTI0MSIsImlhdCI6MTYxMzc0MzYwMiwiZXhwIjoxNjEzNzQ0MjAyfQ.UZe7hLPIiwsBCiOiNMytiUhzNgMvc20PdSTzrhFY3Dk

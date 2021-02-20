@@ -1,0 +1,31 @@
+{
+  "name": "Articulus",
+  "version": "1.0.0",
+  "description": "> Knowledge is the best gift you can give your brain",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparsh-Srivastava/Articulus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sparsh-Srivastava/Articulus/issues"
+  },
+  "homepage": "https://github.com/Sparsh-Srivastava/Articulus#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.17",
+    "nodemailer": "^6.4.18"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
