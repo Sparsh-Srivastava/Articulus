@@ -2,9 +2,13 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "John Snow",
-    "email": "alex@gmail.com",
-    "password": "fleming"
+    "username": "Ash",
+    "last": "Ketchum",
+    "email": "ash@email.com",
+    "age": 10,
+    "gender": "Male",
+    "password": "pikachu",
+    "sub": "free"
 }
 
 ###
@@ -12,8 +16,8 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "email": "alex@gmail.com",
-    "password": "fleming"
+    "email": "test@gmail.com",
+    "password": "ghost123"
 }
 
 ###
