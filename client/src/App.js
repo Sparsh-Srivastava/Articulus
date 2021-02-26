@@ -9,6 +9,7 @@ import LoginScreen from "./components/screens/loginScreen";
 import RegisterScreen from "./components/screens/registerScreen";
 import ForgotPasswordScreen from "./components/screens/forgotPassword"
 import ResetPasswordScreen from "./components/screens/resetPassword"
+import LandingScreen from "./components/screens/landingScreen"
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <PrivateRoute exact path="/dashboard" component={PrivateScreen} />
           <Route exact path="/login" component={LoginScreen} />
           <Route exact path="/register" component={RegisterScreen} />
+          <Route exact path="/" component={LandingScreen} />
           <Route
             exact
             path="/forgotpassword"
