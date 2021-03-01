@@ -50,6 +50,7 @@ const PrivateScreen = () => {
             })}
             </ul>
         </div>
+        <button className="btn btn-danger" onClick={signout}>Log Out</button>
     </>
   );
 };
