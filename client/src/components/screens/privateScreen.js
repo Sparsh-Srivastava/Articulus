@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import './privateScreen.css';
+
+import {SidebarData} from '../controllers/SidebarData';
 
 const PrivateScreen = () => {
   const [error, setError] = useState("");
@@ -34,7 +37,19 @@ const PrivateScreen = () => {
     <span className="error-message">{error}</span>
   ) : (
     <>
-      {privateData}<br/><button onClick={signout}>Log Out</button>
+     <div className='Sidebar'>
+            <ul className='list'>
+            {SidebarData.map((val, key) => {
+                return (
+                    <li key={key} className='row' onClick = {() => {window.location.pathname = val.link}}>
+                        {" "}
+                        <div id='icon'>{val.icon}</div>{" "}
+                        <div id='title'>{val.title}</div>
+                    </li>
+                )
+            })}
+            </ul>
+        </div>
     </>
   );
 };
