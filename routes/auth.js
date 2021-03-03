@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-
+// Auth Routes
 // Controllers
 const {
   login,
   register,
   forgotPassword,
-  resetPassword,
+  resetPassword, 
 } = require("../controllers/auth");
 
 //http://localhost:5000/api/auth/register
