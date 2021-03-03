@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-db()
+db() 
 app.use(express.json());
 app.use("/api/auth", require('./routes/auth'))
 app.use("/api/private", require("./routes/article"))
