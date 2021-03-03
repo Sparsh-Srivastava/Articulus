@@ -36,6 +36,8 @@ exports.login = async (req, res, next) => {
 exports.register = async (req, res, next) => {
   const { username, last, email, age, gender, password, sub } = req.body;
 
+  console.log(req.body);
+
   try {
     const user = await User.create({
       username,

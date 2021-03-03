@@ -3,12 +3,15 @@ const express = require('express')
 const app = express()
 const db = require('./config/db')
 const errorHandler = require('./middleware/error')
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 db()
-
-app.use(express.json())
-
+app.use(express.json());
 app.use("/api/auth", require('./routes/auth'))
+app.use("/api/private", require("./routes/article"))
 app.use("/api/private", require('./routes/private'))
 
 app.use(errorHandler)

@@ -4,7 +4,7 @@ Content-Type: application/json
 {
     "username": "Ash",
     "last": "Ketchum",
-    "email": "ash@email.com",
+    "email": "testing@email.com",
     "age": 10,
     "gender": "Male",
     "password": "pikachu",
@@ -16,11 +16,33 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "email": "test@gmail.com",
-    "password": "ghost123"
+    "email": "tracy@email.com",
+    "password": "pikachu"
 }
 
 ###
 GET http://localhost:5000/api/private/dashboard
 Content-Type: application/json,
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzEzNTMxNjFmMTM4MjJkNDVlNTFjZCIsImlhdCI6MTYxMzgzNzYzNywiZXhwIjoxNjEzODM4MjM3fQ.RvCy2SimNuCpGvmAIE9onLgKGHjA91zHXiXo43EsyfU
+
+###
+POST http://localhost:5000/api/private/newarticle/603e2e2416886f3b889b5087
+Content-Type: application/json,
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0MTY4ODZmM2I4ODliNTA4NyIsImlhdCI6MTYxNDc0MzgxMSwiZXhwIjoxNjE0ODMwMjExfQ.yHpm8kLAXbVCD7NSXNFGuQ6EWcabVOziFYJFAYVjEog
+
+{
+    "title": "abc",
+    "subtitle": "xyz"
+}
+
+###
+# id is for articles
+POST http://localhost:5000/api/private/userbyarticle/603e4b42357e5c26f83ab1b5
+Content-Type: application/json,
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0MTY4ODZmM2I4ODliNTA4NyIsImlhdCI6MTYxNDY5NDk5NiwiZXhwIjoxNjE0NzgxMzk2fQ.lKZE124aU4b0-X2L8dHYgnu2R-tnPL5wVS55QYUSHYc
+
+###
+
+# id is for users
+POST http://localhost:5000/api/auth/articlesbyuser/603e2e2416886f3b889b5087
+Content-Type: application/json

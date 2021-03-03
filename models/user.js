@@ -39,6 +39,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide your subscription status"]
   },
+  articles : [
+    {type: mongoose.Schema.Types.ObjectId,ref:'Article'}
+  ],
   resetPasswordToken: String,
   resetPasswordExpire: Date,
 });
