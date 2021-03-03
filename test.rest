@@ -32,7 +32,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0M
 
 {
     "title": "abc",
-    "subtitle": "xyzxyz"
+    "subtitle": "xyz"
 }
 
 ###
