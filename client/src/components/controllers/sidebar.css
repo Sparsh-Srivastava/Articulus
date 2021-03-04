@@ -1,36 +1,69 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
 .Sidebar{
-    height: 100vh;
+  height: 100%;
+  width: 250px;
+  background-color: #FF5A5F;
+}
+.list{
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+.list .row{
+  width: 100%;
+  height: 70px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  color:pink;
+  justify-content: center;
+  align-items: center;
+}
+.list .row:hover{
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.1);
+}
+.row #icon{
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+.row #title{
+  flex: 70%;
+}
+
+  .one{
+    width: 100px;
+    display: inline-block;
+    margin: 30px;
+    overflow: auto;
+    height: 80px;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+}
+.two{
     width: 250px;
-    background-color: #FF5A5F;
+    display: inline-block;
+    margin: 30px;
+    overflow: auto;
+    height: 80px;
+    border: 1px solid steelblue;
+    padding: 100px;
+    border-radius: 5px;
+}
+.three{
     display: flex;
-  }
-  .list{
-    height: auto;
-    padding: 0;
-    width: 100%;
-  }
-  .list .row{
-    width: 100%;
-    height: 70px;
-    list-style-type: none;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    color:pink;
-    justify-content: center;
-    align-items: center;
-  }
-  .list .row:hover{
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.1);
-  }
-  .row #icon{
-    flex: 30%;
-    display: grid;
-    place-items: center;
-  }
-  .row #title{
-    flex: 70%;
-  }
-  
+    flex-direction: column;
+}
+
   
