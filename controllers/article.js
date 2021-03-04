@@ -39,3 +39,9 @@ exports.getAll = async (req, res) => {
         articles: articles
     })
 }
+
+exports.getUser = async (req, res) => {
+    const {id} = req.params
+    const user = await User.findById(id)
+    res.send(user)
+}

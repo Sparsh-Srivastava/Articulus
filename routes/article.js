@@ -6,7 +6,8 @@ const {
     userByArticle,
     articlesByUser,
     create,
-    getAll
+    getAll,
+    getUser
 } = require("../controllers/article")
 
 //http://localhost:5000/api/private/newarticle/:id
@@ -19,5 +20,7 @@ Router.route("/userbyarticle/:id").post(userByArticle)
 Router.route("/articlesbyuser/:id").post(articlesByUser)
 
 Router.route("/getall").get(getAll)
+
+Router.route("/getuser/:id").get(protect, getUser)
 
 module.exports = Router
