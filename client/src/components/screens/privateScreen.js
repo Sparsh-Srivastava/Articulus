@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './privateScreen.css';
+import Calender from '../controllers/Calender';
+import Charts from '../controllers/Chart';
+import Chart2 from '../controllers/Chart2';
+import Chart3 from '../controllers/Chart3';
+import Chart4 from '../controllers/Chart4';
 
 // import {SidebarData} from '../controllers/SidebarData';
 import Sidebar from '../controllers/sidebar'
@@ -39,7 +44,21 @@ const PrivateScreen = (props) => {
     <span className="error-message">{error}</span>
   ) : (
     <>
-     <Sidebar/>
+     <div className="App">
+     <Sidebar/> 
+     <div className="three">
+     <div>
+     <Charts/>
+     <Calender/>
+     <Chart2/>
+     <Chart3/>
+     </div>
+     <div className="two">
+     <Chart4/>
+     </div>
+     </div>
+     
+    </div>
      {console.log(privateData)}
      <h3>Hey {privateData.username}</h3>
         <button className="btn btn-danger" onClick={signout}>Log Out</button>
