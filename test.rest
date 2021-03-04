@@ -58,3 +58,7 @@ Content-Type: application/json
 ###
 GET http://localhost:5000/api/private/getall
 Content-Type: application/json
+
+###
+GET http://localhost:5000/api/private/getuser/603e2e2416886f3b889b5087
+Content-Type: application/json
