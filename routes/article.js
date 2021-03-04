@@ -10,7 +10,7 @@ const {
 } = require("../controllers/article")
 
 //http://localhost:5000/api/private/newarticle/:id
-Router.route("/newarticle/:id").post(protect, create)
+Router.route("/newarticle/:id").post(create)
 
 // http://localhost:5000/api/private/userbyarticle/:id
 Router.route("/userbyarticle/:id").post(userByArticle)

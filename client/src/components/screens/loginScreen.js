@@ -31,6 +31,7 @@ const LoginScreen = ({ history }) => {
       );
 
       localStorage.setItem("authToken", data.token);
+      localStorage.setItem("id", data.id)
         console.log(data);
       history.push(`/dashboard/${data.id}`);
     } catch (error) {

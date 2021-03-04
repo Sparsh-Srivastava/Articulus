@@ -2,12 +2,9 @@ const Article = require('../models/Article')
 const User = require("../models/User");
 
 exports.create = async (req, res) => {
-
-    console.log(req.params);
-    console.log(req.body);
     user = req.params;
     id = user.id;
-    const { title, subtitle} = req.body;
+    const { title, subtitle } = req.body;
     const article = await Article.create({
         title,
         subtitle,

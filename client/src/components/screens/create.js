@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import Sidebar from '../controllers/sidebar'
 
-const Create = () => {
+const Create = ({match}) => {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("")
   const [error, setError] = useState("")
@@ -11,14 +12,16 @@ const Create = () => {
 
     const config = {
       header: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${localStorage.getItem("authToken")}`
+        "Content-Type": "application/json"
       },
     };
 
     try {
+      // console.log(props);
+      // let userId = props.match.params.id
+      // console.log(userId);
       const { data } = await axios.post(
-        `/api/private/newarticle/${data._id}`,
+        `/api/private/newarticle/${match.params.id}`,
         {
           title,
           subtitle
@@ -26,14 +29,16 @@ const Create = () => {
         config
       );
     } catch (error) {
-        console.log(error);
-      setError("There was a problem");
+      console.log(error);
+      setError(error.response.data.error);
       setTimeout(() => {
         setError("");
       }, 5000);
     }
   };
     return (
+      <>
+      <Sidebar/>
         <div className="register-screen">
       <form onSubmit={newArticle} className="register-screen__form">
         <h3 className="register-screen__title">Create Article</h3><hr/>
@@ -41,6 +46,7 @@ const Create = () => {
         <div className="form-group">
           <label htmlFor="name">Title:</label>
           <input
+            name="title"
             type="text"
             required
             id="name"
@@ -52,6 +58,7 @@ const Create = () => {
         <div className="form-group">
           <label htmlFor="sname">Subtitle:</label>
           <input
+            name="subtitle"
             type="text"
             required
             id="sname"
@@ -65,6 +72,7 @@ const Create = () => {
         </button>
       </form>
     </div>
+    </>
     )
 }
 

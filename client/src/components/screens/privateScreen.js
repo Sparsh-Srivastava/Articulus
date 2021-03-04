@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './privateScreen.css';
+import {Link} from 'react-router-dom'
 import Calender from '../controllers/Calender';
 import Charts from '../controllers/Chart';
 import Chart2 from '../controllers/Chart2';
 import Chart3 from '../controllers/Chart3';
 import Chart4 from '../controllers/Chart4';
+
+import {Redirect} from 'react-router-dom'
 
 // import {SidebarData} from '../controllers/SidebarData';
 import Sidebar from '../controllers/sidebar'
@@ -16,7 +19,12 @@ const PrivateScreen = (props) => {
 
   const signout = () => {
     localStorage.removeItem("authToken")
+    localStorage.removeItem("id");
     window.location.reload(false)
+  }
+
+  const add = () => {
+    <Redirect to='/create/{localstorage.getitem("id)}'/>
   }
 
   useEffect(() => {
@@ -34,6 +42,7 @@ const PrivateScreen = (props) => {
         setPrivateData(data);
       } catch (error) {
         localStorage.removeItem("authToken");
+        localStorage.removeItem("id")
         setError("You are not authorized please login");
       }
     };
@@ -59,6 +68,7 @@ const PrivateScreen = (props) => {
      </div>
      
     </div>
+    <Link to="/create/"></Link>
      {console.log(privateData)}
      <h3>Hey {privateData.username}</h3>
         <button className="btn btn-danger" onClick={signout}>Log Out</button>

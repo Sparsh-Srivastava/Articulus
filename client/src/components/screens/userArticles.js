@@ -1,32 +1,34 @@
-import React, { useState, useEffect } from 'react'
-import {Link} from 'react-router-dom'
-import axios from 'axios'
-import './article.css'
+import React, {useState, useEffect} from 'react'
 import Sidebar from '../controllers/sidebar'
+import axios from 'axios'
+import {Link} from 'react-router-dom'
 
-const Articles = () => {
+const UserArticles = () => {
     const [articles, setArticles] = useState([])
     const [error, setError] = useState("")
 
     useEffect(() => {
-        const getArticles = async () => {
+        const myArticles = async () => {
           const config = {
             headers: {
               "Content-Type": "application/json",
             },
           };
-    
+          
+          var id = localStorage.getItem("id")
+
           try {
-            const { data } = await axios.get("/api/private/getall", config);
-            setArticles(data.articles);
+            const { data } = await axios.post(`/api/private/articlesbyuser/${id}`, config);
+            setArticles(data);
           } catch (error) {
             localStorage.removeItem("authToken");
             localStorage.removeItem("id");
-            setError("Something went wrong");
+            setError("Something doesn't seem right");
           }
         };
-        getArticles();
+        myArticles();
     }, []);
+
     return error ? (
         <span className="error-message">{error}</span>
       ) : (
@@ -49,4 +51,4 @@ const Articles = () => {
       );
 }
 
-export default Articles
+export default UserArticles

@@ -8,21 +8,23 @@ import Settings from '@material-ui/icons/Settings'
 import Article from '@material-ui/icons/Description'
 import Create from '@material-ui/icons/Create'
 
+const id  = localStorage.getItem("id")
+
 export const SidebarData = [
     {
         title : "Home",
         icon : <HomeIcon/>,
-        link : "/dashboard",
+        link : `/dashboard/${id}`,
     },
     {
         title : "Create article",
         icon : <Create/>,
-        link : "/create",
+        link : `/create/${id}`,
     },
     {
         title : "My articles",
         icon : <AssignmentIcon/>,
-        link : "/home",
+        link : `/myarticles/${id}`,
     },
     {
         title : "Analytics",

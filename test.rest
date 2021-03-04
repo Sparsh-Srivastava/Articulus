@@ -27,12 +27,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzEzNzNmM
 
 ###
 POST http://localhost:5000/api/private/newarticle/603e2e2416886f3b889b5087
-Content-Type: application/json,
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0MTY4ODZmM2I4ODliNTA4NyIsImlhdCI6MTYxNDc0MzgxMSwiZXhwIjoxNjE0ODMwMjExfQ.yHpm8kLAXbVCD7NSXNFGuQ6EWcabVOziFYJFAYVjEog
+Content-Type: application/json
 
 {
     "title": "abc",
     "subtitle": "xyz"
+}
+
+###
+POST http://localhost:5000/test/603e2e2416886f3b889b5087
+Content-Type: application/json
+
+{
+    "title": "Article - test #2",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 }
 
 ###
@@ -44,7 +52,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0M
 ###
 
 # id is for users
-POST http://localhost:5000/api/auth/articlesbyuser/603e2e2416886f3b889b5087
+POST http://localhost:5000/api/private/articlesbyuser/603e2e2416886f3b889b5087
 Content-Type: application/json
 
 ###
