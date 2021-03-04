@@ -13,6 +13,7 @@ node_modules/
 /build
 
 # misc
+test.rest
 config.env
 .DS_Store
 .env.local
