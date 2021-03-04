@@ -39,7 +39,7 @@ export const SidebarData = [
     {
         title : "Profile",
         icon : <PersonIcon/>,
-        link : "/home",
+        link : `/profile/${id}`,
     },
     {
         title : "Articles",

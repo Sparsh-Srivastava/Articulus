@@ -13,6 +13,7 @@ import LandingScreen from "./components/screens/landingScreen"
 import all from "./components/screens/articles"
 import Create from "./components/screens/create"
 import UserArticles from "./components/screens/userArticles"
+import Profile from "./components/screens/profile"
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <PrivateRoute exact path="/dashboard/:id" component={PrivateScreen} />
           <PrivateRoute exact path="/create/:id" component={Create} />
           <PrivateRoute exact path="/myarticles/:id" component={UserArticles} />
+          <PrivateRoute exact path="/profile/:id" component={Profile} />
           <Route exact path="/login" component={LoginScreen} />
           <Route exact path="/register" component={RegisterScreen} />
           <Route exact path="/" component={LandingScreen} />

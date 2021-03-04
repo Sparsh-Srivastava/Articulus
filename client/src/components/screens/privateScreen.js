@@ -17,11 +17,11 @@ const PrivateScreen = (props) => {
   const [error, setError] = useState("");
   const [privateData, setPrivateData] = useState("");
 
-  const signout = () => {
-    localStorage.removeItem("authToken")
-    localStorage.removeItem("id");
-    window.location.reload(false)
-  }
+  // const signout = () => {
+  //   localStorage.removeItem("authToken")
+  //   localStorage.removeItem("id");
+  //   window.location.reload(false)
+  // }
 
   const add = () => {
     <Redirect to='/create/{localstorage.getitem("id)}'/>
@@ -71,7 +71,7 @@ const PrivateScreen = (props) => {
     <Link to="/create/"></Link>
      {console.log(privateData)}
      <h3>Hey {privateData.username}</h3>
-        <button className="btn btn-danger" onClick={signout}>Log Out</button>
+        {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}
     </>
   );
 };

@@ -3,6 +3,13 @@ import {SidebarData} from './SidebarData'
 import'./sidebar.css'
 
 const Sidebar = () => {
+
+    const signout = () => {
+        localStorage.removeItem("authToken")
+        localStorage.removeItem("id");
+        window.location.reload(false)
+      }
+
     return (
         <div className='Sidebar'>
             <ul className='list'>
@@ -16,6 +23,7 @@ const Sidebar = () => {
                 )
             })}
             </ul>
+            <button className="btn btn-danger" onClick={signout}>Log Out</button>
         </div>
     )
 }
