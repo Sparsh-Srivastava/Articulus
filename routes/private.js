@@ -4,6 +4,6 @@ const { getPrivateRoute } = require("../controllers/private");
 const { protect } = require("../middleware/auth");
 
 // http://localhost:5000/api/private/dashboard
-router.route("/dashboard").get(protect, getPrivateRoute);
+router.route("/dashboard/:id").get(protect, getPrivateRoute);
 
 module.exports = router;

@@ -5,7 +5,8 @@ const { protect } = require("../middleware/auth");
 const {
     userByArticle,
     articlesByUser,
-    create
+    create,
+    getAll
 } = require("../controllers/article")
 
 //http://localhost:5000/api/private/newarticle/:id
@@ -16,5 +17,7 @@ Router.route("/userbyarticle/:id").post(userByArticle)
 
 //http://localhost:5000/api/auth/articlesbyuser/:id
 Router.route("/articlesbyuser/:id").post(articlesByUser)
+
+Router.route("/getall").get(getAll)
 
 module.exports = Router

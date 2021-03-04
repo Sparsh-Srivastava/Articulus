@@ -21,9 +21,9 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:5000/api/private/dashboard
+GET http://localhost:5000/api/private/dashboard/6031373f01351b0d94e9216d
 Content-Type: application/json,
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzEzNTMxNjFmMTM4MjJkNDVlNTFjZCIsImlhdCI6MTYxMzgzNzYzNywiZXhwIjoxNjEzODM4MjM3fQ.RvCy2SimNuCpGvmAIE9onLgKGHjA91zHXiXo43EsyfU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzEzNzNmMDEzNTFiMGQ5NGU5MjE2ZCIsImlhdCI6MTYxNDgzMTQzNywiZXhwIjoxNjE0OTE3ODM3fQ.jbzvpnlGlSIJmeP61OwOVXG4xcdnm2HP4KiC8w2Dsos
 
 ###
 POST http://localhost:5000/api/private/newarticle/603e2e2416886f3b889b5087
@@ -45,4 +45,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0M
 
 # id is for users
 POST http://localhost:5000/api/auth/articlesbyuser/603e2e2416886f3b889b5087
+Content-Type: application/json
+
+###
+GET http://localhost:5000/api/private/getall
 Content-Type: application/json

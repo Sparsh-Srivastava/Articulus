@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './privateScreen.css';
 
-import {SidebarData} from '../controllers/SidebarData';
+// import {SidebarData} from '../controllers/SidebarData';
+import Sidebar from '../controllers/sidebar'
 
-const PrivateScreen = () => {
+const PrivateScreen = (props) => {
   const [error, setError] = useState("");
   const [privateData, setPrivateData] = useState("");
 
@@ -23,8 +24,9 @@ const PrivateScreen = () => {
       };
 
       try {
-        const { data } = await axios.get("/api/private/dashboard", config);
-        setPrivateData(data.data);
+        // console.log(this.props.match.params.id);
+        const { data } = await axios.get(`/api/private/dashboard/${props.match.params.id}`, config);
+        setPrivateData(data);
       } catch (error) {
         localStorage.removeItem("authToken");
         setError("You are not authorized please login");
@@ -37,19 +39,9 @@ const PrivateScreen = () => {
     <span className="error-message">{error}</span>
   ) : (
     <>
-     <div className='Sidebar'>
-            <ul className='list'>
-            {SidebarData.map((val, key) => {
-                return (
-                    <li key={key} className='row' onClick = {() => {window.location.pathname = val.link}}>
-                        {" "}
-                        <div id='icon'>{val.icon}</div>{" "}
-                        <div id='title'>{val.title}</div>
-                    </li>
-                )
-            })}
-            </ul>
-        </div>
+     <Sidebar/>
+     {console.log(privateData)}
+     <h3>Hey {privateData.username}</h3>
         <button className="btn btn-danger" onClick={signout}>Log Out</button>
     </>
   );

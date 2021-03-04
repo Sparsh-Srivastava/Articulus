@@ -1,9 +1,8 @@
-exports.getPrivateRoute = (req, res, next) => {
-    res
-      .status(200)
-      .json({
-        success: true,
-        data: "You got access to the private data in this route",
-      });
+const User = require('../models/User')
+
+exports.getPrivateRoute = async (req, res, next) => {
+  const { id } = req.params;
+  const user = await User.findById(id);
+  res.send(user);
   };
   

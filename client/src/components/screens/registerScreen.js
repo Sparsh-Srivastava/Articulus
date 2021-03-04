@@ -49,7 +49,7 @@ const RegisterScreen = ({ history }) => {
 
       localStorage.setItem("authToken", data.token);
 
-      history.push("/dashboard");
+      history.push(`/dashboard/${data.id}`);
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {

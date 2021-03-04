@@ -35,3 +35,10 @@ exports.articlesByUser = async (req, res) => {
 
     res.send(user.articles);
 }
+
+exports.getAll = async (req, res) => {
+    const articles = await Article.find()
+    return res.json({
+        articles: articles
+    })
+}
