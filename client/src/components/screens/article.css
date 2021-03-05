@@ -7,11 +7,14 @@
 body{
     text-decoration: none;
 }
-
+.myarticles{
+display: flex;
+}
 .itemsContainer {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    display: flex;
+    padding: 20px;
+    display: inline-block;
     flex-wrap: wrap;
   }
   

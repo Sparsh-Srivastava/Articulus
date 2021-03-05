@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Sidebar from '../controllers/sidebar'
+import './profile.css'
 
 const Profile = () => {
   const [error, setError] = useState("");
@@ -29,16 +30,16 @@ const Profile = () => {
     fetchUserData();
   }, []);
     return (
-        <>
+        <div className='profile'>
         <Sidebar/>
-        <div>
+        <div className='info'>
             <p>Name: {userData.username}</p>
             <p>Email: {userData.email}</p>
             <p>Age: {userData.age}</p>
             <p>Gender: {userData.gender}</p>
             <p>Subscription Status: {userData.sub}</p>
         </div>
-        </>
+        </div>
     )
 }
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Sidebar from '../controllers/sidebar'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import './userArticles.css'
 
 const UserArticles = () => {
     const [articles, setArticles] = useState([])
@@ -32,7 +33,7 @@ const UserArticles = () => {
     return error ? (
         <span className="error-message">{error}</span>
       ) : (
-        <>
+        <div className='userarticles'>
         <Sidebar/>
          <div className="itemsContainer">
              {console.log(articles)}
@@ -47,7 +48,7 @@ const UserArticles = () => {
             })}
 
             </div>
-        </>
+        </div>
       );
 }
 

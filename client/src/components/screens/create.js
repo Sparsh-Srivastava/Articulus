@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Sidebar from '../controllers/sidebar'
+import './create.css'
 
 const Create = ({match}) => {
   const [title, setTitle] = useState("");
@@ -37,7 +38,7 @@ const Create = ({match}) => {
     }
   };
     return (
-      <>
+      <div className='create'>
       <Sidebar/>
         <div className="register-screen">
       <form onSubmit={newArticle} className="register-screen__form">
@@ -72,7 +73,7 @@ const Create = ({match}) => {
         </button>
       </form>
     </div>
-    </>
+    </div>
     )
 }
 
