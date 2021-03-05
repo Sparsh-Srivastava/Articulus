@@ -23,4 +23,14 @@ Router.post("/test/:id", async (req, res) => {
     return res.send(userById);
 })
 
+Router.get("/article/:id", async (req, res) => {
+    id = req.params.id
+    const article = await Article.findById(id)
+    const creator = await User.findById(article.user)
+    return res.json({
+        article: article,
+        user: creator
+    })
+})
+
 module.exports = Router

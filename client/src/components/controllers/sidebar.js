@@ -11,7 +11,9 @@ const Sidebar = () => {
       }
 
     return (
-        <div className='Sidebar'>
+        <div className="container-fluid">
+            <div className="row">
+        <div className='Sidebar col-lg-4'>
             <ul className='list'>
             {SidebarData.map((val, key) => {
                 return (
@@ -24,6 +26,8 @@ const Sidebar = () => {
             })}
             </ul>
             <button className="btn btn-danger" onClick={signout}>Log Out</button>
+        </div>
+        </div>
         </div>
     )
 }

@@ -15,8 +15,8 @@ const landingScreen = () => {
     </div>
      </section>
      <div class="btn-sign">
-     <button type="button" className="btn btn-dark btn-lg sign">Sign In</button>
-     <button type="button" className="btn btn-dark btn-lg sign">Sign Up</button>
+     <Link to="/login"><button type="button" className="btn btn-dark btn-lg sign">Sign In</button></Link>
+     <Link to="/register"><button type="button" className="btn btn-dark btn-lg sign">Sign Up</button></Link>
      </div>
      </div>
      

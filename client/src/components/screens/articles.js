@@ -7,6 +7,7 @@ import Sidebar from '../controllers/sidebar'
 const Articles = () => {
     const [articles, setArticles] = useState([])
     const [error, setError] = useState("")
+    const [search, setSearch] = useState("")
 
     useEffect(() => {
         const getArticles = async () => {
@@ -34,14 +35,27 @@ const Articles = () => {
         <Sidebar/>
          <div className="itemsContainer">
              {console.log(articles)}
-            {articles.map(article => {
+             <div className="search">
+                    <input type="search" placeholder="Search..." onChange={(e) => {
+                      setSearch(e.target.value)
+                    }}/>
+              </div>
+            {articles.filter((val) => {
+              if (search == ""){
+                return val;
+              }else if (val.title.toLowerCase().includes(search.toLowerCase())){
+                return val
+              }
+            }).map(article => {
                 return(
+                  <>
                 <div className="item" key={article._id}>
                     <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
                         <div className="cover">{article.title}<hr/>{article.subtitle}<br/><br/>Created By: {article.user}</div>
                     </Link>
                 </div>
-                )
+                </>
+              )
             })}
 
             </div>

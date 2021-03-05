@@ -33,7 +33,8 @@ const UserArticles = () => {
     return error ? (
         <span className="error-message">{error}</span>
       ) : (
-        <div className='userarticles'>
+          <div className="row">
+        <div className='userarticles col-lg-8'>
         <Sidebar/>
          <div className="itemsContainer">
              {console.log(articles)}
@@ -48,6 +49,7 @@ const UserArticles = () => {
             })}
 
             </div>
+        </div>
         </div>
       );
 }
