@@ -1,0 +1,9 @@
+body{
+    text-decoration: none;
+}
+.profile{
+display: flex;
+}
+.info{
+    padding: 30px;
+}

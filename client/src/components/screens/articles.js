@@ -30,7 +30,7 @@ const Articles = () => {
     return error ? (
         <span className="error-message">{error}</span>
       ) : (
-        <>
+        <div className="myarticles">
         <Sidebar/>
          <div className="itemsContainer">
              {console.log(articles)}
@@ -45,7 +45,7 @@ const Articles = () => {
             })}
 
             </div>
-        </>
+        </div>
       );
 }
 
