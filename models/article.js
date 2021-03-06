@@ -17,6 +17,10 @@ const ArticleSchema = new mongoose.Schema({
         type: String,
         required: '{PATH} is required!'
     },
+    status: {
+        type: String,
+        required: [true, "Please enter article status"]
+    },
     user :{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'

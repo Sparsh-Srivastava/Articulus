@@ -11,6 +11,7 @@ const Update = ({match}) => {
   const [primary, setPrimary] = useState("#a9d9d9");
   const [secondary, setSecondary] = useState("#000000");
   const [number, setNumber] = useState(1)
+  const [status, setStatus] = useState("")
   const [error, setError] = useState("")
 
   const updateArticle = async (e) => {
@@ -32,7 +33,8 @@ const Update = ({match}) => {
           title: marked(title),
           subtitle: marked(subtitle),
           primary: primary,
-          secondary: secondary
+          secondary: secondary,
+          status: status
         },
         config
       );
@@ -150,6 +152,15 @@ const Update = ({match}) => {
             />
           </div>
         </div>
+        <select
+              name='status'
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+            >
+              <option value=' '>---Choose---</option>
+              <option value='Free'>Free</option>
+              <option value='Premium'>Premium</option>
+        </select>
         <button type="submit" className="btn btn-primary">
           Update
         </button>

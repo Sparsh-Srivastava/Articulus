@@ -10,7 +10,8 @@ const Create = ({match}) => {
   const [subtitle, setSubtitle] = useState("")
   const [primary, setPrimary] = useState("#a9d9d9");
   const [secondary, setSecondary] = useState("#000000");
-  const [number, setNumber] = useState(1)
+  const [number, setNumber] = useState(1);
+  const [status, setStatus] = useState("");
   const [error, setError] = useState("")
 
   const newArticle = async (e) => {
@@ -32,7 +33,8 @@ const Create = ({match}) => {
           title: marked(title),
           subtitle: marked(subtitle),
           primary: primary,
-          secondary: secondary
+          secondary: secondary,
+          status: status
         },
         config
       );
@@ -150,6 +152,15 @@ const Create = ({match}) => {
             />
           </div>
         </div>
+        <select
+              name='status'
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+            >
+              <option value=' '>---Choose---</option>
+              <option value='Free'>Free</option>
+              <option value='Premium'>Premium</option>
+        </select>
         <button type="submit" className="btn btn-primary">
           Create
         </button>

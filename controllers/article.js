@@ -4,12 +4,13 @@ const User = require("../models/User");
 exports.create = async (req, res) => {
     user = req.params;
     id = user.id;
-    const { title, subtitle, primary, secondary } = req.body;
+    const { title, subtitle, primary, secondary, status } = req.body;
     const article = await Article.create({
         title,
         subtitle,
         primary,
         secondary,
+        status,
         user:id
     });
     await article.save();

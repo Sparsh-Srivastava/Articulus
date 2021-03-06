@@ -49,6 +49,7 @@ const Articles = () => {
                 return val
               }
             }).map(article => {
+              if(article.status == "Free"){
                 return(
                   <>
                   {console.log(article.primary)}
@@ -59,6 +60,7 @@ const Articles = () => {
                 </div>
                 </>
               )
+              }
             })}
 
             </div>
