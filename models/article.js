@@ -6,7 +6,16 @@ const ArticleSchema = new mongoose.Schema({
         required: '{PATH} is required!'
     },
     subtitle :{
-        type: String
+        type: String,
+        required: '{PATH} is required!'
+    },
+    primary: {
+        type: String,
+        required: '{PATH} is required!'
+    },
+    secondary: {
+        type: String,
+        required: '{PATH} is required!'
     },
     user :{
         type:mongoose.Schema.Types.ObjectId,

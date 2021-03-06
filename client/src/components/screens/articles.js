@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
+import marked from 'marked'
+import parse from "html-react-parser"
 import axios from 'axios'
 import './article.css'
 import Sidebar from '../controllers/sidebar'
@@ -49,9 +51,10 @@ const Articles = () => {
             }).map(article => {
                 return(
                   <>
+                  {console.log(article.primary)}
                 <div className="item" key={article._id}>
                     <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
-                        <div className="cover">{article.title}<hr/>{article.subtitle}<br/><br/>Created By: {article.user}</div>
+                        <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
                     </Link>
                 </div>
                 </>

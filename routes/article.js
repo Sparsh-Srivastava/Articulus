@@ -7,7 +7,8 @@ const {
     articlesByUser,
     create,
     getAll,
-    getUser
+    getUser,
+    update
 } = require("../controllers/article")
 
 //http://localhost:5000/api/private/newarticle/:id
@@ -22,5 +23,7 @@ Router.route("/articlesbyuser/:id").post(articlesByUser)
 Router.route("/getall").get(getAll)
 
 Router.route("/getuser/:id").get(protect, getUser)
+
+Router.route("/articleupdate/:id").put( update)
 
 module.exports = Router

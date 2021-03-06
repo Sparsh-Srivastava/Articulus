@@ -55,6 +55,7 @@ const PrivateScreen = (props) => {
     <>
      <div className="App">
      <Sidebar/> 
+     <h3>Hey {privateData.username}</h3>
      <div className="three">
      <div>
      <Charts/>
@@ -70,7 +71,6 @@ const PrivateScreen = (props) => {
     </div>
     <Link to="/create/"></Link>
      {console.log(privateData)}
-     <h3>Hey {privateData.username}</h3>
         {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}
     </>
   );

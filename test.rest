@@ -64,4 +64,15 @@ GET http://localhost:5000/api/private/getuser/603e2e2416886f3b889b5087
 Content-Type: application/json
 
 ###
-GET http://localhost:5000/article/603fc7663fe2eb1cc4d2f5f4
+GET http://localhost:5000/article/604246ca53c98b239023bc7c
+
+###
+PUT http://localhost:5000/api/private/articleupdate/604246ca53c98b239023bc7c
+Content-Type: application/json
+
+{
+    "title": "Update Test",
+    "subtitle": "This might just work",
+    "primary": "#000",
+    "secondary": "#111"
+}

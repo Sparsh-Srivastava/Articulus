@@ -5,7 +5,7 @@ import parse from "html-react-parser"
 import Sidebar from '../controllers/sidebar'
 import './create.css'
 
-const Create = ({match}) => {
+const Update = ({match}) => {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("")
   const [primary, setPrimary] = useState("#a9d9d9");
@@ -13,7 +13,7 @@ const Create = ({match}) => {
   const [number, setNumber] = useState(1)
   const [error, setError] = useState("")
 
-  const newArticle = async (e) => {
+  const updateArticle = async (e) => {
     e.preventDefault();
 
     const config = {
@@ -26,8 +26,8 @@ const Create = ({match}) => {
       // console.log(props);
       // let userId = props.match.params.id
       // console.log(userId);
-      const { data } = await axios.post(
-        `/api/private/newarticle/${match.params.id}`,
+      const { data } = await axios.put(
+        `/api/private/articleupdate/${match.params.id}`,
         {
           title: marked(title),
           subtitle: marked(subtitle),
@@ -79,8 +79,8 @@ const Create = ({match}) => {
       <div className='create'>
       <Sidebar/>
         <div className="register-screen">
-      <form onSubmit={newArticle} className="register-screen__form">
-        <h3 className="register-screen__title">Create Article</h3><hr/>
+      <form onSubmit={updateArticle} className="register-screen__form">
+        <h3 className="register-screen__title">Update Article</h3><hr/>
         {error && <span className="error-message">{error}</span>}
         <div className="form-group">
           <label htmlFor="name">Title:</label>
@@ -151,7 +151,7 @@ const Create = ({match}) => {
           </div>
         </div>
         <button type="submit" className="btn btn-primary">
-          Create
+          Update
         </button>
       </form>
     </div>
@@ -165,4 +165,4 @@ const Create = ({match}) => {
     )
 }
 
-export default Create
+export default Update
