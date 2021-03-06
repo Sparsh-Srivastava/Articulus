@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import marked from 'marked'
 import parse from "html-react-parser"
 import axios from 'axios'
-import './article.css'
+import './xyz.css'
 import Sidebar from '../controllers/sidebar'
 
 const Articles = () => {

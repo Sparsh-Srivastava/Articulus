@@ -42,7 +42,7 @@ const UserArticles = () => {
              {console.log(articles)}
             {articles.map(article => {
                 return(
-                <div className="item" key={article._id}>
+                <div className="it-em" key={article._id}>
                     <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
                         <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
                     </Link>
