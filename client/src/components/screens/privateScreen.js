@@ -53,6 +53,9 @@ const PrivateScreen = (props) => {
     <span className="error-message">{error}</span>
   ) : (
     <>
+    <div className="container-fluid">
+    <div className="row">
+    <div className="col-lg-8">
      <div className="App">
      <Sidebar/> 
      <h3>Hey {privateData.username}</h3>
@@ -72,6 +75,10 @@ const PrivateScreen = (props) => {
     <Link to="/create/"></Link>
      {console.log(privateData)}
         {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}
+    
+    </div>
+    </div>
+    </div>
     </>
   );
 };

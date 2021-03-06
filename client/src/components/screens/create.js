@@ -80,7 +80,9 @@ const Create = ({match}) => {
       <>
       <div className='create'>
       <Sidebar/>
-        <div className="register-screen">
+      <div className="container-fluid">
+            <div className="row">
+        <div className="register-screen col-lg-9">
       <form onSubmit={newArticle} className="register-screen__form">
         <h3 className="register-screen__title">Create Article</h3><hr/>
         {error && <span className="error-message">{error}</span>}
@@ -95,6 +97,7 @@ const Create = ({match}) => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
+          
         </div>
         {/* <div className="form-group">
           <label htmlFor="name">Title:</label>
@@ -172,6 +175,8 @@ const Create = ({match}) => {
     <hr/>
     <h6>{parse(marked(subtitle))}</h6>
   </div>
+  </div>
+          </div>
   </>
     )
 }
