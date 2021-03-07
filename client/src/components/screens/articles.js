@@ -80,6 +80,17 @@ const Articles = () => {
               </>
             )
             }
+            if(article.status == "Free"){
+              return(
+                <>
+              <div className="item" key={article._id}>
+                  <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
+                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
+                  </Link>
+              </div>
+              </>
+            )
+            }
             })}
 
             </div>

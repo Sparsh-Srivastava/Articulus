@@ -46,13 +46,25 @@ const View = (props) => {
 
     viewData();
   }, []);
+
+  const style = {
+    background: primary,
+    margin: "10%",
+    width: "100%",
+    height: "auto",
+    color: secondary,
+    padding: "5vh",
+    borderRadius: "10px",
+    border: "solid 1px black",
+  };
+
   return error ? (
     <span className="error-message">{error}</span>
   ) : (
     <>
      <div className="App">
      <Sidebar/> 
-     <div>
+     <div style={style}>
          {console.log(data)}
         <h3>{title}</h3>
         <hr/>

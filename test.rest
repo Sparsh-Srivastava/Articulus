@@ -68,7 +68,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0M
 GET http://localhost:5000/article/604246c753c98b239023bc7a
 
 ###
-GET http://localhost:5000/api/private/getarticle/604246c753c98b239023bc7a
+GET http://localhost:5000/api/private/getarticle/604246ca53c98b239023bc7b
 
 ###
 PUT http://localhost:5000/api/private/articleupdate/604246ca53c98b239023bc7c
@@ -80,3 +80,15 @@ Content-Type: application/json
     "primary": "#000",
     "secondary": "#111"
 }
+
+###
+POST http://localhost:5000/comment/604246c753c98b239023bc7a/6041174dbfd5f20c78e6663c
+Content-Type: application/json
+
+{
+    "comment": "test 2"
+}
+
+###
+GET http://localhost:5000/comment/604246c753c98b239023bc7a/6041174dbfd5f20c78e6663c
+Content-Type: application/json
