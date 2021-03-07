@@ -13,6 +13,7 @@ const Update = ({match}) => {
   const [number, setNumber] = useState(1)
   const [status, setStatus] = useState("")
   const [error, setError] = useState("")
+  const [test, setTest] = useState("")
 
   const updateArticle = async (e) => {
     e.preventDefault();
@@ -46,6 +47,32 @@ const Update = ({match}) => {
       }, 5000);
     }
   };
+
+  useEffect(() => {
+    const getArticles = async () => {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      try {
+        const { data } = await axios.get(`/api/private/getarticle/${match.params.id}`, config);
+        setTest(data);
+        setTitle(data.title)
+        setSubtitle(data.subtitle)
+        setPrimary(data.primary)
+        setSecondary(data.secondary)
+        setStatus(data.status)
+      } catch (error) {
+        // localStorage.removeItem("authToken");
+        // localStorage.removeItem("id");
+        setError("Something went wrong");
+      }
+    };
+
+    getArticles()
+  }, [])
   const mailer = {
     background: primary,
     margin: "10%",
@@ -78,6 +105,7 @@ const Update = ({match}) => {
 
     return (
       <>
+      {console.log(test)}
       <div className='create'>
       <Sidebar/>
         <div className="register-screen">

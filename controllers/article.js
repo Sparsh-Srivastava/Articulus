@@ -1,5 +1,6 @@
 const Article = require('../models/Article')
 const User = require("../models/User");
+const Router = require('../routes/article');
 
 exports.create = async (req, res) => {
     user = req.params;
@@ -71,4 +72,10 @@ exports.update = async (req, res) => {
             })
         }
     })
+}
+
+exports.getArticle = async (req, res) => {
+    const { id } = req.params;
+    const user = await Article.findById(id);
+    res.send(user);
 }

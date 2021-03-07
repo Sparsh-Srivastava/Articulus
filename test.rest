@@ -2,12 +2,12 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "Ash",
-    "last": "Ketchum",
-    "email": "testing@email.com",
-    "age": 10,
+    "username": "Free",
+    "last": "Account",
+    "email": "free@account.com",
+    "age": 21,
     "gender": "Male",
-    "password": "pikachu",
+    "password": "123456",
     "sub": "free"
 }
 
@@ -61,10 +61,14 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5000/api/private/getuser/603e2e2416886f3b889b5087
-Content-Type: application/json
+Content-Type: application/json,
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwM2UyZTI0MTY4ODZmM2I4ODliNTA4NyIsImlhdCI6MTYxNTA1MTg5MywiZXhwIjoxNjE1MTM4MjkzfQ.N5i4urv9qj5JHW1HKgO6vB_NweUYwzPb6j7ORnH_JI4
 
 ###
-GET http://localhost:5000/article/604246ca53c98b239023bc7c
+GET http://localhost:5000/article/604246c753c98b239023bc7a
+
+###
+GET http://localhost:5000/api/private/getarticle/604246c753c98b239023bc7a
 
 ###
 PUT http://localhost:5000/api/private/articleupdate/604246ca53c98b239023bc7c

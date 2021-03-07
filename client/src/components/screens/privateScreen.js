@@ -59,17 +59,6 @@ const PrivateScreen = (props) => {
      <div className="App">
      <Sidebar/> 
      <h3>Hey {privateData.username}</h3>
-     <div className="three">
-     <div>
-     <Charts/>
-     <Calender/>
-     <Chart2/>
-     <Chart3/>
-     </div>
-     <div className="two">
-     <Chart4/>
-     </div>
-     </div>
      
     </div>
     <Link to="/create/"></Link>

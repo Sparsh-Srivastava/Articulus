@@ -16,6 +16,8 @@ const View = (props) => {
   const [subtitle, setSubtitle] = useState("")
   const [primary, setPrimary] = useState("")
   const [secondary, setSecondary] = useState("")
+  const [first, setFirst] = useState("")
+  const [last, setLast] = useState("")
 
   useEffect(() => {
     const viewData = async () => {
@@ -33,6 +35,8 @@ const View = (props) => {
         setSubtitle(parse(marked(data.article.subtitle)))
         setPrimary(data.article.primary)
         setSecondary(data.article.secondary)
+        setFirst(data.user.username)
+        setLast(data.user.last)
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")
@@ -53,6 +57,7 @@ const View = (props) => {
         <h3>{title}</h3>
         <hr/>
         <h5>{subtitle}</h5>
+        <h6>Created By: {first} {last}</h6>
      </div>
     </div>
         {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}

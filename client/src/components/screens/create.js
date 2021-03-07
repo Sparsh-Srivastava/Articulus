@@ -4,6 +4,7 @@ import marked from 'marked'
 import parse from "html-react-parser"
 import Sidebar from '../controllers/sidebar'
 import './create.css'
+import {Redirect} from 'react-router-dom'
 
 const Create = ({match}) => {
   const [title, setTitle] = useState("");

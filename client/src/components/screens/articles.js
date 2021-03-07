@@ -10,6 +10,7 @@ const Articles = () => {
     const [articles, setArticles] = useState([])
     const [error, setError] = useState("")
     const [search, setSearch] = useState("")
+    const [user, setUser] = useState("")
 
     useEffect(() => {
         const getArticles = async () => {
@@ -28,7 +29,26 @@ const Articles = () => {
             setError("Something went wrong");
           }
         };
+
+        const getUser = async () => {
+          const setting = {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+            },
+          };
+          
+          try {
+            const { data } = await axios.get(`/api/private/getuser/${localStorage.getItem("id")}`, setting)
+            setUser(data)
+          } catch (error) {
+            localStorage.removeItem("authToken");
+            localStorage.removeItem("id");
+            setError("Something went wrong");
+          }
+        }
         getArticles();
+        getUser();
     }, []);
     return error ? (
         <span className="error-message">{error}</span>
@@ -49,18 +69,17 @@ const Articles = () => {
                 return val
               }
             }).map(article => {
-              if(article.status == "Free"){
-                return(
-                  <>
-                  {console.log(article.primary)}
-                <div className="item" key={article._id}>
-                    <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
-                        <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
-                    </Link>
-                </div>
-                </>
-              )
-              }
+              if(user.sub == "Premium"){
+              return(
+                <>
+              <div className="item" key={article._id}>
+                  <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
+                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
+                  </Link>
+              </div>
+              </>
+            )
+            }
             })}
 
             </div>

@@ -42,6 +42,9 @@ const UserSchema = new mongoose.Schema({
   articles : [
     {type: mongoose.Schema.Types.ObjectId,ref:'Article'}
   ],
+  comments: [
+    {type: mongoose.Schema.Types.ObjectId,ref:'Comment'}
+  ],
   resetPasswordToken: String,
   resetPasswordExpire: Date,
 });
