@@ -83,7 +83,8 @@ const Create = ({match}) => {
       <Sidebar/>
       <div className="container-fluid">
             <div className="row">
-        <div className="register-screen col-lg-5">
+              <div className='col-lg-3 col-md-3 col-sm-3'></div>
+        <div className="register-screen col-lg-5 col-md-5 col-sm-5">
       <form onSubmit={newArticle} className="register-screen__form">
         <h3 className="register-screen__title">Create Article</h3><hr/>
         {error && <span className="error-message">{error}</span>}
