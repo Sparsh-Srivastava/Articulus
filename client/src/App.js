@@ -16,7 +16,7 @@ import UserArticles from "./components/screens/userArticles"
 import Profile from "./components/screens/profile"
 import Update from "./components/screens/update"
 import View from "./components/screens/viewArticles"
-
+import NewCreate from "./2.0/src/screens/Create"
 const App = () => {
   return (
     <Router>
@@ -26,12 +26,12 @@ const App = () => {
           <PrivateRoute exact path="/create/:id" component={Create} />
           <PrivateRoute exact path="/myarticles/:id" component={UserArticles} />
           <PrivateRoute exact path="/profile/:id" component={Profile} />
-          <PrivateRoute exact path="/myarticles/item/:id" component={Update} />
-          <Route exact path="/item/:id" component={View} />
+          <PrivateRoute exact path="/myarticles/item/:id" component={Update} /> */}
+          {/* <Route exact path="/item/:id" component={View} /> */}
           <Route exact path="/login" component={LoginScreen} />
           <Route exact path="/register" component={RegisterScreen} />
           <Route exact path="/" component={LandingScreen} />
-          <PrivateRoute exact path="/all" component={all}/>
+          {/* <PrivateRoute exact path="/all" component={all}/> */}
           <Route
             exact
             path="/forgotpassword"
@@ -41,7 +41,8 @@ const App = () => {
             exact
             path="/passwordreset/:resetToken"
             component={ResetPasswordScreen}
-          /> */}
+          />
+          <PrivateRoute exact path="/create/:id" component={NewCreate} />
         </Switch>
       </div>
     </Router>
