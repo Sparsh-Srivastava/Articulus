@@ -9,6 +9,7 @@
     line-height: 1.7;
     background: #eee;
     color: #333;
+    background-color: #28527a;
   }
   
   .form-group,
@@ -32,7 +33,7 @@
   }
   
   .form-group input:focus {
-    border-bottom: 3px solid yellow;
+    border-bottom: 3px solid #3e978b;
   }
   
   .btn {
@@ -48,7 +49,7 @@
   }
   
   .btn-primary {
-    background-color: yellow;
+    background-color: #3e978b;
     color: #fff;
   }
   

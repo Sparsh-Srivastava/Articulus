@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Sidebar from '../controllers/sidebar'
 import './profile.css'
+import Navbar from "../controllers/sidebar"
 
 const Profile = () => {
   const [error, setError] = useState("");
@@ -30,8 +31,9 @@ const Profile = () => {
     fetchUserData();
   }, []);
     return (
-        <div className='profile'>
-        <Sidebar/>
+      <>
+      <Navbar/>
+        <div className='profile container'>
         <div className='info'>
             <p>Name: {userData.username}</p>
             <p>Email: {userData.email}</p>
@@ -40,6 +42,7 @@ const Profile = () => {
             <p>Subscription Status: {userData.sub}</p>
         </div>
         </div>
+      </>
     )
 }
 

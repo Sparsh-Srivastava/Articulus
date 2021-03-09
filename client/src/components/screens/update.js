@@ -4,6 +4,7 @@ import marked from 'marked'
 import parse from "html-react-parser"
 import Sidebar from '../controllers/sidebar'
 import './create.css'
+import Navbar from "../controllers/sidebar"
 
 const Update = ({match}) => {
   const [title, setTitle] = useState("");
@@ -105,9 +106,9 @@ const Update = ({match}) => {
 
     return (
       <>
+      <Navbar/>
       {console.log(test)}
       <div className='create'>
-      <Sidebar/>
         <div className="register-screen">
       <form onSubmit={updateArticle} className="register-screen__form">
         <h3 className="register-screen__title">Update Article</h3><hr/>

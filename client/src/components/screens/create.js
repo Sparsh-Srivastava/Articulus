@@ -5,6 +5,7 @@ import parse from "html-react-parser"
 import Sidebar from '../controllers/sidebar'
 import './create.css'
 import {Redirect} from 'react-router-dom'
+import Navbar from "../controllers/sidebar"
 
 const Create = ({match}) => {
   const [title, setTitle] = useState("");
@@ -79,12 +80,10 @@ const Create = ({match}) => {
 
     return (
       <>
+      <Navbar/>
       <div className='create'>
-      <Sidebar/>
-      <div className="container-fluid">
-            <div className="row">
-        <div className="register-screen col-lg-5">
-      <form onSubmit={newArticle} className="register-screen__form">
+      <div className="container">
+      <form onSubmit={newArticle} className="create-form">
         <h3 className="register-screen__title">Create Article</h3><hr/>
         {error && <span className="error-message">{error}</span>}
         <div className="form-group">
@@ -131,8 +130,8 @@ const Create = ({match}) => {
             name='subtitle'
             id='areacontent'
             className='form'
-            cols='100'
-            rows='5'
+            cols='130'
+            rows='8'
             value={subtitle}
             onChange={(e) => setSubtitle(e.target.value)}
           ></textarea>
@@ -169,8 +168,6 @@ const Create = ({match}) => {
           Create
         </button>
       </form>
-    </div>
-    </div>
     <div className="preview" style={mailer}>
     <h4>{parse(marked(title))}</h4>
     <hr/>

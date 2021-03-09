@@ -11,7 +11,7 @@ import Chart4 from '../controllers/Chart4';
 import {Redirect} from 'react-router-dom'
 
 // import {SidebarData} from '../controllers/SidebarData';
-import Sidebar from '../controllers/sidebar'
+import Navbar from "../controllers/sidebar"
 
 const PrivateScreen = (props) => {
   const [error, setError] = useState("");
@@ -53,11 +53,9 @@ const PrivateScreen = (props) => {
     <span className="error-message">{error}</span>
   ) : (
     <>
-    <div className="container-fluid">
-    <div className="row">
-    <div className="col-lg-8">
+    <Navbar/>
+    <div className="container">
      <div className="App">
-     <Sidebar/> 
      <h3>Hey {privateData.username}</h3>
      
     </div>
@@ -65,8 +63,6 @@ const PrivateScreen = (props) => {
      {console.log(privateData)}
         {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}
     
-    </div>
-    </div>
     </div>
     </>
   );

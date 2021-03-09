@@ -28,6 +28,20 @@ display: flex;
 
   .cover {
     color: rgb(53, 53, 53);
+    margin-left: 25%;
+    background-color: cornsilk;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cover:hover {
+    color: rgb(53, 53, 53);
+    margin-left: 25%;
+    background-color: rgb(224, 218, 191);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   Link{

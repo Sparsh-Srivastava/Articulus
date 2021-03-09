@@ -19,8 +19,10 @@ input[type="color"] {
     border: none;
     border-radius: 10vh;
   }
-  .register-screen
-  {
-    margin-top:10%;
-    width:100%;
+
+  .create-form{
+    padding: 1.5rem;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
   }

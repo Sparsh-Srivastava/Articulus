@@ -4,7 +4,7 @@ import marked from 'marked'
 import parse from "html-react-parser"
 import axios from 'axios'
 import './xyz.css'
-import Sidebar from '../controllers/sidebar'
+import Navbar from "../controllers/sidebar"
 
 const Articles = () => {
     const [articles, setArticles] = useState([])
@@ -53,8 +53,9 @@ const Articles = () => {
     return error ? (
         <span className="error-message">{error}</span>
       ) : (
+        <>
+        <Navbar/>
         <div className="myarticles">
-        <Sidebar/>
          <div className="itemsContainer">
              {console.log(articles)}
              <div className="search">
@@ -95,6 +96,7 @@ const Articles = () => {
 
             </div>
         </div>
+        </>
       );
 }
 

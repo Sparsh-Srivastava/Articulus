@@ -8,6 +8,7 @@ import parse from "html-react-parser"
 import {Redirect} from 'react-router-dom'
 
 import Sidebar from '../controllers/sidebar'
+import Navbar from "../controllers/sidebar"
 
 const View = (props) => {
     const[data, setData] = useState("")
@@ -50,7 +51,6 @@ const View = (props) => {
   const style = {
     background: primary,
     margin: "10%",
-    width: "100%",
     height: "auto",
     color: secondary,
     padding: "5vh",
@@ -62,8 +62,8 @@ const View = (props) => {
     <span className="error-message">{error}</span>
   ) : (
     <>
+    <Navbar/>
      <div className="App">
-     <Sidebar/> 
      <div style={style}>
          {console.log(data)}
         <h3>{title}</h3>

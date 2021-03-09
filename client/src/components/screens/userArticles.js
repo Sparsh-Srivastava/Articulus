@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import marked from 'marked'
 import parse from "html-react-parser"
 import './userArticles.css'
+import Navbar from "../controllers/sidebar"
 
 const UserArticles = () => {
     const [articles, setArticles] = useState([])
@@ -35,15 +36,14 @@ const UserArticles = () => {
     return error ? (
         <span className="error-message">{error}</span>
       ) : (
-          <div className="row">
-        <div className='userarticles col-lg-8'>
-        <Sidebar/>
+        <>
+        <Navbar/>
          <div className="itemsContainer">
              {console.log(articles)}
             {articles.map(article => {
                 return(
                 <div className="it-em" key={article._id}>
-                    <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
+                    <Link to={"item/" + article._id} style={{ textDecoration: 'none'}}>
                         <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
                     </Link>
                 </div>
@@ -51,8 +51,7 @@ const UserArticles = () => {
             })}
 
             </div>
-        </div>
-        </div>
+        </>
       );
 }
 
