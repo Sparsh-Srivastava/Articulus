@@ -4,7 +4,7 @@ import Sidebar from '../controllers/sidebar'
 import './profile.css'
 import Navbar from "../controllers/sidebar"
 
-const Profile = () => {
+const Profile = ({match}) => {
   const [error, setError] = useState("");
   const [userData, setUserData] = useState("");
 
@@ -19,7 +19,7 @@ const Profile = () => {
 
       try {
           let id = localStorage.getItem("id")
-        const { data } = await axios.get(`/api/private/getuser/${id}`, config);
+        const { data } = await axios.get(`/api/private/getuser/${match.params.id}`, config);
         setUserData(data);
       } catch (error) {
         localStorage.removeItem("authToken");

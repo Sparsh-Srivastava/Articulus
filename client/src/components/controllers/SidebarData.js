@@ -59,30 +59,30 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 
-const id  = localStorage.getItem("id")
+// const id  = window.name
 
 export const SidebarData = [
   {
     title: 'Home',
-    path: `/dashboard/${id}`,
+    path: `/dashboard/${window.name}`,
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
   {
     title: 'Create',
-    path: `/create/${id}`,
+    path: `/create/${window.name}`,
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
   {
     title: 'My Articles',
-    path: `/myarticles/${id}`,
+    path: `/myarticles/${window.name}`,
     icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },
   {
     title: 'Profile',
-    path: `/profile/${id}`,
+    path: `/profile/${window.name}`,
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },

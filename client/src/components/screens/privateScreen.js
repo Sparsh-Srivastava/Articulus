@@ -57,7 +57,6 @@ const PrivateScreen = (props) => {
     <div className="container">
      <div className="App">
      <h3>Hey {privateData.username}</h3>
-     
     </div>
     <Link to="/create/"></Link>
      {console.log(privateData)}

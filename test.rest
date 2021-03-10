@@ -92,3 +92,23 @@ Content-Type: application/json
 ###
 GET http://localhost:5000/comment/604246c753c98b239023bc7a/6041174dbfd5f20c78e6663c
 Content-Type: application/json
+
+###
+POST http://localhost:5000/create/6041174dbfd5f20c78e6663c/604792b8af6d3c2b8472bcf2
+Content-Type: application/json
+
+{
+    "comment": "Comment V6.0"
+}
+
+###
+GET http://localhost:5000/create/604792b8af6d3c2b8472bcf2
+Content-Type: application/json
+
+###
+GET http://localhost:5000/user/6041174dbfd5f20c78e6663c
+Content-Type: application/json
+
+###
+GET http://localhost:5000/comment/604792b8af6d3c2b8472bcf2
+Content-Type: application/json

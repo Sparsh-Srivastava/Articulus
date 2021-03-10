@@ -2,6 +2,7 @@ const express = require('express')
 const Router = express.Router()
 const Article = require('../models/Article')
 const User = require('../models/User')
+const Comment = require('../models/Comment')
 const {protect} = require('../middleware/auth')
 
 Router.post("/test/:id", async (req, res) => {
@@ -31,6 +32,58 @@ Router.get("/article/:id", async (req, res) => {
         article: article,
         user: creator
     })
+})
+
+Router.post("/create/:user/:article", async (req, res) => {
+    // console.log(req.params);
+        user = req.params.user;
+        article = req.params.article;
+        const { comment } = req.body;
+        const comm = await Comment.create({
+            comment,
+            user:user,
+            article:article
+        });
+        await comm.save();
+    
+        const userById = await User.findById(user);
+    
+        userById.comments.push(comm);
+        await userById.save();
+    
+        const articleById = await Article.findById(article)
+    
+        articleById.comments.push(comm)
+        await articleById.save()
+    
+        // return res.send(userById);
+        return res.json({
+            comment,
+            user: userById,
+            article: articleById
+        })
+        // return res.json({
+        //     user: user,
+        //     article: article
+        // })
+})
+
+Router.get("/create/:article", async (req, res) => {
+        article = req.params.article
+        const all = await Article.find()
+        res.send(all)
+})
+
+Router.get("/user/:id", async(req, res) => {
+    id = req.params.id
+    const user = await User.findById(id)
+    res.send(user)
+})
+
+Router.get("/comment/:id", async(req, res) => {
+    id = req.params.id
+    const ans = await Article.findById(id).populate('comments')
+    res.send(ans)
 })
 
 module.exports = Router

@@ -13,6 +13,7 @@ app.use(express.json());
 app.use("/api/auth", require('./routes/auth'))
 app.use("/api/private", require("./routes/article"))
 app.use("/api/private", require('./routes/private'))
+app.use("/", require("./routes/comment"))
 
 app.use("/",require("./routes/test"))
 

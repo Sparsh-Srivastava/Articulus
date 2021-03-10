@@ -7,6 +7,7 @@ const LoginScreen = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [id, setId] = useState("")
 
   useEffect(() => {
     if (localStorage.getItem("authToken")) {
@@ -29,7 +30,7 @@ const LoginScreen = ({ history }) => {
         { email, password },
         config
       );
-
+        setId(data.id)
       localStorage.setItem("authToken", data.token);
       localStorage.setItem("id", data.id)
         console.log(data);

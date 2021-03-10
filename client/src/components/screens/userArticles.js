@@ -7,7 +7,7 @@ import parse from "html-react-parser"
 import './userArticles.css'
 import Navbar from "../controllers/sidebar"
 
-const UserArticles = () => {
+const UserArticles = ({match}) => {
     const [articles, setArticles] = useState([])
     const [error, setError] = useState("")
 
@@ -22,7 +22,7 @@ const UserArticles = () => {
           var id = localStorage.getItem("id")
 
           try {
-            const { data } = await axios.post(`/api/private/articlesbyuser/${id}`, config);
+            const { data } = await axios.post(`/api/private/articlesbyuser/${match.params.id}`, config);
             setArticles(data);
           } catch (error) {
             localStorage.removeItem("authToken");
