@@ -1,3 +1,29 @@
-.comment{
-    background-color: red;
-}
+.com-m {
+    padding: 1.5rem;
+    background-color: #acdbdf;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .comment {
+    background-color: #FFF;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-left:35%;
+    width: 600px;
+    height: 3rem;
+  }
+  .btn-me {
+    background-color: chartreuse;
+    margin-left: 25%;
+    width: 50%;
+  }
+  /* .cms
+  {
+      border:2px solid black;
+      width:900px;
+      margin:0 15rem;
+      padding: 0.5rem 0;
+  } */
