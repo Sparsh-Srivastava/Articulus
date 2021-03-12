@@ -6,7 +6,7 @@ import marked from 'marked'
 import parse from "html-react-parser"
 
 import {Redirect} from 'react-router-dom'
-
+import '../screens/viewArticles.css'
 import Sidebar from '../controllers/sidebar'
 import Navbar from "../controllers/sidebar"
 
@@ -91,6 +91,7 @@ const View = (props) => {
 
   const style = {
     background: primary,
+    backgroundColor: "yellowgreen",
     margin: "10%",
     height: "auto",
     color: secondary,
@@ -104,7 +105,7 @@ const View = (props) => {
   ) : (
     <>
     <Navbar/>
-     <div className="App">
+     <div className="App art">
      <div style={style}>
          {/* {console.log(comments)} */}
         <h3>{title}</h3>
@@ -113,7 +114,8 @@ const View = (props) => {
         <h6>Created By: {first} {last}</h6>
      </div>
      <br/>
-     <form onSubmit={createComment} className="create-form">
+     <form onSubmit={createComment} className="com-m ">
+     <div class="cms">
      <input
         name="comment"
         type="text"
@@ -124,9 +126,11 @@ const View = (props) => {
         onChange={(e) => setComment(e.target.value)}
         className="comment"
       />
-      <button type="submit" className="btn btn-primary">
+      
+      <button type="submit" className="btn fix-btn">
           Create
         </button>
+        </div>
       </form>
       {console.log(info.comments)}
 

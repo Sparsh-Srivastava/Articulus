@@ -49,14 +49,18 @@ const Create = ({match}) => {
     }
   };
   const mailer = {
+    position:"absolute",
+    top:"50rem",
     background: primary,
-    margin: "10%",
-    width: "80%",
+    margin: "1%",
+    width: "1150px",
+    marginBottom:"500px;",
     height: "auto",
     color: secondary,
     padding: "5vh",
     borderRadius: "10px",
     border: "solid 1px black",
+    alignItems: "center"
   };
 
   // const paras = number => {
@@ -86,7 +90,7 @@ const Create = ({match}) => {
       <form onSubmit={newArticle} className="create-form">
         <h3 className="register-screen__title">Create Article</h3><hr/>
         {error && <span className="error-message">{error}</span>}
-        <div className="form-group">
+        <div className="form-group f-grp">
           <label htmlFor="name">Title:</label>
           <input
             name="title"
@@ -124,7 +128,7 @@ const Create = ({match}) => {
             onChange={(e) => setSubtitle(e.target.value)}
           />
         </div> */}
-        <div className="form-group">
+        <div className="form-group f-grp">
         <label htmlFor="subtitle">Content:</label>
         <textarea
             name='subtitle'
@@ -136,7 +140,11 @@ const Create = ({match}) => {
             onChange={(e) => setSubtitle(e.target.value)}
           ></textarea>
           </div>
-        <div className="form-group">
+          <label className="xxa f-grp" >Background Color : </label>
+<span className='tab1' />
+
+<label className="xxb">Text Color : </label> 
+        <div className="form-group f-grp">
         <div className='colour'>
             <input
               type='color'
@@ -146,6 +154,7 @@ const Create = ({match}) => {
               name='body'
             />
             <span className='tab1' />
+            
             <input
               type='color'
               value={secondary}
@@ -164,7 +173,7 @@ const Create = ({match}) => {
               <option value='Free'>Free</option>
               <option value='Premium'>Premium</option>
         </select>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn fix-btn btn-primary">
           Create
         </button>
       </form>

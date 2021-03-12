@@ -56,13 +56,14 @@ const Articles = () => {
         <>
         <Navbar/>
         <div className="myarticles">
-         <div className="itemsContainer">
-             {console.log(articles)}
-             <div className="search">
+        <div className="search">
                     <input type="search" placeholder="Search..." onChange={(e) => {
                       setSearch(e.target.value)
                     }}/>
               </div>
+         <div className="itemsContainer">
+             {console.log(articles)}
+             
             {articles.filter((val) => {
               if (search == ""){
                 return val;

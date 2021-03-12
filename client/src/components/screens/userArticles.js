@@ -44,7 +44,7 @@ const UserArticles = ({match}) => {
                 return(
                 <div className="it-em" key={article._id}>
                     <Link to={"item/" + article._id} style={{ textDecoration: 'none'}}>
-                        <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
+                        <div className="cover c">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
                     </Link>
                 </div>
                 )

@@ -75,14 +75,20 @@ const Update = ({match}) => {
     getArticles()
   }, [])
   const mailer = {
+    position:"absolute",
+    top:"50rem",
+    left:"210px",
     background: primary,
-    margin: "10%",
-    width: "80%",
+    margin: "1%",
+    marginLeft:"35px",
+    width: "1200px",
+    marginBottom:"500px;",
     height: "auto",
     color: secondary,
     padding: "5vh",
     borderRadius: "10px",
     border: "solid 1px black",
+    alignItems: "center"
   };
 
   // const paras = number => {
@@ -110,10 +116,10 @@ const Update = ({match}) => {
       {console.log(test)}
       <div className='create'>
         <div className="register-screen">
-      <form onSubmit={updateArticle} className="register-screen__form">
+      <form onSubmit={updateArticle} className="register-screen__form create-form">
         <h3 className="register-screen__title">Update Article</h3><hr/>
         {error && <span className="error-message">{error}</span>}
-        <div className="form-group">
+        <div className="form-group f-grp">
           <label htmlFor="name">Title:</label>
           <input
             name="title"
@@ -150,7 +156,8 @@ const Update = ({match}) => {
             onChange={(e) => setSubtitle(e.target.value)}
           />
         </div> */}
-        <div className="form-group">
+      
+        <div className="form-group f-grp">
         <label htmlFor="subtitle">Content:</label>
         <textarea
             name='subtitle'
@@ -162,7 +169,11 @@ const Update = ({match}) => {
             onChange={(e) => setSubtitle(e.target.value)}
           ></textarea>
           </div>
-        <div className="form-group">
+          <label className="xxa f-grp" >Background Color : </label>
+<span className='tab1' />
+
+<label className="xxb">Text Color : </label> 
+        <div className="form-group f-grp">
         <div className='colour'>
             <input
               type='color'
@@ -190,7 +201,7 @@ const Update = ({match}) => {
               <option value='Free'>Free</option>
               <option value='Premium'>Premium</option>
         </select>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn fix-btn btn-primary">
           Update
         </button>
       </form>
