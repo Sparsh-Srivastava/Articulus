@@ -84,7 +84,7 @@ function Navbar() {
                 </li>
               );
             })}
-            <button onClick={signout} className="btn btn-danger">Log Out</button>
+            <button onClick={signout} className="btn btn-danger btn-log">Log Out</button>
           </ul>
         </nav>
       </IconContext.Provider>

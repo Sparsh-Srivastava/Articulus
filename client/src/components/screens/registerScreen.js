@@ -66,6 +66,7 @@ const RegisterScreen = ({ history }) => {
         <div className="form-group">
           <label htmlFor="name">First Name:</label>
           <input
+          className="first-name"
             type="text"
             required
             id="name"
@@ -77,12 +78,14 @@ const RegisterScreen = ({ history }) => {
         <div className="form-group">
           <label htmlFor="lname">Last Name:</label>
           <input
+          
             type="text"
             required
             id="lname"
             placeholder="Enter Last Name"
             value={last}
             onChange={(e) => setLast(e.target.value)}
+            className="last-name"
           />
         </div>
         <div className="form-group">

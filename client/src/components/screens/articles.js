@@ -57,9 +57,11 @@ const Articles = () => {
         <Navbar/>
         <div className="myarticles">
         <div className="search">
+        <i class="fas fa-search search-icon"></i>
                     <input type="search" placeholder="Search..." onChange={(e) => {
                       setSearch(e.target.value)
                     }}/>
+              
               </div>
          <div className="itemsContainer">
              {console.log(articles)}
