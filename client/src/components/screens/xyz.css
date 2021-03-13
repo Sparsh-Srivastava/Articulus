@@ -33,10 +33,16 @@ grid-template-columns: repeat(3,1fr);
   .cover {
     color: rgb(53, 53, 53);
     margin-left: 2%;
-    background-color: cornsilk;
+    background-color: rgb(246, 246, 246);
     padding: 25px;
+    padding-bottom: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    overflow: hidden;
+   /* text-overflow: ellipsis; */
+   display: -webkit-box;
+   -webkit-line-clamp: 4; /* number of lines to show */
+   -webkit-box-orient: vertical;
   }
 
   /* .cover:hover {

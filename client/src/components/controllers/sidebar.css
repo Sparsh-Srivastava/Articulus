@@ -74,7 +74,7 @@ span {
 } */
 
 .navbar {
-  background-color: #acdbdf;
+  background-color: #000;
   height: 80px;
   display: flex;
   justify-content: start;
@@ -128,8 +128,19 @@ span {
 }
 
 .nav-text a:hover {
-  background-color: #000;
+  background-color: rgb(53, 53, 53);
 }
+
+/* span.logo img{
+  border: solid 1px red;
+  align-self: flex-end;
+} */
+
+/* .menu-bars:hover {
+  background-color: rgb(53, 53, 53);
+  border-radius: 100%;
+  padding: 1px;
+} */
 
 .nav-menu-items {
   width: 100%;

@@ -76,7 +76,7 @@ const Articles = () => {
                 <>
               <div className="item" key={article._id}>
                   <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
-                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
+                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/></div>
                   </Link>
               </div>
               </>
@@ -87,7 +87,7 @@ const Articles = () => {
                 <>
               <div className="item" key={article._id}>
                   <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
-                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/>Created By: {article.user}</div>
+                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/></div>
                   </Link>
               </div>
               </>

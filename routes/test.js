@@ -83,7 +83,27 @@ Router.get("/user/:id", async(req, res) => {
 Router.get("/comment/:id", async(req, res) => {
     id = req.params.id
     const ans = await Article.findById(id).populate('comments')
+    // const creator = await User.findById(ans.comments._id)
+    // console.log(ans.comments);
     res.send(ans)
+})
+
+Router.delete("/article/:id", (req, res) => {
+    let id = req.params.id
+    console.log(id)
+
+    let deleteArticle = Article.deleteOne({_id: id}, (err) => {
+        if(err){
+            res.json({
+                message: "There was an error",
+                error: err
+            })
+        }else{
+            res.json({
+                message: "Article was deleted"
+            })
+        }
+    })
 })
 
 module.exports = Router

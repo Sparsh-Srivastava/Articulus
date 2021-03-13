@@ -8,3 +8,12 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .info {
+      /* background-color: blue; */
+      margin-bottom: 200px;
+  }
+
+  .icon{
+      float: right;
+  }

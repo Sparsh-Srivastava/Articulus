@@ -10,7 +10,7 @@ import Navbar from "../controllers/sidebar"
 const Create = ({match}) => {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("")
-  const [primary, setPrimary] = useState("#a9d9d9");
+  const [primary, setPrimary] = useState("#ebe9c3");
   const [secondary, setSecondary] = useState("#000000");
   const [number, setNumber] = useState(1);
   const [status, setStatus] = useState("");
@@ -54,13 +54,14 @@ const Create = ({match}) => {
     background: primary,
     margin: "1%",
     width: "1150px",
-    marginBottom:"500px;",
+    marginBottom:"0px;",
     height: "auto",
     color: secondary,
     padding: "5vh",
     borderRadius: "10px",
     border: "solid 1px black",
-    alignItems: "center"
+    alignItems: "center",
+    zIndex: "-1"
   };
 
   // const paras = number => {
@@ -144,6 +145,10 @@ const Create = ({match}) => {
 <span className='tab1' />
 
 <label className="xxb">Text Color : </label> 
+{/* <span className='tab2' /> */}
+<div className="space2" />
+
+<label className="xxa f-grp" >Article Status : </label>
         <div className="form-group f-grp">
         <div className='colour'>
             <input
@@ -154,6 +159,7 @@ const Create = ({match}) => {
               name='body'
             />
             <span className='tab1' />
+            <div className="space3" />
             
             <input
               type='color'
@@ -162,9 +168,8 @@ const Create = ({match}) => {
               id='body'
               name='body'
             />
-          </div>
-        </div>
-        <select
+<div className="space3" />
+            <select
               name='status'
               value={status}
               onChange={(e) => setStatus(e.target.value)}
@@ -173,6 +178,9 @@ const Create = ({match}) => {
               <option value='Free'>Free</option>
               <option value='Premium'>Premium</option>
         </select>
+          </div>
+          
+        </div>
         <button type="submit" className="btn fix-btn btn-primary">
           Create
         </button>
@@ -182,6 +190,7 @@ const Create = ({match}) => {
     <hr/>
     <h6>{parse(marked(subtitle))}</h6>
   </div>
+  {/* <div className="space">This is empty space</div> */}
   </div>
           </div>
   </>

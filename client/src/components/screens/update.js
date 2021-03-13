@@ -5,11 +5,12 @@ import parse from "html-react-parser"
 import Sidebar from '../controllers/sidebar'
 import './create.css'
 import Navbar from "../controllers/sidebar"
+import { FaTrash, FaMarker, FaEye } from "react-icons/fa"
 
 const Update = ({match}) => {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("")
-  const [primary, setPrimary] = useState("#a9d9d9");
+  const [primary, setPrimary] = useState("#ebe9c3");
   const [secondary, setSecondary] = useState("#000000");
   const [number, setNumber] = useState(1)
   const [status, setStatus] = useState("")
@@ -110,6 +111,26 @@ const Update = ({match}) => {
   //   return content
   // };
 
+  const deleteArticle = async() => {
+    let confirmDelete = window.confirm("Are you sure you want to delete this Article?");
+    if(confirmDelete){
+      const options = {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      } 
+
+      try {
+        const { data } = await axios.delete(`/article/${match.params.id}`, options);
+        console.log(data);
+      } catch (error) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("id");
+        setError("Something doesn't seem right");
+      }
+    }
+  }
+
     return (
       <>
       <Navbar/>
@@ -163,7 +184,7 @@ const Update = ({match}) => {
             name='subtitle'
             id='areacontent'
             className='form'
-            cols='100'
+            cols='130'
             rows='5'
             value={subtitle}
             onChange={(e) => setSubtitle(e.target.value)}
@@ -204,6 +225,18 @@ const Update = ({match}) => {
         <button type="submit" className="btn fix-btn btn-primary">
           Update
         </button>
+        {/* <Link style={{ textDecoration: 'none'}} className="icon"> */}
+        <FaTrash
+        className='deleteIcon'
+        onClick={deleteArticle}
+        style={{
+          marginLeft: "20px",
+          top: "2px",
+          position: "relative",
+          zIndex: "102",
+        }}
+        />
+      {/* </Link> */}
       </form>
     </div>
     </div>

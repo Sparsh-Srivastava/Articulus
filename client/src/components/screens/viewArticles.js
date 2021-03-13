@@ -92,7 +92,7 @@ const View = (props) => {
   const style = {
     background: primary,
     backgroundColor: "yellowgreen",
-    margin: "10%",
+    margin: "2% 10%",
     height: "auto",
     color: secondary,
     padding: "5vh",
@@ -137,9 +137,11 @@ const View = (props) => {
       {info.map(comment => {
               return(
                 <>
+              <Link to={"comment/" + comment._id} style={{ textDecoration: 'none' }}>
               <div className="item" key={comment._id}>
-                      <div className="cover">{comment.comment}</div>
+                      <div className="cover">{comment.user}<hr/>{comment.comment}</div>
               </div>
+              </Link>
               </>
             )
       })}
