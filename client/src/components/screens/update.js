@@ -80,8 +80,8 @@ const Update = ({match}) => {
     top:"50rem",
     left:"210px",
     background: primary,
-    margin: "1%",
-    marginLeft:"35px",
+    marginTop: "1%",
+    marginRight:"20px",
     width: "1200px",
     marginBottom:"500px;",
     height: "auto",
@@ -89,6 +89,7 @@ const Update = ({match}) => {
     padding: "5vh",
     borderRadius: "10px",
     border: "solid 1px black",
+    justifyContent:"center",
     alignItems: "center"
   };
 

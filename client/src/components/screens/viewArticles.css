@@ -1,26 +1,24 @@
 .com-m {
-    padding: 1.5rem;
-    background-color: #acdbdf;
+  padding: 1.5rem;
+  background-color: #acdbdf;
 
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  }
-  .comment {
-    background-color: #FFF;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    margin-left:35%;
-    width: 600px;
-    height: 3rem;
-  }
-  .btn-me {
-    background-color: chartreuse;
-    margin-left: 25%;
-    width: 50%;
-  }
-  /* .cms
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.comment {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-left: 10%;
+  width: 1200px;
+  height: 3rem;
+}
+.btn-me {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+/* .cms
   {
       border:2px solid black;
       width:900px;

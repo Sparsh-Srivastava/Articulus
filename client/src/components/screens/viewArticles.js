@@ -127,7 +127,7 @@ const View = (props) => {
         className="comment"
       />
       
-      <button type="submit" className="btn fix-btn">
+      <button type="submit" className="btn fix-btn btn-me">
           Create
         </button>
         </div>
