@@ -106,4 +106,30 @@ Router.delete("/article/:id", (req, res) => {
     })
 })
 
+Router.get("/data/:user", async (req, res) => {
+    let body = [];
+    const user = req.params.user
+
+    const article = await Article.find({user: user})
+    
+    article.forEach((item) => {
+        const dat = item.createdAt
+        const itemy = dat.toDateString()
+        const datb = itemy.split(' ');
+        const month = datb[1]
+        const day = Number(datb[2])
+        const year = Number(datb[3])
+
+        const d = "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(`${month}`) / 3 ;
+        body.push({
+          title: item.title,
+          day: day,
+          month: d,
+          year: year
+        });
+      });
+
+    res.json(body)
+})
+
 module.exports = Router

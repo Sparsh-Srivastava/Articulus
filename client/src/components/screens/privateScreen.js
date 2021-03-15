@@ -2,11 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './privateScreen.css';
 import {Link} from 'react-router-dom'
-import Calender from '../controllers/Calender';
-import Charts from '../controllers/Chart';
-import Chart2 from '../controllers/Chart2';
-import Chart3 from '../controllers/Chart3';
-import Chart4 from '../controllers/Chart4';
+import Calendar from '../controllers/calendar'
 
 import {Redirect} from 'react-router-dom'
 
@@ -54,15 +50,14 @@ const PrivateScreen = (props) => {
   ) : (
     <>
     <Navbar/>
-    <div className="container">
      <div className="App">
-     <h3>Hey {privateData.username}</h3>
+     <div className="calendar">
+      <Calendar/>
+     </div>
     </div>
     <Link to="/create/"></Link>
      {console.log(privateData)}
         {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}
-    
-    </div>
     </>
   );
 };

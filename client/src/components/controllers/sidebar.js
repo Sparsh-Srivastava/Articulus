@@ -7,9 +7,12 @@ import './sidebar.css';
 import { IconContext } from 'react-icons';
 import * as IoIcons from 'react-icons/io';
 import axios from 'axios'
+// const Img = require('./blank.png')
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+  const [error, setError] = useState("");
+  const [privateData, setPrivateData] = useState("");
   // const [id, setId] = useState("")
   // const [error, setError] = useState("")
 
@@ -56,6 +59,29 @@ function Navbar() {
     },
   ];
 
+  useEffect(() => {
+    const fetchPrivateDate = async () => {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        },
+      };
+
+      try {
+        // console.log(this.props.match.params.id);
+        const { data } = await axios.get(`/api/private/dashboard/${localStorage.getItem("id")}`, config);
+        setPrivateData(data);
+      } catch (error) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("id")
+        setError("You are not authorized please login");
+      }
+    };
+
+    fetchPrivateDate();
+  }, []);
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -74,6 +100,7 @@ function Navbar() {
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
+            <center><h4 className="name">Hi, {privateData.username} {privateData.last}</h4></center>
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
