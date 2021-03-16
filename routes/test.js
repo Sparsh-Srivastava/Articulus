@@ -38,9 +38,10 @@ Router.post("/create/:user/:article", async (req, res) => {
     // console.log(req.params);
         user = req.params.user;
         article = req.params.article;
-        const { comment } = req.body;
+        const { comment, rating } = req.body;
         const comm = await Comment.create({
             comment,
+            rating,
             user:user,
             article:article
         });
@@ -59,6 +60,7 @@ Router.post("/create/:user/:article", async (req, res) => {
         // return res.send(userById);
         return res.json({
             comment,
+            rating,
             user: userById,
             article: articleById
         })
@@ -130,6 +132,27 @@ Router.get("/data/:user", async (req, res) => {
       });
 
     res.json(body)
+})
+
+Router.get("/mean/:article", async(req, res) => {
+    let ratings = []
+    // user = req.params.user
+    // const person = await User.findById(user).populate('comments')
+    // const comments = person.comments
+    // // console.log(person.comments);
+    // comments.forEach((item) => {
+    //     const rating = item.rating
+    //     ratings.push(rating)
+    // });
+    // res.send(ratings)
+    const article = req.params.article
+    const art = await Article.findById(article).populate('comments')
+    const comments = art.comments
+    comments.forEach((item) => {
+        const rating = item.rating
+        ratings.push(rating)
+    });
+    res.send(ratings)
 })
 
 module.exports = Router

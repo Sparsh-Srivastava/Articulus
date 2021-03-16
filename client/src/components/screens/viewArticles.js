@@ -21,6 +21,8 @@ const View = (props) => {
   const [last, setLast] = useState("")
   const [comment, setComment] = useState("")
   const [info, setInfo] = useState([])
+  const [date, setDate] = useState("")
+  const [rating, setRating] = useState(0)
 
   useEffect(() => {
     const viewData = async () => {
@@ -40,6 +42,7 @@ const View = (props) => {
         setSecondary(data.article.secondary)
         setFirst(data.user.username)
         setLast(data.user.last)
+        setDate(data.user.createdAt)
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")
@@ -51,6 +54,7 @@ const View = (props) => {
         const { data } = await axios.get(`/comment/${props.match.params.id}`, config);
         console.log(props.match.params.id);
         setInfo(data.comments)
+        setRating(data.rating)
         console.log(data.comments);
       } catch (error) {
         localStorage.removeItem("authToken");
@@ -77,6 +81,7 @@ const View = (props) => {
         `/create/${localStorage.getItem("id")}/${props.match.params.id}`,
         {
           comment: comment,
+          rating: rating
         },
         config
       );
@@ -112,6 +117,7 @@ const View = (props) => {
         <hr/>
         <h5>{subtitle}</h5>
         <h6>Created By: {first} {last}</h6>
+        <p>{date}</p>
      </div>
      <br/>
      <form onSubmit={createComment} className="com-m ">
@@ -126,6 +132,19 @@ const View = (props) => {
         onChange={(e) => setComment(e.target.value)}
         className="comment"
       />
+      <center>
+      <input
+        name="rating"
+        type="number"
+        required
+        id="rating"
+        placeholder="Enter rating"
+        value={rating}
+        onChange={(e) => setRating(e.target.value)}
+        className="rating"
+      />
+      </center>
+      <br/>
       
       <button type="submit" className="btn fix-btn btn-me">
           Create
@@ -139,7 +158,7 @@ const View = (props) => {
                 <>
               <Link to={"comment/" + comment._id} style={{ textDecoration: 'none' }}>
               <div className="item" key={comment._id}>
-                      <div className="cover">{comment.user}<hr/>{comment.comment}</div>
+                      <div className="cover">{comment.user}<hr/>{comment.comment}{comment.rating}</div>
               </div>
               </Link>
               </>

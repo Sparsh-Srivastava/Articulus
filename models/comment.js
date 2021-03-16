@@ -5,6 +5,10 @@ const CommentSchema = new mongoose.Schema({
         type:String,
         required: '{PATH} is required!'
     },
+    rating: {
+        type: Number,
+        required: '{PATH} is required!'
+    },
     user :{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'
