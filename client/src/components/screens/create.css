@@ -99,13 +99,20 @@ input[type="color"] {
     float:left;
     
   } */
-
+  .colour
+{
+  margin-bottom: 20px;
+}
   .xxa{
     margin-left:30px;
   }
 .xxb
 {
  margin-left:200px;  
+}
+.xxc
+{
+  margin-left: 250px;
 }
   .choice
   {
@@ -131,4 +138,21 @@ input[type="color"] {
 
 .tab2 {
   tab-size: 4;
+}
+
+.deleteIcon
+{
+  border-radius: 20px;
+  height:30px;
+  width:40px;
+  color:black;
+ 
+  box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 10px 10px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+.deleteIcon :hover
+{
+  color: red;
 }

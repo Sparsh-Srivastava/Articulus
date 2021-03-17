@@ -25,3 +25,14 @@
       margin:0 15rem;
       padding: 0.5rem 0;
   } */
+
+  .date-view
+  {
+    color: white;
+    font-size: smaller;
+    text-shadow: 2px 2px 4px blue;
+  }
+  .full-form
+  {
+    padding-bottom: 0px;
+  }
