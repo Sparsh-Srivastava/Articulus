@@ -100,7 +100,7 @@ const View = (props) => {
     margin: "2% 10%",
     height: "auto",
     color: secondary,
-    padding: "5vh",
+    padding: "5vh 5vh 0",
     borderRadius: "10px",
     border: "solid 1px black",
   };
@@ -111,13 +111,13 @@ const View = (props) => {
     <>
     <Navbar/>
      <div className="App art">
-     <div style={style}>
+     <div class="full-view" style={style}>
          {/* {console.log(comments)} */}
         <h3>{title}</h3>
         <hr/>
         <h5>{subtitle}</h5>
         <h6>Created By: {first} {last}</h6>
-        <p>{date}</p>
+        <p className="date-view">{date}</p>
      </div>
      <br/>
      <form onSubmit={createComment} className="com-m ">

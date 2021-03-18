@@ -195,8 +195,13 @@ const Update = ({match}) => {
 <span className='tab1' />
 
 <label className="xxb">Text Color : </label> 
+{/* <span className='tab1' />
+
+<label className="xxc">Article Status : </label>  */}
+<div className="space2" />
+<label className="xxa f-grp" >Article Status : </label>  
         <div className="form-group f-grp">
-        <div className='colour'>
+        <div className='colour '>
             <input
               type='color'
               onChange={(e) => setPrimary(e.target.value)}
@@ -205,6 +210,7 @@ const Update = ({match}) => {
               name='body'
             />
             <span className='tab1' />
+            <div className="space3" />
             <input
               type='color'
               value={secondary}
@@ -212,8 +218,11 @@ const Update = ({match}) => {
               id='body'
               name='body'
             />
-          </div>
-        </div>
+              <div className="space3" />
+         
+      
+        <div className="space3" />
+        
         <select
               name='status'
               value={status}
@@ -223,6 +232,9 @@ const Update = ({match}) => {
               <option value='Free'>Free</option>
               <option value='Premium'>Premium</option>
         </select>
+
+        </div>
+        </div>
         <button type="submit" className="btn fix-btn btn-primary">
           Update
         </button>
@@ -235,6 +247,8 @@ const Update = ({match}) => {
           top: "2px",
           position: "relative",
           zIndex: "102",
+       
+       
         }}
         />
       {/* </Link> */}

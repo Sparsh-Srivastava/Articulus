@@ -1,5 +1,9 @@
+div.rbc-calender
+{
+    width:500px;
+}
 .cal{
-    background-color: #fff;
+    background-color: rgba(52, 247, 247, 1);
     display: block;
     width:fit-content;
     padding: 5px;
@@ -8,3 +12,97 @@
     border-radius: 10px;
     z-index: 10;
 }
+.rbc-month-view{
+    padding-top: 10px;
+}
+.rbc-row{
+   
+        height:50px;
+}
+.rbc-month-header
+{
+    margin:10px;
+}
+ div.rbc-header
+{
+    padding-top:10px;
+    border:1px 1px solid black;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0px 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+
+.rbc-header span{
+    padding-top: 10px;
+}
+
+ div.rbc-date-cell
+{
+    
+    width:100px;
+    color:rgb(49, 63, 21);
+    padding: 8px 0 0 ;
+    background-color:#70DBDB;
+    color: #008080;
+    /* color:#fff
+    background-color: rgba(255, 165, 0,0.8 ); */
+    text-align: center;
+    border:1px 1px solid black;
+    justify-content: center;
+    border-radius: 300px;
+    border-collapse:separate;
+    margin:5px 28px;
+    
+    font-size: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.rbc-date-cell:hover{
+    /* background-color:#70DBDB;
+    color: #008080; */
+    color:#fff;
+    
+    background-color: rgba(255, 165, 0,0.8 );
+}
+
+/* 
+div.rbc-event.rbc-selected.rbc-event-allday
+{
+    
+    padding:0px;
+    margin: 0px;
+    width: 10px;
+    height: 10px;
+    background-color: salmon;
+
+} */
+
+span.rbc-toolbar-label
+{
+    color:#000;
+}
+ /* .rbc-event-content */
+ .rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event
+{
+    padding:0;
+    position:absolute;
+    
+    margin-top:-50px;
+    height:10px;
+    width:10px;
+    background-color: red;
+    
+}
+
+
+
+.rbc-btn-group button
+{
+    padding-top:10px;
+    border:1px 1px solid black;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
