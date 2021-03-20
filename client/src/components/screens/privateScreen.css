@@ -3,3 +3,17 @@
     float: right;
     margin-right: 10px;
 }
+
+div.text{
+    color: black;
+    width: fit-content;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    margin-left: 300px;
+    margin-top: 10px;
+    margin-bottom: -30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}

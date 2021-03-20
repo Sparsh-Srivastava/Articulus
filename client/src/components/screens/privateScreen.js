@@ -3,6 +3,8 @@ import axios from "axios";
 import './privateScreen.css';
 import {Link} from 'react-router-dom'
 import Calendar from '../controllers/calendar'
+import Bar from '../controllers/average'
+import Logo from './images/web.svg'
 
 import {Redirect} from 'react-router-dom'
 
@@ -54,9 +56,11 @@ const PrivateScreen = (props) => {
      <div className="calendar">
       <Calendar/>
      </div>
+     <div className="text">Top Rated Articles</div>
+       <Bar/>
     </div>
-    <Link to="/create/"></Link>
-     {console.log(privateData)}
+    {/* <Link to="/create/"></Link>
+     {console.log(privateData)} */}
         {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}
     </>
   );

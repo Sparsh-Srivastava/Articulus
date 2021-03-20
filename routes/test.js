@@ -134,25 +134,36 @@ Router.get("/data/:user", async (req, res) => {
     res.json(body)
 })
 
-Router.get("/mean/:article", async(req, res) => {
-    let ratings = []
-    // user = req.params.user
-    // const person = await User.findById(user).populate('comments')
-    // const comments = person.comments
-    // // console.log(person.comments);
-    // comments.forEach((item) => {
-    //     const rating = item.rating
-    //     ratings.push(rating)
-    // });
-    // res.send(ratings)
-    const article = req.params.article
-    const art = await Article.findById(article).populate('comments')
-    const comments = art.comments
-    comments.forEach((item) => {
-        const rating = item.rating
-        ratings.push(rating)
-    });
-    res.send(ratings)
+Router.get("/mean/:user", async(req, res) => {
+    let body = []
+    var avrating = []
+    let all = []
+    const user = req.params.user
+    const details = await Article.find({user: user}).populate('comments')
+    details.forEach((detail) => {
+        const title = detail.title
+        const comm = detail.comments
+
+        var avr = 0
+        var total = 0
+
+        for(var i=0; i<comm.length; i++){
+            avrating.push(comm[i].rating)
+            if(comm[i].rating != null){
+                avr += comm[i].rating
+                total++
+            }
+        }
+
+        avr /= total
+        all.push(avr)
+
+        body.push({
+            title: title,
+            average: avr
+        })
+    })
+    res.send(body)
 })
 
 module.exports = Router

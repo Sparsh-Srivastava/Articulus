@@ -3,13 +3,13 @@ div.rbc-calender
     width:500px;
 }
 .cal{
-    background-color: rgba(52, 247, 247, 1);
+    background-color: rgb(255, 255, 255);
     display: block;
     width:fit-content;
     padding: 5px;
     margin: 2%;
     margin-right: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     z-index: 10;
 }
 .rbc-month-view{
@@ -30,7 +30,7 @@ div.rbc-calender
     justify-content: center;
     border-radius: 10px;
     margin: 0px 6px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  
 }
 
@@ -44,8 +44,8 @@ div.rbc-calender
     width:100px;
     color:rgb(49, 63, 21);
     padding: 8px 0 0 ;
-    background-color:#70DBDB;
-    color: #008080;
+    background-color:#c92c3b;
+    color: #ffffff;
     /* color:#fff
     background-color: rgba(255, 165, 0,0.8 ); */
     text-align: center;
@@ -56,7 +56,7 @@ div.rbc-calender
     margin:5px 28px;
     
     font-size: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 div.rbc-date-cell:hover{
     /* background-color:#70DBDB;
@@ -104,5 +104,5 @@ span.rbc-toolbar-label
     justify-content: center;
     border-radius: 10px;
     margin: 10px 6px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 } 

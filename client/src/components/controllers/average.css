@@ -1,0 +1,12 @@
+div.bar{
+    background-color: rgb(255, 255, 255, 1);
+    width: fit-content;
+    z-index: -10;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: -1;
+    margin-left: 40px;
+    margin-top: 50px;
+    padding: 10px;
+}
