@@ -56,9 +56,22 @@ const PrivateScreen = (props) => {
      <div className="calendar">
       <Calendar/>
      </div>
+     
+     <div className="chalja">
+     <img  src="https://cdn.iconscout.com/icon/premium/png-256-thumb/article-writing-1549710-1313270.png"/>
+  
+    <button type="button" class="btn btn1 btn-primary btn-lg">Create</button>
+
+
+     </div>
+     <div class="graph-1">
      <div className="text">Top Rated Articles</div>
        <Bar/>
+     </div>
     </div>
+  
+     
+    
     {/* <Link to="/create/"></Link>
      {console.log(privateData)} */}
         {/* <button className="btn btn-danger" onClick={signout}>Log Out</button> */}

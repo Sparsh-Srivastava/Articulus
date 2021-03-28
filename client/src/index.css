@@ -80,7 +80,8 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  
   line-height: 1.7;
   background: #eee;
   color: #333;
@@ -90,7 +91,7 @@ body {
   /* background-color: #41aea9; */
   /* background-color: #acdbdf; */
   /* background: url("./tile_background.png"); */
-  background: url("./try2.svg");
+  background: url("./wallpaper4.svg");
   background-repeat: repeat;
 }
 

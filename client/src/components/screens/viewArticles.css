@@ -1,7 +1,10 @@
 .com-m {
   padding: 1.5rem;
   background-color: #acdbdf;
-
+  width:1000px;
+  position: relative;
+  left: 100px;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -11,8 +14,8 @@
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  margin-left: 10%;
-  width: 1200px;
+  
+  width: 900px;
   height: 3rem;
 }
 .btn-me {
@@ -20,10 +23,8 @@
 }
 /* .cms
   {
-      border:2px solid black;
-      width:900px;
-      margin:0 15rem;
-      padding: 0.5rem 0;
+    position: absolute;
+    left:50px;
   } */
 
   .date-view
@@ -32,7 +33,14 @@
     font-size: smaller;
     text-shadow: 2px 2px 4px blue;
   }
-  .full-form
+  .art
   {
+    position: absolute;
+    top:50px;
+    left:250px;
     padding-bottom: 0px;
+  }
+  .full-view
+  {
+  width:1000px;
   }
