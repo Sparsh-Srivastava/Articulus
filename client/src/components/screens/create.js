@@ -53,7 +53,7 @@ const Create = ({match}) => {
     top:"50rem",
     background: primary,
     margin: "1%",
-    width: "1150px",
+    width: "1050px",
     marginBottom:"0px;",
     height: "auto",
     color: secondary,
@@ -87,7 +87,7 @@ const Create = ({match}) => {
       <>
       <Navbar/>
       <div className='create'>
-      <div className="container">
+      
       <form onSubmit={newArticle} className="create-form">
         <h3 className="register-screen__title">Create Article</h3><hr/>
         {error && <span className="error-message">{error}</span>}
@@ -135,7 +135,7 @@ const Create = ({match}) => {
             name='subtitle'
             id='areacontent'
             className='form'
-            cols='130'
+            cols='110'
             rows='8'
             value={subtitle}
             onChange={(e) => setSubtitle(e.target.value)}
@@ -181,17 +181,31 @@ const Create = ({match}) => {
           </div>
           
         </div>
-        <button type="submit" className="btn fix-btn btn-primary">
+        {/* <button type="submit" className="btn fix-btn ">
           Create
-        </button>
+        </button> */}
+        
+         <div class="wrapper">
+  <div class="link_wrapper">
+    <a className="btn-create"href="#">Create</a>
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+        <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+      </svg>
+    </div>
+  </div>
+  
+</div>
       </form>
+      <h4 className="preview-header">Preview</h4>
     <div className="preview" style={mailer}>
+    
     <h4>{parse(marked(title))}</h4>
     <hr/>
     <h6>{parse(marked(subtitle))}</h6>
   </div>
   {/* <div className="space">This is empty space</div> */}
-  </div>
+  
           </div>
   </>
     )

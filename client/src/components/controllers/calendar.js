@@ -58,7 +58,7 @@ const Cal = () => {
                 events={myEventsList}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ height: 400, width: 700, zIndex: 10, backgroundColor: "rgba(255,255,255, 0.7)" }}
+                style={{ height: 400, width: 700, zIndex: 10, backgroundColor: "#b8b5ff98"}}
             />
         </div>
     )

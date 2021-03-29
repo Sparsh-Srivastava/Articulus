@@ -40,11 +40,16 @@ const UserArticles = ({match}) => {
       ) : (
         <>
         <Navbar/>
+
+        
+      
          <div className="itemsContainer">
+         
              {console.log(articles)}
             {articles.map(article => {
                 return(
                 <div className="it-em" key={article._id}>
+               
                         <div className="cover c">
                         {/* <Link style={{ textDecoration: 'none'}} className="icon">
                           <FaTrash
@@ -58,7 +63,7 @@ const UserArticles = ({match}) => {
                           }}
                           />
                         </Link> */}
-                        <Link to={"item/" + article._id} style={{ textDecoration: 'none'}} className="icon">
+                        <Link to={"item/" + article._id} style={{ textDecoration: 'none'}} className="icon-1">
                           <FaMarker 
                           className='EditIcon'
                           style={{
@@ -69,7 +74,7 @@ const UserArticles = ({match}) => {
                           }}
                           />
                         </Link>
-                        <Link exact to={"/item/" + article._id} style={{ textDecoration: 'none'}} className="icon">
+                        <Link exact to={"/item/" + article._id} style={{ textDecoration: 'none'}} className="icon-1">
                           <FaEye
                           className='ViewIcon'
                           style={{
