@@ -11,7 +11,8 @@ import Sidebar from '../controllers/sidebar'
 import Navbar from "../controllers/sidebar"
 
 const View = (props) => {
-    const[data, setData] = useState("")
+  const [data, setData] = useState("")
+  const [id, setId] = useState("")
   const [error, setError] = useState("");
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("")
@@ -36,6 +37,7 @@ const View = (props) => {
         // console.log(this.props.match.params.id);
         const { data } = await axios.get(`/article/${props.match.params.id}`, config);
         setData(data)
+        setId(data.id)
         setTitle(parse(marked(data.article.title)))
         setSubtitle(parse(marked(data.article.subtitle)))
         setPrimary(data.article.primary)
@@ -94,6 +96,31 @@ const View = (props) => {
     }
   }
 
+  console.log(props.match.params.id);
+
+  const follow = async () => {
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    try {
+      // console.log(this.props.match.params.id);
+      const { data } = await axios.post(
+        `/follow/${props.match.params.id}/${localStorage.getItem("id")}`,
+        config
+      );
+
+    } catch (error) {
+      localStorage.removeItem("authToken");
+      localStorage.removeItem("id")
+      setError("You are not authorized please login");
+      console.log(error);
+    }
+  }
+
   const style = {
     background: primary,
     backgroundColor: "yellowgreen",
@@ -113,6 +140,7 @@ const View = (props) => {
      <div className="App art">
      <div class="full-view" style={style}>
          {/* {console.log(comments)} */}
+         <button onClick={follow}>Follow</button>
         <h3>{title}</h3>
         <hr/>
         <h5>{subtitle}</h5>

@@ -16,6 +16,7 @@ import UserArticles from "./components/screens/userArticles"
 import Profile from "./components/screens/profile"
 import Update from "./components/screens/update"
 import View from "./components/screens/viewArticles"
+import Social from "./components/screens/followers"
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route exact path="/register" component={RegisterScreen} />
           <Route exact path="/" component={LandingScreen} />
           <PrivateRoute exact path="/all" component={all}/>
+          <PrivateRoute exact path="/followers/:id" component={Social}/>
           <Route
             exact
             path="/forgotpassword"

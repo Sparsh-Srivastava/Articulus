@@ -46,15 +46,21 @@ function Navbar() {
       cName: 'nav-text'
     },
     {
-      title: 'Profile',
-      path: `/profile/${id}`,
-      icon: <IoIcons.IoMdPeople />,
-      cName: 'nav-text'
-    },
-    {
       title: 'Articles',
       path: '/all',
       icon: <FaIcons.FaEnvelopeOpenText />,
+      cName: 'nav-text'
+    },
+    {
+      title: 'Followers',
+      path: `/followers/${id}`,
+      icon: <FaIcons.FaEllipsisH />,
+      cName: 'nav-text'
+    },
+    {
+      title: 'Profile',
+      path: `/profile/${id}`,
+      icon: <IoIcons.IoMdPeople />,
       cName: 'nav-text'
     },
   ];

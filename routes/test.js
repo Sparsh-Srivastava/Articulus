@@ -166,4 +166,102 @@ Router.get("/mean/:user", async(req, res) => {
     res.send(body)
 })
 
+Router.post("/follow/:author/:user", async (req,res) => {
+    // let followera = []
+    // let following = []
+    const author = req.params.author
+    const user = req.params.user
+
+    console.log(author);
+    console.log(user);
+
+    try {
+        // const authorName = await User.findById(author)
+        const authorName = await Article.findById(author).populate("user")
+        const userName = await User.findById(user)
+
+        const writer = authorName.user
+
+        writer.following.push(writer._id)
+        userName.followers.push(userName._id)
+
+        await writer.save()
+        await userName.save()
+
+        // const wid = writer._id
+        // const wname = writer.username
+        // const wlast = writer.last
+        // const wemail = writer.email
+
+        // writer.following.push({
+        //     id: wid,
+        //     name: wname,
+        //     last: wlast,
+        //     email: wemail
+        // })
+
+        // userName.followers.push({
+        //     id: userName._id,
+        //     name: userName.username,
+        //     last: userName.last,
+        //     email: userName.email
+        // })
+
+        // console.log(authorName);
+        // console.log(userName);
+
+        // console.log(authorName);
+        // console.log(userName);
+
+        // authorName.following.push(userName._id);
+        // await authorName.save()
+        // userName.followers.push(authorName._id)
+        // await userName.save()
+
+        // res.json({
+        //     a: followera,
+        //     b: following
+        // })
+    } catch (error) {
+        console.log("Damn, the time constraint");
+        console.log(error);
+    }
+
+    // if (authorName._id === userName._id) {
+    //     return res.status(400).json({ alreadyfollow : "You cannot follow yourself"})
+    // } 
+
+    // const userById = await User.findById(id)
+    // userById.articles.push(article);
+    // await userById.save();
+    
+})
+
+Router.get("/social/:id", async(req, res) => {
+    let body = [];
+    let id = req.params.id
+    let folling = []
+    const data = await User.findById(id).populate("followers").populate("following")
+    const followers = data.followers
+    const following = data.following
+    // const creator = await User.findById(ans.comments._id)
+    // console.log(ans.comments);
+    // followers.forEach(async (id) => {
+    //     const follow = await User.findById(id)
+    //     const name = follow.username
+    //     console.log(follow.username);
+    //     body.push({
+    //         name: name,
+    //     });
+    //     console.log(body);
+    // });
+
+    // await console.log(body);
+
+    res.json({
+        followers: following,
+        following: followers
+    })
+})
+
 module.exports = Router
