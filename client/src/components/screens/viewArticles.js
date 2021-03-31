@@ -174,8 +174,8 @@ const View = (props) => {
       </center>
       <br/>
       
-      <button type="submit" className="btn fix-btn btn-me">
-          Create
+      <button type="submit" className=" btn-me fix-btn">
+          <span>Create</span>
         </button>
         </div>
       </form>

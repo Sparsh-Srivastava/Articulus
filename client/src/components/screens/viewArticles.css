@@ -1,7 +1,7 @@
 .com-m {
   padding: 1.5rem;
-  background-color: #acdbdf;
-  width:1000px;
+  background-color: #7868e6;
+  width: 1000px;
   position: relative;
   left: 100px;
   margin-top: 50px;
@@ -14,12 +14,45 @@
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  
+  border: none;
   width: 900px;
   height: 3rem;
 }
+.rating {
+  border: none;
+  padding: 10px;
+}
 .btn-me {
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: #b8b5ff;
+  border-radius: 20px;
+  box-shadow: 6px 6px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  font-size: 20px;
+}
+.btn-me span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn-me span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.btn-me:hover span {
+  padding-right: 25px;
+}
+
+.btn-me:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 /* .cms
   {
@@ -27,20 +60,17 @@
     left:50px;
   } */
 
-  .date-view
-  {
-    color: white;
-    font-size: smaller;
-    text-shadow: 2px 2px 4px blue;
-  }
-  .art
-  {
-    position: absolute;
-    top:50px;
-    left:250px;
-    padding-bottom: 0px;
-  }
-  .full-view
-  {
-  width:1000px;
-  }
+.date-view {
+  color: white;
+  font-size: smaller;
+  text-shadow: 2px 2px 4px blue;
+}
+.art {
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  padding-bottom: 0px;
+}
+.full-view {
+  width: 1000px;
+}

@@ -172,11 +172,12 @@ const Create = ({match}) => {
             <select
               name='status'
               value={status}
+              className="status"
               onChange={(e) => setStatus(e.target.value)}
             >
-              <option value=' '>---Choose---</option>
-              <option value='Free'>Free</option>
-              <option value='Premium'>Premium</option>
+              <option className="stat" value=' '>---Choose---</option>
+              <option className="stat" value='Free'>Free</option>
+              <option className="stat" value='Premium'>Premium</option>
         </select>
           </div>
           

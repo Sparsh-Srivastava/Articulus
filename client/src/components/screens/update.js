@@ -225,11 +225,12 @@ const Update = ({match}) => {
         <select
               name='status'
               value={status}
+              className="status"
               onChange={(e) => setStatus(e.target.value)}
             >
-              <option value=' '>---Choose---</option>
-              <option value='Free'>Free</option>
-              <option value='Premium'>Premium</option>
+              <option className="stat" value=' '>---Choose---</option>
+              <option className="stat" value='Free'>Free</option>
+              <option className="stat" value='Premium'>Premium</option>
         </select>
 
         </div>
@@ -254,6 +255,11 @@ const Update = ({match}) => {
         className='deleteIcon'
         onClick={deleteArticle}
         style={{
+          backgroundColor:"black",
+          color:"red",
+          height:"60px",
+          width:"55px",
+          padding:"16px",
           marginLeft: "20px",
           top: "2px",
           position: "relative",
