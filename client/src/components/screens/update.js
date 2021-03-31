@@ -235,10 +235,10 @@ const Update = ({match}) => {
 
         </div>
         </div>
-        {/* <button type="submit" className="btn fix-btn btn-primary">
+        <button type="submit" className="btn fix-btn btn-primary">
           Update
-        </button> */}
-        <div class="wrapper">
+        </button>
+        {/* <div class="wrapper">
   <div class="link_wrapper">
     <a className="btn-create"href="#">Update</a>
     <div class="icon">
@@ -248,7 +248,7 @@ const Update = ({match}) => {
     </div>
   </div>
   
-</div>
+</div> */}
         
         {/* <Link style={{ textDecoration: 'none'}} className="icon"> */}
         <FaTrash

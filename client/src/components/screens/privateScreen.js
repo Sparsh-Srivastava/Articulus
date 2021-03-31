@@ -65,7 +65,7 @@ const PrivateScreen = (props) => {
 
      </div>
      <div class="graph-1">
-     <div className="text">Top Rated Articles</div>
+     {/* <div className="text">Top Rated Articles</div> */}
        <Bar/>
      </div>
     </div>

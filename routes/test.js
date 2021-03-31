@@ -182,10 +182,13 @@ Router.post("/follow/:author/:user", async (req,res) => {
 
         const writer = authorName.user
 
-        writer.following.push(writer._id)
-        userName.followers.push(userName._id)
+        const writer_id = writer._id
+        const genius = await User.findById(writer_id)
 
-        await writer.save()
+        genius.followers.push(userName._id)
+        userName.following.push(genius._id)
+
+        await genius.save()
         await userName.save()
 
         // const wid = writer._id
@@ -218,10 +221,10 @@ Router.post("/follow/:author/:user", async (req,res) => {
         // userName.followers.push(authorName._id)
         // await userName.save()
 
-        // res.json({
-        //     a: followera,
-        //     b: following
-        // })
+        res.json({
+            a: genius,
+            b: userName
+        })
     } catch (error) {
         console.log("Damn, the time constraint");
         console.log(error);

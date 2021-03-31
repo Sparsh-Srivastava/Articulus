@@ -182,11 +182,11 @@ const Create = ({match}) => {
           </div>
           
         </div>
-        {/* <button type="submit" className="btn fix-btn ">
+        <button type="submit" className="btn fix-btn btn-danger">
           Create
-        </button> */}
+        </button>
         
-         <div class="wrapper">
+         {/* <div class="wrapper">
   <div class="link_wrapper">
     <a className="btn-create"href="#">Create</a>
     <div class="icon">
@@ -196,7 +196,7 @@ const Create = ({match}) => {
     </div>
   </div>
   
-</div>
+</div> */}
       </form>
       <h4 className="preview-header">Preview</h4>
     <div className="preview" style={mailer}>
