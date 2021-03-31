@@ -26,170 +26,154 @@ input[type="color"] {
     justify-content: center;
     align-items: center;
   } */
-  body{
-    text-decoration: none;
+body {
+  text-decoration: none;
 }
-.create{
-  
-display: flex;
-font-family: 'Kiwi Maru', serif;
-font-weight: 500;
-position: absolute;
-left:300px;
-margin-left: 50px;
-
+.create {
+  display: flex;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 500;
+  position: absolute;
+  left: 300px;
+  margin-left: 50px;
 }
-.update
-{
-  position:absolute;
-  left:50px;
+.update {
+  position: absolute;
+  left: 50px;
 }
 input[type="color"] {
-    -webkit-appearance: none;
-    border: none;
-    width: 30%;
-    height: 5vh;
-  }
-  input[type="color"]::-webkit-color-swatch-wrapper {
-    background: rgba(255, 255, 255, 1);
-    padding: 0;
-  }
-  input[type="color"]::-webkit-color-swatch {
-    border: none;
-    border-radius: 10vh;
-  }
-    input[name=title]
-    {
-      width:900px;
-      border-radius: 10px;
-    }
-    
-    
-  .create-form{
-    border: 1px solid #301b3f;
-    width:1000px;
-    height: 570px;
-    font-family: 'Kiwi Maru', serif;
-    font-weight: 400;
-    color:#301b3f;
-    border-radius: 15px;
-    padding: 1rem;
-    /* background: rgb(237,237,237); */
-    background-color: #eeebdd99;
-    justify-content: center;
-    position: absolute;
-     top:100px;
-    align-items: center;
-    z-index: -1;
-  }
-  .fix-btn
-  {
-    padding:8px 25px;
-    margin-left: 350px;
-    display:block;
-    background-color:#301b3f;
-    width:300px;
-  }
-  .f-grp{
-    padding-left:20px;
-    
-  }
-  .form-group textarea{
-    border-radius: 15px;
-  }
-  /* .ppppp
+  -webkit-appearance: none;
+  border: none;
+  width: 30%;
+  height: 5vh;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  background: rgba(255, 255, 255, 1);
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 10vh;
+}
+input[name="title"] {
+  width: 900px;
+  border-radius: 10px;
+}
+
+.create-form {
+  border: 1px solid #301b3f;
+  width: 1000px;
+  height: 570px;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  color: #301b3f;
+  border-radius: 15px;
+  padding: 1rem;
+  /* background: rgb(237,237,237); */
+  background-color: #eeebdd99;
+  justify-content: center;
+  position: absolute;
+  top: 100px;
+  align-items: center;
+  z-index: -1;
+}
+.fix-btn {
+  padding: 8px 25px;
+  margin-left: 350px;
+  display: block;
+  background-color: #301b3f;
+  width: 300px;
+}
+.f-grp {
+  padding-left: 20px;
+}
+.form-group textarea {
+  border-radius: 15px;
+}
+/* .ppppp
   {
     display:block;
     margin:50px;
 
   } */
-  /* .colors,.bg
+/* .colors,.bg
   {
     display:inline-block;
     float:left;
     
   } */
-  .register-screen__title
-  {
-    color:#301b3f;
-  }
-  .colour
-{
+.register-screen__title {
+  color: #301b3f;
+}
+.colour {
   margin-bottom: 20px;
 }
-  .xxa{
-    margin-left:20px;
-  }
-.xxb
-{
- margin-left:150px;  
+.xxa {
+  margin-left: 20px;
 }
-.xxc
-{
+.xxb {
+  margin-left: 150px;
+}
+.xxc {
   margin-left: 250px;
 }
-  .choice
-  {
-    border-radius: 5px;
-    background-color: red;
-  }
+.choice {
+  border-radius: 5px;
+  background-color: red;
+}
 
-  div.space{
-    display: block;
-    height: 200px;
-    width: 100px;
-  }
+div.space {
+  display: block;
+  height: 200px;
+  width: 100px;
+}
 
-  div.space2{
-    display: inline-block;
-    width: 170px;
-  }
+div.space2 {
+  display: inline-block;
+  width: 170px;
+}
 
-  div.space3{
-    display: inline-block;
-    width: 20px;
-  }
+div.space3 {
+  display: inline-block;
+  width: 20px;
+}
 
 .tab2 {
   tab-size: 4;
 }
 
-.deleteIcon
-{
+.deleteIcon {
   border-radius: 20px;
-  height:30px;
-  width:40px;
-  color:black;
- 
+  height: 30px;
+  width: 40px;
+  color: black;
+
   box-shadow: 10px 10px 5px #ccc;
-      -moz-box-shadow: 10px 10px 5px #ccc;
-      -webkit-box-shadow: 10px 10px 5px #ccc;
-      -khtml-box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
 }
-.deleteIcon :hover
-{
-  color: red;
-}
-.preview-header{
-position: absolute;
-top:47rem;
-left: 32rem;
+
+.preview-header {
+  position: absolute;
+  top: 47rem;
+  left: 32rem;
 }
 
 /* button */
-.wrapper{
+.wrapper {
   position: absolute;
-  
+
   top: 525px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.link_wrapper{
+.link_wrapper {
   position: relative;
 }
 
- .btn-create{
+.btn-create {
   display: block;
   width: 250px;
   height: 50px;
@@ -202,12 +186,12 @@ left: 32rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 3px solid #333;
-  transition: all .35s;
-  font-family: 'Kiwi Maru', serif;
-font-weight: 500;
-} 
+  transition: all 0.35s;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 500;
+}
 
-.icon{
+.icon {
   width: 50px;
   height: 50px;
   border: 3px solid transparent;
@@ -217,20 +201,20 @@ font-weight: 500;
   right: 0;
   top: 0;
   z-index: -1;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.icon svg{
+.icon svg {
   width: 30px;
   position: absolute;
   top: calc(50% - 15px);
   left: calc(50% - 15px);
   transform: rotate(-45deg);
   fill: #482b5d;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.btn-create:hover{
+.btn-create:hover {
   width: 200px;
   border: 3px solid #482b5d;
   background: transparent;
@@ -238,9 +222,17 @@ font-weight: 500;
   color: #482b5d;
 }
 
-.btn-create:hover + .icon{
+.btn-create:hover + .icon {
   border: 3px solid #482b5d;
   right: -25%;
 }
-
-
+.deleteIcon:hover {
+  background-color: azure;
+}
+.status {
+  border-radius: 10px;
+  border: 3px solid #7868e6;
+}
+.stat {
+  background-color: #e4fbff;
+}

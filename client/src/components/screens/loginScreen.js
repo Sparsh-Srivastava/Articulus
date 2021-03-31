@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./loginScreen.css";
+import loginsvg from "./Layer 2.svg";
 
 const LoginScreen = ({ history }) => {
   const [email, setEmail] = useState("");
@@ -44,6 +45,10 @@ const LoginScreen = ({ history }) => {
   };
 
   return (
+    <div className="container">
+      <div className="login-svg">
+        <img src={loginsvg}></img>
+      </div>
     <div className="login-screen">
       <form onSubmit={loginHandler} className="login-screen__form">
         <h3 className="login-screen__title">Login</h3><hr/>
@@ -86,6 +91,7 @@ const LoginScreen = ({ history }) => {
           Don't have an account? <Link to="/register">Register</Link>
         </span>
       </form>
+    </div>
     </div>
   );
 };
