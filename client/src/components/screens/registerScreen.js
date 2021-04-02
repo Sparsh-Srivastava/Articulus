@@ -152,7 +152,7 @@ const RegisterScreen = ({ history }) => {
         </div>
         
         </div>
-        <div class="flip-card-back"><button id="flip-card-btn-turn-to-front"></button>
+        <div class="flip-card-back"><button id="flip-card-btn-turn-to-front">flip back</button>
         <div className="form-group">
           <label htmlFor="age">Age:</label>
           <input
