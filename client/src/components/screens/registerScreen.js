@@ -3,7 +3,20 @@ import axios from "axios";
 import { Link ,Route } from "react-router-dom";
 import "./registerScreen.css";
 // import subscription from "./subscription.js"
+document.addEventListener('DOMContentLoaded', function(event) {
 
+  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
+  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+
+  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+});
 const RegisterScreen = ({ history }) => {
   const [username, setUsername] = useState("");
   const [last, setLast] = useState("");
@@ -61,8 +74,18 @@ const RegisterScreen = ({ history }) => {
 
   return (
     
+    
     <div className="register-screen">
+    <div class="flip-card-3D-wrapper">
+<div id="flip-card">
+	
+	
+
+
       <form onSubmit={registerHandler} className="register-screen__form">
+      <div class="flip-card-front">
+     
+      
         <h3 className="register-screen__title">Register</h3><hr/>
         {error && <span className="error-message">{error}</span>}
         <div className="form-group">
@@ -125,9 +148,11 @@ const RegisterScreen = ({ history }) => {
             value={confirmpassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
+          <button id="flip-card-btn-turn-to-back">Next</button>
         </div>
         
-        
+        </div>
+        <div class="flip-card-back"><button id="flip-card-btn-turn-to-front"></button>
         <div className="form-group">
           <label htmlFor="age">Age:</label>
           <input
@@ -242,17 +267,21 @@ const RegisterScreen = ({ history }) => {
   </label>
 </div>
 </div>
- <button type="submit" className="btn btn-primary">
+ <button type="submit" className="btn btn-primary btn-register">
           Register
         </button>
 
         <span className="register-screen__subtext">
           Already have an account? <Link to="/login">Login</Link>
         </span>
-        
+        </div>
+       
       </form>
-      
+      </div>
+        
+        </div>
     </div>
+    
     
     
 
