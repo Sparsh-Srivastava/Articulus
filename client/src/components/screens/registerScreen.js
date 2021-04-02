@@ -3,7 +3,20 @@ import axios from "axios";
 import { Link ,Route } from "react-router-dom";
 import "./registerScreen.css";
 // import subscription from "./subscription.js"
+document.addEventListener('DOMContentLoaded', function(event) {
 
+  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
+  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+
+  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+});
 const RegisterScreen = ({ history }) => {
   const [username, setUsername] = useState("");
   const [last, setLast] = useState("");
@@ -61,8 +74,18 @@ const RegisterScreen = ({ history }) => {
 
   return (
     
+    
     <div className="register-screen">
+    <div class="flip-card-3D-wrapper">
+<div id="flip-card">
+	
+	
+
+
       <form onSubmit={registerHandler} className="register-screen__form">
+      <div class="flip-card-front">
+     
+      
         <h3 className="register-screen__title">Register</h3><hr/>
         {error && <span className="error-message">{error}</span>}
         <div className="form-group">
@@ -125,12 +148,140 @@ const RegisterScreen = ({ history }) => {
             value={confirmpassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
+          <button id="flip-card-btn-turn-to-back">Next</button>
         </div>
         
-        <Link to="/subscription">next</Link>
-        
+        </div>
+        <div class="flip-card-back"><button id="flip-card-btn-turn-to-front"></button>
+        <div className="form-group">
+          <label htmlFor="age">Age:</label>
+          <input
+            type="number"
+            required
+            id="age"
+            placeholder="Enter Age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="gender">Gender:</label>
+          {/* <input
+            type="text"
+            required
+            id="gender"
+            placeholder="Enter Gender"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+          /> */}
+          <select
+              name='gender'
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value=' '>---Choose---</option>
+              <option value='Male'>Male</option>
+              <option value='Female'>Female</option>
+              <option value='Rather not say'>Rather not say</option>
+            </select>
+        </div>
+<div className="form-group">
+<label htmlFor="sub">Subscription:</label>
+{/* <input
+  type="text"
+  required
+  id="sub"
+  placeholder="Enter Subscription"
+  value={sub}
+  onChange={(e) => setSub(e.target.value)}
+/> */}
+{/* <input 
+  type="radio" 
+  required
+  name="Free"
+  value={sub} 
+  checked={sub === sub}
+  onChange={(e) => setSub(e.target.value)} 
+/>
+<input 
+  type="radio" 
+  required
+  name="Premium"
+  value={sub} 
+  checked={sub === sub}
+  onChange={(e) => setSub(e.target.value)} 
+/> */}
+{/* <input 
+  type="radio" 
+  required
+  id="Free" 
+  name="sub" 
+  value="Free"
+  onChange={(e) => setSub(e.target.value)}
+/>
+<label for="Free">Free</label>
+<input 
+  type="radio" 
+  id="Premium" 
+  name="sub" 
+  value="Premium"
+  onChange={(e) => setSub(e.target.value)}
+/>
+<label for="Premium">Premium</label> */}
+
+<div class="grid">
+  <label class="card">
+  <input 
+    type="radio"
+    required 
+    name="plan" 
+    value="Free"
+    onChange={(e) => setSub(e.target.value)}  
+    class="radio" 
+    checked
+  />
+
+  <span class="plan-details">
+    <span class="plan-type">Basic</span>
+    <span class="plan-cost">₹0<span class="slash">/</span><abbr class="plan-cycle" title="month">mo</abbr></span>
+    <span>Access to community articles</span>
+    <span>Only read articles</span>
+    <span>No exclusive features</span>
+  </span>
+  </label>
+  <label class="card">
+    <input 
+      name="plan" 
+      class="radio" 
+      type="radio"
+      value="Premium"
+      onChange={(e) => setSub(e.target.value)}
+    />
+    <span class="plan-details" aria-hidden="true">
+      <span class="plan-type">Premium</span>
+      <span class="plan-cost">₹200<span class="slash">/</span><abbr class="plan-cycle" title="month">mo</abbr></span>
+      <span>Access to all articles</span>
+      <span>Read and Create Articles</span>
+      <span>Exclusive features</span>
+    </span>
+  </label>
+</div>
+</div>
+ <button type="submit" className="btn btn-primary btn-register">
+          Register
+        </button>
+
+        <span className="register-screen__subtext">
+          Already have an account? <Link to="/login">Login</Link>
+        </span>
+        </div>
+       
       </form>
+      </div>
+        
+        </div>
     </div>
+    
     
     
 

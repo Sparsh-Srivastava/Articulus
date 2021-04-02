@@ -19,11 +19,7 @@
   margin-bottom: 1rem;
 }
 
-.register-screen__subtext {
-  font-size: 0.7rem;
-  display: block;
-  margin: 0.5rem 0;
-}
+
 
 :root {
   --card-line-height: 1.2em;
@@ -44,7 +40,7 @@
 }
 @media (min-width: 42em) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .card {
@@ -149,4 +145,101 @@
 }
 .next{
   margin-left: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#flip-card {
+ 
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.do-flip {
+  -o-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+#flip-card .flip-card-front, #flip-card .flip-card-back{
+  
+  position: absolute;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+
+}
+
+#flip-card .flip-card-back {
+    
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.register-screen__form{
+  margin-right: 50px;
+  position: absolute;
+  width:450px;
+  height:750px;
+  top:50px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  background-color: rgba(225, 225, 225);
+}
+#flip-card-btn-turn-to-back
+{
+  margin: 25px 120px;
+  width:100px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #3c3f58;
+
+}
+.form-group
+{
+  padding-right: 50px;
+  padding-left: 30px;
+}
+
+label .card{
+    user-select: auto;
+    width: 252px;
+    height: 212px;
+
+}
+
+.btn-register
+{
+  background-color: #3c3f58;
+  margin-left: 120px;
+width:200px;
+}
+
+.register-screen__subtext {
+  font-size: 0.7rem;
+  display: block;
+  margin: 0.5rem 35px;
 }
