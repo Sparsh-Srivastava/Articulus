@@ -49,6 +49,7 @@ const RegisterScreen = ({ history }) => {
       );
 
       localStorage.setItem("authToken", data.token);
+      localStorage.setItem("id", data.id)
 
       history.push(`/dashboard/${data.id}`);
     } catch (error) {
@@ -60,21 +61,16 @@ const RegisterScreen = ({ history }) => {
   };
 
   return (
-    
-    
-  
-	
-	
-
 
       <form onSubmit={registerHandler} className="register-screen__form">
+        {error && <span className="error-message">{error}</span>}
      <div class="user-ragistration">
 	<div class="container register">
                 <div class="row">
                     <div class="col-md-3 register-left">
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
                         <h3>Welcome</h3>
-                        <p>You are 30 seconds away from earning your own money!</p>
+                        <p>You are 30 seconds away from reading you heart out!</p>
                         
                     </div>
                     <div class="col-md-9 register-right">
@@ -282,7 +278,10 @@ const RegisterScreen = ({ history }) => {
 </div>
                                         
                             
-                                        <input type="submit" class="btnRegister"  value="Register"/>                                      
+                                        {/* <input type="submit" class="btnRegister"  value="Register"/>*/}
+        <button type="submit" className="btn btn-primary btn-register">
+          Register
+        </button>
        </div>
 
 
