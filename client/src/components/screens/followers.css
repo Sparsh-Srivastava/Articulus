@@ -1,5 +1,47 @@
-.followers{
-    position: absolute;
-    left: 260px;
-    width: 80%;
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+.follow {
+  position: absolute;
+  left: 28rem;
+  width: 60%;
+  margin-top: 5rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 10px;
+  display: flex;
+}
+.following {
+  float: left;
+  width: 300px;
+  margin: 3rem;
+  margin-left: 8rem;
+}
+.cf {
+  text-transform: uppercase;
+  font-family: "Patrick Hand", cursive;
+  margin-left: 3rem;
+}
+.followers {
+  width: 300px;
+  margin: 3rem;
+}
+.icn {
+  color: black;
+}
+.icm {
+  color: black;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.cv {
+  background-color: chartreuse;
 }
