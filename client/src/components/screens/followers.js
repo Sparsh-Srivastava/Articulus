@@ -3,6 +3,7 @@ import axios from 'axios'
 import Navbar from "../controllers/sidebar"
 import "./followers.css"
 
+
 const Followers = () => {
 
     const [data, setData] = useState([])
@@ -36,29 +37,29 @@ const Followers = () => {
       <>
       <Navbar/>
         <div className="followers">
-            <h1>Hello</h1>
+            
             {console.log(data)}
-            <p>Following</p>
             {data.map(packet => {
               return(
                 <>
               <div className="item" key={packet._id}>
-                      <div className="cover">{packet.username}<hr/>{packet.username}{packet.last}</div>
+                      <div className="cover"><i class="fas fa-users icn"></i>{packet.username} {packet.username} {packet.last}</div>
               </div>
               </>
             )
             })}
-            <p>Followers</p>
             {followers.map(packet => {
               return(
                 <>
               <div className="item" key={packet._id}>
-                      <div className="cover">{packet.username}<hr/>{packet.username}{packet.last}</div>
+                      <div className="cover"> <i class="fas fa-users icn"></i> {packet.username} {packet.username} {packet.last}</div>
               </div>
               </>
             )
             })}
+            
         </div>
+        
       </>
     )
 }

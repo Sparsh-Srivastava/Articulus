@@ -1,5 +1,46 @@
-.followers{
-    position: absolute;
-    left: 260px;
-    width: 80%;
+.followers {
+  position: absolute;
+  left: 39rem;
+  width: 30%;
+  padding-top: 90px;
+  padding-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 3rem;
+  /* background-color: #b8b5ff; */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 25px;
+  border: 1px solid #7868e6;
+  box-shadow: 0px 6px 12px #7868e6;
+}
+.foll-name {
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.following {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+.cover {
+  background-color: #edeef7;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.icn {
+  color: black;
+  margin-right: 1rem;
 }
