@@ -3,20 +3,7 @@ import axios from "axios";
 import { Link ,Route } from "react-router-dom";
 import "./registerScreen.css";
 // import subscription from "./subscription.js"
-document.addEventListener('DOMContentLoaded', function(event) {
 
-  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
-  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
-
-  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
-  document.getElementById('flip-card').classList.toggle('do-flip');
-  };
-
-  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
-  document.getElementById('flip-card').classList.toggle('do-flip');
-  };
-
-});
 const RegisterScreen = ({ history }) => {
   const [username, setUsername] = useState("");
   const [last, setLast] = useState("");
@@ -75,19 +62,36 @@ const RegisterScreen = ({ history }) => {
   return (
     
     
-    <div className="register-screen">
-    <div class="flip-card-3D-wrapper">
-<div id="flip-card">
+  
 	
 	
 
 
       <form onSubmit={registerHandler} className="register-screen__form">
-      <div class="flip-card-front">
-     
-      
-        <h3 className="register-screen__title">Register</h3><hr/>
-        {error && <span className="error-message">{error}</span>}
+     <div class="user-ragistration">
+	<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Previous</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Next</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Register</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                    {error && <span className="error-message">{error}</span>}
         <div className="form-group">
           <label htmlFor="name">First Name:</label>
           <input
@@ -124,6 +128,9 @@ const RegisterScreen = ({ history }) => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+                                    </div>
+                                    <div class="col-md-6">
+          
        
         <div className="form-group">
           <label htmlFor="password">Password:</label>
@@ -148,11 +155,7 @@ const RegisterScreen = ({ history }) => {
             value={confirmpassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <button id="flip-card-btn-turn-to-back">Next</button>
-        </div>
-        
-        </div>
-        <div class="flip-card-back"><button id="flip-card-btn-turn-to-front">flip back</button>
+        </div>  
         <div className="form-group">
           <label htmlFor="age">Age:</label>
           <input
@@ -185,7 +188,17 @@ const RegisterScreen = ({ history }) => {
               <option value='Rather not say'>Rather not say</option>
             </select>
         </div>
-<div className="form-group">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Subscription</h3>
+                                <div class="row register-form">
+                                    
+                                    <div class="col-md-12">
+                                    <div className="form-group">
 <label htmlFor="sub">Subscription:</label>
 {/* <input
   type="text"
@@ -267,20 +280,26 @@ const RegisterScreen = ({ history }) => {
   </label>
 </div>
 </div>
- <button type="submit" className="btn btn-primary btn-register">
-          Register
-        </button>
+                                        
+                            
+                                        <input type="submit" class="btnRegister"  value="Register"/>                                      
+       </div>
+
 
         <span className="register-screen__subtext">
           Already have an account? <Link to="/login">Login</Link>
         </span>
-        </div>
-       
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+</div>
       </form>
-      </div>
+      
         
-        </div>
-    </div>
+       
     
     
     
