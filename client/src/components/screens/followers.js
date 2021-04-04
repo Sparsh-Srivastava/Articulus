@@ -43,7 +43,7 @@ const Followers = () => {
             {data.map(packet => {
               return(
                 <>
-              <div className="item" key={packet._id}>
+              <div className="item tm" key={packet._id}>
                       <div className="cover cv">
                        
                       <h6 className="d">Name: {packet.username} {packet.last} <br></br>  email: {packet.email}<br></br> age: {packet.age}<br></br> Gender: {packet.gender}</h6> </div>
@@ -58,7 +58,7 @@ const Followers = () => {
             {followers.map(packet => {
               return(
                 <>
-              <div className="item" key={packet._id}>
+              <div className="item tm" key={packet._id}>
                       <div className="cover cv"><h6 className="d">Name: {packet.username} {packet.last} <br></br>  email: {packet.email}<br></br> age: {packet.age}<br></br> Gender: {packet.gender}</h6></div>
               </div>
               </>
