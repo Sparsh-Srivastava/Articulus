@@ -44,7 +44,10 @@ const Followers = () => {
               return(
                 <>
               <div className="item" key={packet._id}>
-                      <div className="cover cv"><i class="fas fa-user-check icn"></i> {packet.username} {packet.username} {packet.last}</div>
+                      <div className="cover cv">
+                       
+                      <h6 className="d">Name: {packet.username} {packet.last} <br></br>  email: {packet.email}<br></br> age: {packet.age}<br></br> Gender: {packet.gender}</h6> </div>
+                        
               </div>
               </>
             )
@@ -56,7 +59,7 @@ const Followers = () => {
               return(
                 <>
               <div className="item" key={packet._id}>
-                      <div className="cover cv"><i class="fas fa-user icm"></i> {packet.username} {packet.username} {packet.last}</div>
+                      <div className="cover cv"><h6 className="d">Name: {packet.username} {packet.last} <br></br>  email: {packet.email}<br></br> age: {packet.age}<br></br> Gender: {packet.gender}</h6></div>
               </div>
               </>
             )
