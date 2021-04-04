@@ -17,6 +17,7 @@ import Profile from "./components/screens/profile"
 import Update from "./components/screens/update"
 import View from "./components/screens/viewArticles"
 import Social from "./components/screens/followers"
+import NotFoundPage from './components/screens/404';
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
             path="/passwordreset/:resetToken"
             component={ResetPasswordScreen}
           />
+          <Route path="*" component={NotFoundPage} />
         </Switch>
       </div>
     </Router>

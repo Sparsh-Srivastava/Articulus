@@ -267,4 +267,19 @@ Router.get("/social/:id", async(req, res) => {
     })
 })
 
+Router.get("/values/:id", async (req, res) => {
+    let id = req.params.id
+
+    const user = await User.findById(id)
+
+    const followers = user.followers.length
+
+    const following = user.following.length
+
+    res.json({
+        followers: followers,
+        following: following
+    })
+})
+
 module.exports = Router

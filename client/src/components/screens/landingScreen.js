@@ -18,6 +18,37 @@ const landingScreen = () => {
      <Link to="/login"><button type="button" className="btn btn-dark btn-lg sign">Sign In</button></Link>
      <Link to="/register"><button type="button" className="btn btn-dark btn-lg sign">Sign Up</button></Link>
      </div>
+     <div class="card-holder2">
+  <div class="card2 bg-gold">
+    New York is Sunny today at 60°.
+  </div>
+</div>
+<div class="card-holder2">
+  <div class="card2 bg-news">
+    Breaking News <br/> 
+    Apple launches the new iPhone.
+  </div>
+</div>
+<div class="card-holder2">
+  <div class="card2 bg-germany">
+     Germany! Germany! Germany!!
+  </div>
+</div>
+<div class="card-holder2">
+  <div class="card2 bg-aurora">
+    New Planets<br/>Discovered
+  </div>
+</div>
+<div class="card-holder2">
+  <div class="card2 bg-purple">
+    The refreshing Black Currant Ice Cream is a wonderful treat.
+  </div>
+</div>
+<div class="card-holder2">
+  <div class="card2 bg-spring">
+   Keep Calm and Add Some Colors.
+  </div>
+</div>
     
 
 <footer>
