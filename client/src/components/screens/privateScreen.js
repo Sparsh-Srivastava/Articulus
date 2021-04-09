@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom'
 import { IconContext } from 'react-icons';
 import Calendar from '../controllers/calendar'
 import Bar from '../controllers/average'
+import Pie from '../controllers/pie'
 import Logo from './images/web.svg'
+import Line from '../controllers/line'
 import * as FaIcons from 'react-icons/fa';
 
 import {Redirect} from 'react-router-dom'
@@ -102,6 +104,8 @@ const PrivateScreen = (props) => {
      {/* <div className="text">Top Rated Articles</div> */}
        <Bar/>
      </div>
+     <Pie/>
+     <Line/>
     </div>
     </IconContext.Provider>
      

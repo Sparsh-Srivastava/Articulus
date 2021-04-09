@@ -24,6 +24,7 @@ const View = (props) => {
   const [info, setInfo] = useState([])
   const [date, setDate] = useState("")
   const [rating, setRating] = useState(0)
+  const [view, setView] = useState(0)
 
   useEffect(() => {
     const viewData = async () => {
@@ -62,6 +63,17 @@ const View = (props) => {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")
         setError("You are not authorized please login");
+      }
+
+      try {
+        // console.log(this.props.match.params.id);
+        const { data } = await axios.get(`/view/${props.match.params.id}`, config);
+        console.log(props.match.params.id);
+        setView(data.article.views)
+      } catch (error) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("id")
+        setError("Problem with VIEWS");
       }
 
     };
@@ -140,7 +152,8 @@ const View = (props) => {
      <div className="App art">
      <div class="full-view" style={style}>
          {/* {console.log(comments)} */}
-         <button onClick={follow}>Follow</button>
+         <button onClick={follow}>Follow</button><span>VIEWS: {view}</span>
+         {console.log(view)}
         <h3>{title}</h3>
         <hr/>
         <h5>{subtitle}</h5>

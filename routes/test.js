@@ -282,4 +282,60 @@ Router.get("/values/:id", async (req, res) => {
     })
 })
 
+Router.get('/view/:id', async function(req, res) {
+    var postId = req.params.id;
+    var ip = req.connection.remoteAddress;
+  
+//     Hit.find({postId: postId, ip: ip}).then(function(result) {
+//       //var newVisitor = false;
+//       if (!result) { /* add a new record and newVisitor = true */
+  
+//       return Post.find({id: postId}).then(function(post) {
+//         //if (newVisitor) { /* update the counter on the post */
+//         res.send(post);
+//       });
+//     };
+//   });
+    // const article = await Article.findById(postId)
+    // var views = article.views
+
+    // views += 2
+
+    // const article = await Article.findOneAndUpdate({id: postId}, {
+    //     views: 1
+    // }, function(err, aff, res) {
+    //     console.log(res)
+    // })
+
+    const article = await Article.findById(postId)
+
+    article.views = article.views + 1;
+
+    await article.save()
+
+    res.json({
+        article: article,
+        ip: ip
+    })
+})
+
+Router.get("/pie/:user", async(req, res) => {
+    let body = []
+    // var avrating = []
+    // let all = []
+    let view = []
+    const user = req.params.user
+    const details = await Article.find({user: user})
+    details.forEach((detail) => {
+        const title = detail.title
+        const comm = detail.views
+
+        body.push({
+            title: title,
+            views: comm
+        })
+    })
+    res.send(body)
+})
+
 module.exports = Router
