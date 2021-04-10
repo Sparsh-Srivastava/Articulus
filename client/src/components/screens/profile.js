@@ -15,6 +15,8 @@ const Pimage = () => {
 const Profile = ({match}) => {
   const [error, setError] = useState("");
   const [userData, setUserData] = useState("");
+  const [following, setFollowing] = useState([])
+  const [followers, setFollowers] = useState([])
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -29,6 +31,17 @@ const Profile = ({match}) => {
           let id = localStorage.getItem("id")
         const { data } = await axios.get(`/api/private/getuser/${match.params.id}`, config);
         setUserData(data);
+      } catch (error) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("id")
+        setError("You are not authorized please login");
+      }
+
+      try {
+        let id = localStorage.getItem("id")
+        const { data } = await axios.get(`/social/${localStorage.getItem("id")}`, config);
+        setFollowing(data.followers);
+        setFollowers(data.following);
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")
@@ -104,10 +117,10 @@ const Profile = ({match}) => {
                 <div class="profile-info-left">
                     <div class="text-center">
                         <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="Avatar" class="avatar img-circle"/>
-                        <h2>Name: {userData.username}</h2>
+                        <h2>{userData.username} {userData.last}</h2>
 
                     </div>
-                    <div class="action-buttons">
+                    {/* <div class="action-buttons">
                         <div class="row">
                             <div  >
                                 <a href="#" class="btn btn-success b"><i class="fa fa-plus-round"></i> Follow</a>
@@ -116,7 +129,7 @@ const Profile = ({match}) => {
                                 <a href="#" class="btn btn-primary b"><i class="fa fa-android-mail"></i> Message</a>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div class="section">
                         <h3>About Me</h3>
                         <p>Name: {userData.username}</p>
@@ -280,7 +293,22 @@ const Profile = ({match}) => {
                         </div>
                         
                         <div class="tab-pane fade" id="followers">
-                            <div class="media user-follower">
+                            {followers.map(packet => {
+                                return(
+                                    <>
+                                <div className="media user-follower" key={packet._id}>
+                                    <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User Avatar" class="media-object pull-left"/>
+                                    <div className="media-body">
+                                        <a href="#">{packet.username}<br/><span class="text-muted username">@{packet.last}</span></a>
+                                        <button type="button" class="btn-toggle-following pull-right f"><i class="fa fa-checkmark-round"></i> 
+                                        <span>Following</span></button>
+                                        {/* <h6 className="d">Name: {packet.username} {packet.last} <br></br>  email: {packet.email}<br></br> age: {packet.age}<br></br> Gender: {packet.gender}</h6> */}
+                                    </div>
+                                </div>
+                                </>
+                                )
+                            })}
+                            {/* <div class="media user-follower">
                                 <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User Avatar" class="media-object pull-left"/>
                                 <div class="media-body">
                                     <a href="#">Antonius<br/><span class="text-muted username">@mrantonius</span></a>
@@ -350,11 +378,26 @@ const Profile = ({match}) => {
                                     <a href="#">John Simmons<br/><span class="text-muted username">@jsimm</span></a>
                                     <button type="button" class=" btn-default pull-right"><i class="fa fa-plus"></i> Follow</button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         
                         <div class="tab-pane fade" id="following">
-                            <div class="media user-following">
+                        {following.map(packet => {
+                            return(
+                                <>
+                            <div className="media user-follower" key={packet._id}>
+                                <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User Avatar" class="media-object pull-left"/>
+                                <div className="media-body">
+                                    <a href="#">{packet.username}<br/><span class="text-muted username">@{packet.last}</span></a>
+                                    <button type="button" class="btn-danger btn-f btn-f pull-right"><i class="fa fa-close-round"></i> 
+                                    Unfollow</button>
+                                    {/* <h6 className="d">Name: {packet.username} {packet.last} <br></br>  email: {packet.email}<br></br> age: {packet.age}<br></br> Gender: {packet.gender}</h6> */}
+                                </div>
+                            </div>
+                            </>
+                            )
+                        })}
+                            {/* <div class="media user-following">
                                 <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User Avatar" class="media-object pull-left"/>
                                 <div class="media-body">
                                     <a href="#">Stella<br/><span class="text-muted username">@stella</span></a>
@@ -395,7 +438,7 @@ const Profile = ({match}) => {
                                     <a href="#">Stella<br/><span class="text-muted username">@stella</span></a>
                                     <button type="button" class=" btn-danger btn-f pull-right"><i class="fa fa-close-round"></i> Unfollow</button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
