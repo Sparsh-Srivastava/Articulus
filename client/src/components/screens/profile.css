@@ -72,7 +72,7 @@
   background: url("./profile-svg.svg") no-repeat;
 } */
 .left{
-  margin-left: 100px;
+  margin-left: 150px;
   
   background: rgba(243, 192, 222, 0.2);
     border: .1vmin solid rgba(219, 219, 219, 0.1);
@@ -81,7 +81,7 @@
     box-shadow: 0 .5vmin 1vmin rgba(0, 0, 0, .4);
 }
 .right{
-  margin-left: 100px;
+  margin-left: 50px;
   background: rgba(243, 192, 222, 0.2);
   border: .1vmin solid rgba(219, 219, 219, 0.1);
   border-radius: 4vmin;
@@ -113,6 +113,7 @@
 }
 .img-circle{
  border-radius: 50%;
+ height:250px;
 }
 .profile-info-left .section {
   margin-top: 50px;
@@ -309,7 +310,9 @@
 height:50px;
 }
 .heading-right
-{background-color:rgba(93, 51, 84, 0.2) ;
+
+{
+  background-color:rgba(93, 51, 84, 0.2) ;
 border-radius: 5%;
 }
 /* .nav-tabs > li > a {
