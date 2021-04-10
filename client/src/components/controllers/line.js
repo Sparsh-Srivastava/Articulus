@@ -31,7 +31,7 @@ const Linegraph = () => {
           };
     
           try {
-            const { data } = await axios.get(`/pie/${localStorage.getItem("id")}`, config);
+            const { data } = await axios.get(`/line/${localStorage.getItem("id")}`, config);
             setLine(data)
           } catch (error) {
             // localStorage.removeItem("authToken");
@@ -52,6 +52,7 @@ const Linegraph = () => {
                 <Tooltip />
                 <Legend />
                 <Line type="monotone" dataKey="views" stroke="#8884d8" />
+                <Line type="monotone" dataKey="average" stroke="#82ca9d" />
             </LineChart>
         </div>
     )

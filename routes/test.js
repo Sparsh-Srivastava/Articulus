@@ -338,4 +338,52 @@ Router.get("/pie/:user", async(req, res) => {
     res.send(body)
 })
 
+Router.get("/line/:user", async(req, res) => {
+    // let body = []
+    // const user = req.params.user
+    // const details = await Article.find({user: user})
+    // details.forEach((detail) => {
+        // const title = detail.title
+        // const comm = detail.views
+
+    //     body.push({
+    //         title: title,
+    //         views: comm
+    //     })
+    // })
+    // res.send(body)
+    let body = []
+    var avrating = []
+    let all = []
+    const user = req.params.user
+    const details = await Article.find({user: user}).populate('comments')
+    details.forEach((detail) => {
+        const title = detail.title
+        const comm = detail.comments
+
+        const comm1 = detail.views
+
+        var avr = 0
+        var total = 0
+
+        for(var i=0; i<comm.length; i++){
+            avrating.push(comm[i].rating)
+            if(comm[i].rating != null){
+                avr += comm[i].rating
+                total++
+            }
+        }
+
+        avr /= total
+        all.push(avr)
+
+        body.push({
+            title: title,
+            average: avr,
+            views: comm1
+        })
+    })
+    res.send(body)
+})
+
 module.exports = Router

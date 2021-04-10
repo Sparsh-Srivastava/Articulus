@@ -69,7 +69,7 @@ input[name="title"] {
   border-radius: 15px;
   padding: 1rem;
   /* background: rgb(237,237,237); */
-  background-color: #eeebdd99;
+  background-color: rgba(206, 199, 232, 0.8);
   justify-content: center;
   position: absolute;
   top: 100px;
