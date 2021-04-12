@@ -44,7 +44,7 @@ const Followers = () => {
               return(
                 <>
               <div className="item tm" key={packet._id}>
-                      <div className="cover cv">s
+                      <div className="cover cv">
                        
                       <h6 className="d">Name: {packet.username} {packet.last} <br></br>  email: {packet.email}<br></br> age: {packet.age}<br></br> Gender: {packet.gender}</h6> </div>
                         

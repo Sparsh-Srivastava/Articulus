@@ -54,6 +54,7 @@ const Piegraph = () => {
 
     return (
         <div className="pie">
+          <p className="h">PIE CHART</p>
             {console.log(pie)}
             {/* <BarChart width={600} height={250} data={bar}>
                 <CartesianGrid strokeDasharray="1 1" />

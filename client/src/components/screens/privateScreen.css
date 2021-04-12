@@ -1,117 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100&display=swap");
 
-.calendar{
-    position: absolute;
-    left:260px;
-    top:5px;
-    margin-right: 10px;
-    border-radius: 10px;
-}
-
-div.text{
-    
-    color: black;
-    width: 250px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 25px;
-    margin-left: 250px;
-    margin-top: 10px;
-    margin-bottom: -30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-}
-.graph-1
-{
-    position: absolute;
-    left:240px;
-    top:400px;
-    width:200px;
-}
-.chalja
-{
-    position: absolute;
-    left:1290px;
-    top:50px;
-    
-}
-.chalja img{
-    background-color: #b8b5ff;
-    height:200px;
-}
-.btn1{
-padding-top: 20px;
-position: absolute;
-top:200px;
-left:30px;
-width:150px;
-margin-top: 20px;
+.calendar {
+  position: absolute;
+  left: 260px;
+  top: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
-.c1{
-    width: 6px;
-    height: 65px;
-    background-color: green;
-    position: absolute;
-    top: 30px;
-    right: 505px;
-    z-index: 1000;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+div.text {
+  color: black;
+  width: 250px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 25px;
+  margin-left: 250px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+.graph-1 {
+  position: absolute;
+  left: 240px;
+  top: 110px;
+  width: 200px;
+}
+.chalja {
+  position: absolute;
+  left: 1290px;
+  top: 50px;
+}
+.chalja img {
+  background-color: #b8b5ff;
+  height: 200px;
+}
+.btn1 {
+  padding-top: 20px;
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  width: 150px;
+  margin-top: 20px;
 }
 
-.c2{
-    width: 6px;
-    height: 65px;
-    background-color: rgb(25, 0, 255);
-    position: absolute;
-    top: 30px;
-    right: 315px;
-    z-index: 1000;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+.c1 {
+  width: 6px;
+  height: 65px;
+  background-color: green;
+  position: absolute;
+  top: 30px;
+  right: 505px;
+  z-index: 1000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-span.t1{
-    font-size: 10px;
-    position: absolute;
-    top: 7px;
+.c2 {
+  width: 6px;
+  height: 65px;
+  background-color: rgb(25, 0, 255);
+  position: absolute;
+  top: 30px;
+  right: 315px;
+  z-index: 1000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-span.t2{
-    font-size: 10px;
-    position: absolute;
-    top: 7px;
+span.t1 {
+  font-size: 10px;
+  position: absolute;
+  top: 7px;
+  left: 30px;
 }
 
-.f1{
-    background-color: #fff;
-    padding: 10px 20px;
-    padding-top: 15px;
-    font-size: 28px;
-    position: absolute;
-    top: 30px;
-    right: 350px;
-    border-radius: 10px;
+span.t2 {
+  font-size: 10px;
+  position: absolute;
+  top: 7px;
+  left: 30px;
 }
 
-.f2{
-    background-color: #fff;
-    padding: 10px 20px;
-    padding-top: 15px;
-    font-size: 28px;
-    position: absolute;
-    top: 30px;
-    right: 150px;
-    border-radius: 10px;
+.f1 {
+  background-color: #fff;
+  padding: 10px 20px;
+  padding-top: 15px;
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+  right: 350px;
+  border-radius: 10px;
+}
+.t1 {
+  right: 10px;
 }
 
-.line1{
-    display: inline;
-    padding-right: 20px;
+.f2 {
+  background-color: #fff;
+  padding: 10px 20px;
+  padding-top: 15px;
+  font-size: 28px;
+  position: absolute;
+  top: 30px;
+  right: 150px;
+  border-radius: 10px;
 }
 
-.icon123{
-    padding-left: 20px;
-    padding-right: 20px;
+.line1 {
+  display: inline;
+  padding-right: 20px;
+}
+
+.icon123 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.grp {
+  display: flex;
+}
+.blank {
+  content: "";
+  height: 20px;
+  width: 650px;
+  margin-top: 10px;
+  margin-left: 330px;
+  /* background-color: #301b3f;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%; */
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  display: flex;
+
+  border-left: 40px solid #301b3f;
+}
+.t {
+  display: flex;
+  float: right;
+  font-size: 75px;
+  margin-top: 5px;
+  color: #301b3f;
+  font-family: "Londrina Solid", cursive;
+  font-weight: 600;
+  letter-spacing: 5px;
+  margin-right: 800px;
 }
