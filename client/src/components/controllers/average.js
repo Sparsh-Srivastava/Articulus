@@ -54,6 +54,7 @@ const Average = () => {
 
     return (
         <div className="bar">
+          <p className="ha">BAR GRAPH</p>
             <BarChart width={600} height={250} data={bar}>
                 <CartesianGrid strokeDasharray="1 1" />
                 <XAxis dataKey="title" tick={false} hide reversed type="category"/>

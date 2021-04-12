@@ -1,14 +1,25 @@
-div.line{
-    background-color: rgb(255, 255, 255, 1);
-    width: fit-content;
-    z-index: -10;
-    border-radius: 10px;
-    margin-top: 10px;
-    position: absolute;
-    top: 700px;
-    left: 240px;
-    z-index: 100;
-    margin-left: 40px;
-    margin-top: 50px;
-    padding: 10px;
+div.line {
+  /* background-color: rgb(255, 255, 255, 1); */
+  background: rgba(237, 230, 230, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: fit-content;
+  z-index: -10;
+  border-radius: 10px;
+  margin-top: 10px;
+  position: absolute;
+  top: 390px;
+  left: 280px;
+  z-index: 100;
+  margin-left: 40px;
+  margin-top: 50px;
+  padding: 30px;
+  padding-left: 70px;
+}
+.hl {
+  font-size: 20px;
+  margin-left: 300px;
 }

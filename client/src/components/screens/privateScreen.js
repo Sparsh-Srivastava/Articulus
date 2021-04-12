@@ -77,10 +77,14 @@ const PrivateScreen = (props) => {
     <IconContext.Provider value={{ color: 'rgb(125, 117, 196)', size: '30px' }}>
     <Navbar/>
      <div className="App">
-     <div className="calendar">
+     {/* <div className="calendar">
       <Calendar/>
+     </div> */}
+     <div className="grp">
+     <div className="blank"></div>
+     <h1 className="t"> ANALYSIS</h1>
      </div>
-
+     
     <div className="c1"></div>
      <div className="f1">
        <span className="icon123"><FaIcons.FaUserFriends/></span>
@@ -92,6 +96,7 @@ const PrivateScreen = (props) => {
        <span className="icon123"><FaIcons.FaUserAlt/></span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t2">Following</span>  {following}
       </div>
+      
      
      {/* <div className="chalja">
      <img  src="https://cdn.iconscout.com/icon/premium/png-256-thumb/article-writing-1549710-1313270.png"/>
@@ -100,12 +105,18 @@ const PrivateScreen = (props) => {
 
 
      </div> */}
+     <div className="graph-c">
      <div class="graph-1">
      {/* <div className="text">Top Rated Articles</div> */}
        <Bar/>
      </div>
-     <Pie/>
-     <Line/>
+     <div className="pie"> 
+     <Pie/> 
+     </div>
+     <div className="lineg">
+       <Line/>
+       </div>
+     </div>
     </div>
     </IconContext.Provider>
      

@@ -45,14 +45,15 @@ const Linegraph = () => {
 
     return (
         <div className="line">
+          <p className="hl">LINE GRAPH</p>
             <LineChart width={730} height={250} data={line} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="title" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="views" stroke="#8884d8" />
-                <Line type="monotone" dataKey="average" stroke="#82ca9d" />
+                <Line type="monotone" dataKey="views" stroke="#150e56" />
+                <Line type="monotone" dataKey="average" stroke="#7cbd1e" />
             </LineChart>
         </div>
     )
