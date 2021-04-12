@@ -18,6 +18,8 @@ import Navbar from "../controllers/sidebar"
 const PrivateScreen = (props) => {
   const [followers, setCount1] = useState(0)
   const [following, setCount2] = useState(0)
+  const [articles, setCount3] = useState(0)
+  const [comments, setCount4] = useState(0)
   const [error, setError] = useState("");
   const [privateData, setPrivateData] = useState("");
 
@@ -61,6 +63,8 @@ const PrivateScreen = (props) => {
         const { data } = await axios.get(`/values/${props.match.params.id}`, config2);
         setCount1(data.followers);
         setCount2(data.following)
+        setCount3(data.articles)
+        setCount4(data.comments)
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")
@@ -80,10 +84,10 @@ const PrivateScreen = (props) => {
      {/* <div className="calendar">
       <Calendar/>
      </div> */}
-     <div className="grp">
+     {/* <div className="grp">
      <div className="blank"></div>
      <h1 className="t"> ANALYSIS</h1>
-     </div>
+     </div> */}
      
     <div className="c1"></div>
      <div className="f1">
@@ -95,6 +99,16 @@ const PrivateScreen = (props) => {
        <div className="f2">
        <span className="icon123"><FaIcons.FaUserAlt/></span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t2">Following</span>  {following}
+      </div>
+      <div className="c3"></div>
+       <div className="f3">
+       <span className="icon123"><FaIcons.FaUserAlt/></span>
+       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t3">Articles</span>  {articles}
+      </div>
+      <div className="c4"></div>
+       <div className="f4">
+       <span className="icon123"><FaIcons.FaUserAlt/></span>
+       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t4">Comments</span>  {comments}
       </div>
       
      

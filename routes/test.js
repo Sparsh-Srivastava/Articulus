@@ -269,16 +269,24 @@ Router.get("/social/:id", async(req, res) => {
 
 Router.get("/values/:id", async (req, res) => {
     let id = req.params.id
+    var avrating = []
+    let all = []
 
-    const user = await User.findById(id)
+    const user = await User.findById(id).populate('comments')
 
     const followers = user.followers.length
 
     const following = user.following.length
 
+    const articles = user.articles.length
+
+    const comments = user.comments.length
+
     res.json({
         followers: followers,
-        following: following
+        following: following,
+        articles: articles,
+        comments: comments
     })
 })
 
@@ -384,6 +392,12 @@ Router.get("/line/:user", async(req, res) => {
         })
     })
     res.send(body)
+})
+
+Router.get("/recent/:id", async (req, res) => {
+    const id = req.params.id
+    const user = await User.findById(id).populate("followers")
+    res.send(user.followers)
 })
 
 module.exports = Router
