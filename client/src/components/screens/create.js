@@ -6,6 +6,7 @@ import Sidebar from '../controllers/sidebar'
 import './create.css'
 import {Redirect} from 'react-router-dom'
 import Navbar from "../controllers/sidebar"
+import { useHistory } from "react-router-dom";
 
 const Create = ({match}) => {
   const [title, setTitle] = useState("");
@@ -15,6 +16,8 @@ const Create = ({match}) => {
   const [number, setNumber] = useState(1);
   const [status, setStatus] = useState("");
   const [error, setError] = useState("")
+
+  let history = useHistory();
 
   const newArticle = async (e) => {
     e.preventDefault();
@@ -40,6 +43,7 @@ const Create = ({match}) => {
         },
         config
       );
+      history.push(`/myarticles/${localStorage.getItem("id")}`)
     } catch (error) {
       console.log(error);
       setError(error.response.data.error);

@@ -6,6 +6,7 @@ import Sidebar from '../controllers/sidebar'
 import './create.css'
 import Navbar from "../controllers/sidebar"
 import { FaTrash, FaMarker, FaEye } from "react-icons/fa"
+import { useHistory } from "react-router-dom";
 
 const Update = ({match}) => {
   const [title, setTitle] = useState("");
@@ -16,6 +17,8 @@ const Update = ({match}) => {
   const [status, setStatus] = useState("")
   const [error, setError] = useState("")
   const [test, setTest] = useState("")
+
+  let history = useHistory();
 
   const updateArticle = async (e) => {
     e.preventDefault();
@@ -41,6 +44,7 @@ const Update = ({match}) => {
         },
         config
       );
+      history.push(`/myarticles/${localStorage.getItem("id")}`)
     } catch (error) {
       console.log(error);
       setError(error.response.data.error);
@@ -123,6 +127,7 @@ const Update = ({match}) => {
       try {
         const { data } = await axios.delete(`/article/${match.params.id}`, options);
         console.log(data);
+        history.push(`/myarticles/${localStorage.getItem("id")}`)
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id");
