@@ -19,20 +19,24 @@ grid-template-columns: repeat(3,1fr);
   grid-template-columns: repeat(3, 1fr);
 }
 .search {
-  margin: 3rem 30rem;
+  margin: 3rem 36rem;
 }
 input[type="search"] {
   width: 500px;
   border-radius: 10px;
-  margin: 5px;
-  border-style:none;
+  margin: 5px 10px;
+  border-style: none;
 }
-input[type="search"]:hover{
-  border-style:none;
+input[type="search"]:hover {
+  border-style: none;
 }
-/* .search-icon {
-  margin: 3rem 10rem;
-} */
+.search-icon {
+  color: black;
+  font-size: 20px;
+}
+.s {
+  padding: 10px;
+}
 /* .item {
   background-color: red;
   border-radius: 10px;

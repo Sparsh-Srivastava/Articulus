@@ -57,7 +57,7 @@ const Create = ({match}) => {
     top:"50rem",
     background: primary,
     margin: "1%",
-    width: "1050px",
+    width: "1005px",
     marginBottom:"0px;",
     height: "auto",
     color: secondary,
@@ -90,7 +90,7 @@ const Create = ({match}) => {
     return (
       <>
       <Navbar/>
-      <div className='create'>
+      <div className='create crtry2'>
       
       <form onSubmit={newArticle} className="create-form">
         <h3 className="register-screen__title">Create Article</h3><hr/>
@@ -176,7 +176,7 @@ const Create = ({match}) => {
             <select
               name='status'
               value={status}
-              className="status"
+              className="status op"
               onChange={(e) => setStatus(e.target.value)}
             >
               <option className="stat" value=' '>---Choose---</option>
