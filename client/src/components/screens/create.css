@@ -110,6 +110,7 @@ input[name="title"] {
 .xxa {
   margin-left: 20px;
 }
+
 .xxb {
   margin-left: 150px;
 }
@@ -156,7 +157,7 @@ div.space3 {
 .preview-header {
   position: absolute;
   top: 47rem;
-  left: 32rem;
+  left: 28rem;
 }
 
 /* button */
@@ -231,7 +232,18 @@ div.space3 {
 .status {
   border-radius: 10px;
   border: 3px solid #7868e6;
+  /* margin-left: 22px; */
 }
+.op {
+  margin-left: 22px;
+}
+
 .stat {
   background-color: #e4fbff;
+}
+.crtry {
+  margin-left: 6rem;
+}
+.crtry2 {
+  margin-left: 10rem;
 }

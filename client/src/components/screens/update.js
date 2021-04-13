@@ -82,10 +82,10 @@ const Update = ({match}) => {
   const mailer = {
     position:"absolute",
     top:"50rem",
-    left:"20rem",
+    left:"27rem",
     background: primary,
     margin: "1%",
-    width: "1050px",
+    width: "1000px",
     marginBottom:"0px;",
     height: "auto",
     color: secondary,
@@ -140,7 +140,7 @@ const Update = ({match}) => {
       <>
       <Navbar/>
       {console.log(test)}
-      <div className='create'>
+      <div className='create crtry'>
         <div className="register-screen">
       <form onSubmit={updateArticle} className="update register-screen__form create-form">
         <h3 className="register-screen__title">Update Article</h3><hr/>
@@ -228,7 +228,7 @@ const Update = ({match}) => {
         <div className="space3" />
         
         <select
-              name='status'
+              name='status op'
               value={status}
               className="status"
               onChange={(e) => setStatus(e.target.value)}
