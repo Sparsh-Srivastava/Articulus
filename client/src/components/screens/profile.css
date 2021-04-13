@@ -192,6 +192,7 @@
   margin-left:100px;
 }
 .btn-toggle-following {
+  margin-top: -10px;
   width:100px;
   background-color: #7bae16;
   color: #fff;
@@ -432,4 +433,138 @@ border-radius: 5%;
 }
 .btn-f{
   width:100px;
+}
+
+div.procard {
+  position: absolute;
+  left: 300px;
+  background-color: white;
+  margin-top: 40px;
+  height: 300px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+span.proname {
+  font-size: 18px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+div.subcard {
+  position: absolute;
+  top: 320px;
+  left: 300px;
+  background-color: white;
+  margin-top: 40px;
+  height: 70px;
+  width: 350px;
+  border-radius: 10px;
+  background-image: url("http://fc00.deviantart.net/fs71/f/2010/085/3/c/GOLD_Snow_Leopard_Wallpaper_by_RiCk_C.jpg");
+  background-position: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+span.prosub {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 0.1em;
+}
+
+span.proemail {
+  font-size: 18px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+div.procard img {
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 90px;
+  position: relative;
+  left: 100px;
+}
+
+div.foll {
+  position: absolute;
+  left: 700px;
+  background-color: white;
+  margin-top: 40px;
+  height: 700px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+div.wrap1 {
+  position: absolute;
+  background-color: white;
+  height: 600px;
+  width: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+div.folling {
+  position: absolute;
+  margin-top: 40px;
+  left: 1100px;
+  background-color: white;
+  margin-top: 40px;
+  height: 700px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+span.foll1 {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+span.foll2 {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+span.space {
+  color: white;
+}
+
+div.proinfo {
+  position: absolute;
+  top: 420px;
+  left: 300px;
+  background-color: white;
+  margin-top: 40px;
+  height: 280px;
+  width: 350px;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+
+div.detail {
+  margin: 20px 20px;
+}
+
+span.ltr {
+  position: absolute;
+  right: 20px;
 }
