@@ -82,7 +82,7 @@ const Update = ({match}) => {
   const mailer = {
     position:"absolute",
     top:"50rem",
-    left:"27rem",
+    left:"25rem",
     background: primary,
     margin: "1%",
     width: "1000px",
