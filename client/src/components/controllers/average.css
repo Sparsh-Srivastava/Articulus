@@ -1,6 +1,6 @@
 div.bar {
-  /* background-color: rgb(255, 255, 255, 1); */
-  background: rgba(237, 230, 230, 0.25);
+  background-color: rgb(255, 255, 255, 1);
+  /* background: rgba(237, 230, 230, 0.25); */
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -12,11 +12,11 @@ div.bar {
   top: 1px;
   position: absolute;
   z-index: -1;
-  margin-left: 600px;
+  margin-left: 400px;
   /* margin-top: 15px; */
   padding: 10px;
 }
 .ha {
-  margin-left: 250px;
+  margin-left: 70px;
   font-size: 20px;
 }

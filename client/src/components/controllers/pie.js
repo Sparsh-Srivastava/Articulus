@@ -54,7 +54,7 @@ const Piegraph = () => {
 
     return (
         <div className="pie">
-          <p className="h">PIE CHART</p>
+          <p className="h">TOP 5 VIEWED ARTICLES</p>
             {console.log(pie)}
             {/* <BarChart width={600} height={250} data={bar}>
                 <CartesianGrid strokeDasharray="1 1" />
@@ -64,7 +64,7 @@ const Piegraph = () => {
                 <Legend />
                 <Bar legendType="star" dataKey="average" fill="#c92c3b" barSize={80} />
             </BarChart> */}
-            <PieChart width={400} height={250}>
+            <PieChart width={250} height={250}>
                 <Pie data={pie} dataKey="views" nameKey="title" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
                 <Tooltip />
                 {/* <Pie data={pie} dataKey="views" nameKey="title" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label /> */}
