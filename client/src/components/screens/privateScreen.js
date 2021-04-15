@@ -91,23 +91,28 @@ const PrivateScreen = (props) => {
      
     <div className="c1"></div>
      <div className="f1">
-       <span className="icon123"><FaIcons.FaUserFriends/></span>
+       <span className="icon123 fas fa-user-friends">
+
+       {/* <FaIcons.FaUserFriends/> */}
+       </span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div>
        <span className="t1">Followers</span>{followers}
        </div>
        <div className="c2"></div>
        <div className="f2">
-       <span className="icon123"><FaIcons.FaUserAlt/></span>
-       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t2">Following</span>  {following}
+       <span className="icon123 fas fa-users"></span>
+       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t2">Following</span>
+       
+         {following}
       </div>
       <div className="c3"></div>
        <div className="f3">
-       <span className="icon123"><FaIcons.FaUserAlt/></span>
+       <span className="icon123  far fa-newspaper"></span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t3">Articles</span>  {articles}
       </div>
       <div className="c4"></div>
        <div className="f4">
-       <span className="icon123"><FaIcons.FaUserAlt/></span>
+       <span className="icon123 far fa-comments"> </span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t4">Comments</span>  {comments}
       </div>
       

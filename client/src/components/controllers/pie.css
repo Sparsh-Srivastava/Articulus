@@ -1,6 +1,6 @@
 div.pie {
-  /* background-color: rgb(255, 255, 255, 1); */
-  background: rgba(237, 230, 230, 0.25);
+  background-color: rgb(255, 255, 255, 1);
+  /* background: rgba(137, 46, 46, 0.25); */
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -11,7 +11,7 @@ div.pie {
   border-radius: 10px;
   margin-top: 10px;
   position: absolute;
-  top: 10px;
+  top: 7px;
   left: 120px;
   z-index: 100;
   margin-left: 40px;
@@ -19,6 +19,6 @@ div.pie {
   padding: 3px;
 }
 .h {
-  margin-left: 150px;
+  margin-left: 15px;
   font-size: 20px;
 }
