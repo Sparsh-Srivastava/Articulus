@@ -2,9 +2,8 @@
 
 .calendar {
   position: absolute;
-  left: 260px;
-  top: 5px;
-  margin-right: 10px;
+  left: -120px;
+  top: -80px;
   border-radius: 10px;
 }
 
@@ -231,7 +230,7 @@ width:100px;
   font-size: 75px;
   margin-top: 5px;
   color: #301b3f;
-  font-family: "Londrina Solid", cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 600;
   letter-spacing: 5px;
   margin-right: 800px;
@@ -267,4 +266,13 @@ width:100px;
   padding: 0px 15px;
   background-color: #fddb3a;
   color: black;
+}
+
+div.total {
+  position: absolute;
+  top: 600px;
+  left: 1200px;
+  background-color: red;
+  border: solid 5px black;
+  z-index: 2000;
 }

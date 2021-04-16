@@ -52,9 +52,9 @@ function Navbar() {
       cName: 'nav-text'
     },
     {
-      title: 'Followers',
-      path: `/followers/${id}`,
-      icon: <FaIcons.FaEllipsisH />,
+      title: 'Scheduler',
+      path: `/scheduler/${id}`,
+      icon: <FaIcons.FaCalendarDay />,
       cName: 'nav-text'
     },
     {

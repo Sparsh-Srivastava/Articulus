@@ -8,6 +8,8 @@ import Bar from '../controllers/average'
 import Pie from '../controllers/pie'
 import Logo from './images/web.svg'
 import Line from '../controllers/line'
+import Circle from '../controllers/circle'
+import Money from '../controllers/earning'
 import * as FaIcons from 'react-icons/fa';
 
 import {Redirect} from 'react-router-dom'
@@ -22,6 +24,7 @@ const PrivateScreen = (props) => {
   const [comments, setCount4] = useState(0)
   const [error, setError] = useState("");
   const [privateData, setPrivateData] = useState("");
+  const [money, setMoney] = useState(0)
 
   // const signout = () => {
   //   localStorage.removeItem("authToken")
@@ -65,6 +68,16 @@ const PrivateScreen = (props) => {
         setCount2(data.following)
         setCount3(data.articles)
         setCount4(data.comments)
+      } catch (error) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("id")
+        setError("You are not authorized please login");
+      }
+
+      try {
+        // console.log(this.props.match.params.id);
+        const { data } = await axios.get(`/netEarn/${localStorage.getItem("id")}`, config2);
+        setMoney(data)
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")
@@ -132,10 +145,17 @@ const PrivateScreen = (props) => {
      <div className="pie"> 
      <Pie/> 
      </div>
+     <div className="circle"> 
+     <Circle/> 
+     </div>
      <div className="lineg">
        <Line/>
-       </div>
+      </div>
+      <div className="lineg">
+       <Money/>
+      </div>
      </div>
+     <div className="total">{money}</div>
     </div>
     </IconContext.Provider>
      

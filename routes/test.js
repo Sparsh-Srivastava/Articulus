@@ -400,4 +400,75 @@ Router.get("/recent/:id", async (req, res) => {
     res.send(user.followers)
 })
 
+Router.get("/quantity/:id", async (req, res) => {
+    let one = 0
+    let two = 0
+    let three = 0
+    let four = 0
+    let five = 0
+    let body = []
+    let all = []
+    const user = req.params.id
+    const details = await Article.find({user: user}).populate('comments')
+    // const length = details.comments.length
+    details.forEach((detail) => {
+        const title = detail.title
+        const comm = detail.comments
+
+        for(var i=0; i<comm.length; i++){
+            if(comm[i].rating == 1){
+                one++;
+            }else if(comm[i].rating == 2){
+                two++;
+            }else if(comm[i].rating == 3){
+                three++;
+            }else if(comm[i].rating == 4){
+                four++;
+            }else if(comm[i].rating == 5){
+                five++;
+            }
+        }
+
+        body.push({
+            "one": one,
+            "two": two,
+            "three": three,
+            "four": four,
+            "five": five,
+            title: title,
+        })
+    })
+    let a1 = body.slice(-1).pop().one
+    let a2 = body.slice(-1).pop().two
+    let a3 = body.slice(-1).pop().three
+    let a4 = body.slice(-1).pop().four
+    let a5 = body.slice(-1).pop().five
+    all.push({
+        "name": "1",
+        "data": a1,
+        "fill": "#8884d8"
+    },
+    {
+        "name": "2",
+        "data": a2,
+        "fill": "#83a6ed"
+    },
+    {
+        "name": "3",
+        "data": a3,
+        "fill": "#8dd1e1"
+    },
+    {
+        "name": "4",
+        "data": a4,
+        "fill": "#82ca9d"
+    },
+    {
+        "name": "5",
+        "data": a5,
+        "fill": "#a4de6c"
+    })
+    res.send(all)
+})
+
 module.exports = Router

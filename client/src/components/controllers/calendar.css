@@ -1,4 +1,4 @@
-div.rbc-calender
+/*div.rbc-calender
 {
     width:500px;
     background-color: #b8b5ff98;
@@ -55,7 +55,7 @@ font-weight: 500;
     color: #ffffff;
     /* color:#fff
     background-color: rgba(255, 165, 0,0.8 ); */
-    text-align: center;
+   /* text-align: center;
     border:1px 1px solid black;
     justify-content: center;
     border-radius: 300px;
@@ -68,7 +68,7 @@ font-weight: 500;
 div.rbc-date-cell:hover{
     /* background-color:#70DBDB;
     color: #008080; */
-    color:#93329e;
+    /*color:#93329e;
     font-weight: bold;
     background-color: rgba(255, 255, 255 );
 }
@@ -85,14 +85,14 @@ div.rbc-event.rbc-selected.rbc-event-allday
 
 } */
 
-span.rbc-toolbar-label
+/*span.rbc-toolbar-label
 {
     color:#000;
     text-shadow: 1px 1px 0px #b69cc2;;
     
 }
  /* .rbc-event-content */
- .rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event
+ /*.rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event
 {
     padding:0;
     position:absolute;
@@ -112,8 +112,20 @@ span.rbc-toolbar-label
     justify-content: center;
     border-radius: 10px;
     /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
-} 
+/*} 
 .rbc-date-cell.rbc-now.rbc-current
 {
     background-color: rgb(111, 161, 36);
+}*/
+
+.cal{
+    display: block;
+    width:fit-content;
+    padding: 5px;
+    margin: 2%;
+    margin-right: 20px;
+    border-radius: 5px;
+    z-index: 10;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 500;
 }

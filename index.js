@@ -16,6 +16,7 @@ app.use("/api/private", require('./routes/private'))
 app.use("/", require("./routes/comment"))
 
 app.use("/",require("./routes/test"))
+app.use("/",require("./routes/misc"))
 
 app.use(errorHandler)
 
