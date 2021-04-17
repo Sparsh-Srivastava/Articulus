@@ -121,13 +121,21 @@ Router.get("/data/:user", async (req, res) => {
         const month = datb[1]
         const day = Number(datb[2])
         const year = Number(datb[3])
+        const h = dat.getHours()
+        const m = dat.getMinutes()
+        const s = dat.getSeconds()
+        const mm = dat.getMilliseconds()
 
         const d = "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(`${month}`) / 3 ;
         body.push({
           title: item.title,
           day: day,
           month: d,
-          year: year
+          year: year,
+          h: h,
+          m: m,
+          s: s,
+          mm: mm
         });
       });
 

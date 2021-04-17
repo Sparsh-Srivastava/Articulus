@@ -1,7 +1,7 @@
-/*div.rbc-calender
+div.rbc-calender
 {
     width:500px;
-    background-color: #b8b5ff98;
+    background-color: #3a3a3a98;
     font-family: 'Kiwi Maru', serif;
 font-weight: 500;
 }
@@ -28,17 +28,22 @@ font-weight: 500;
 .rbc-month-header
 {
     margin:10px;
+    /* background-color: black; */
+}
+
+div.rbc-row{
+    /* background-color: rgb(202, 202, 202); */
 }
  div.rbc-header
 {
     padding-top:5px;
-    border:1px 1px solid black;
     justify-content: center;
     border-radius: 10px;
     margin: 0px 6px;
     height: 30px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
+    background-color: #6f2777;
+    color: white;
 }
 
 .rbc-header span{
@@ -55,7 +60,7 @@ font-weight: 500;
     color: #ffffff;
     /* color:#fff
     background-color: rgba(255, 165, 0,0.8 ); */
-   /* text-align: center;
+    text-align: center;
     border:1px 1px solid black;
     justify-content: center;
     border-radius: 300px;
@@ -66,14 +71,13 @@ font-weight: 500;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 div.rbc-date-cell:hover{
-    /* background-color:#70DBDB;
-    color: #008080; */
-    /*color:#93329e;
+    background-color:#70DBDB;
+    color: #008080;
+    color:#93329e;
     font-weight: bold;
     background-color: rgba(255, 255, 255 );
 }
 
-/* 
 div.rbc-event.rbc-selected.rbc-event-allday
 {
     
@@ -83,16 +87,16 @@ div.rbc-event.rbc-selected.rbc-event-allday
     height: 10px;
     background-color: salmon;
 
-} */
+}
 
-/*span.rbc-toolbar-label
+span.rbc-toolbar-label
 {
     color:#000;
     text-shadow: 1px 1px 0px #b69cc2;;
     
 }
  /* .rbc-event-content */
- /*.rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event
+ .rbc-event.rbc-selected, .rbc-day-slot .rbc-selected.rbc-background-event
 {
     padding:0;
     position:absolute;
@@ -105,18 +109,17 @@ div.rbc-event.rbc-selected.rbc-event-allday
 }
 
 
-
 .rbc-btn-group button
 {
     padding-top:10px;
     justify-content: center;
     border-radius: 10px;
     /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
-/*} 
+} 
 .rbc-date-cell.rbc-now.rbc-current
 {
     background-color: rgb(111, 161, 36);
-}*/
+}
 
 .cal{
     display: block;

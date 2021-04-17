@@ -43,9 +43,8 @@ const Cal = () => {
       cal.map(item => {
         myEventsList.push({
             title: parse(marked(item.title)),
-            allDay: true,
-            start: new Date(item.year, item.month, item.day),
-            end: new Date(item.year, item.month, item.day),
+            start: new Date(item.year, item.month, item.day, item.h, item.m, item.s, item.mm),
+            end: new Date(item.year, item.month, item.day, item.h, item.m, item.s, item.mm),
           });
     })
 
@@ -58,7 +57,7 @@ const Cal = () => {
                 events={myEventsList}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ height: 700, width: 1080, zIndex: 10, backgroundColor: "#fff", borderRadius: 20}}
+                style={{ height: 700, width: 1080, zIndex: 10, backgroundColor: "rgb(255, 255, 255)", borderRadius: 20}}
             />
         </div>
     )
