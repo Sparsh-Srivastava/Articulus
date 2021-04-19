@@ -65,7 +65,7 @@ const Piegraph = () => {
                 <Bar legendType="star" dataKey="average" fill="#c92c3b" barSize={80} />
             </BarChart> */}
             <PieChart width={400} height={265}>
-                <Pie data={pie} dataKey="views" nameKey="title" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                <Pie data={pie} dataKey="views" nameKey="title" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#6165cf" label />
                 <Tooltip />
                 {/* <Pie data={pie} dataKey="views" nameKey="title" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label /> */}
             </PieChart>

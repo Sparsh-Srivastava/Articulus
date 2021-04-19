@@ -5,8 +5,7 @@ import './profile.css'
 import Navbar from "../controllers/sidebar"
 import image from "./cat-3374422_640.jpg"
 import cardimage from "./cheque-guarantee-card-229830_640.jpg"
-
-
+import Pic from "./images/fancy-pants.jpg"
 
 const Pimage = () => {
   <img src="./images/web.svg"/>
@@ -69,9 +68,9 @@ const Profile = ({match}) => {
       <>
       <Navbar/>
       <div className="procard">
-          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" />
-          <span className="proname">Full Stack Developer</span>
-          <span className="proemail">Bay Area, San Francisco, CA</span>
+          <img src={Pic} />
+          <span className="proname">{userData.email}</span>
+          <span className="proemail">@{userData.username}</span>
       </div>
       <div className="subcard">
           <span className="prosub">{userData.sub}</span>
@@ -83,7 +82,7 @@ const Profile = ({match}) => {
                     return(
                         <>
                     <div className="media user-follower" key={packet._id}>
-                        <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User Avatar" class="media-object pull-left"/>
+                        <img src={Pic} alt="User Avatar" class="media-object pull-left"/>
                         <span className="space">__</span>
                         <div className="media-body">
                             {packet.username}<br/><span class="text-muted username">@{packet.last}</span>
@@ -103,7 +102,7 @@ const Profile = ({match}) => {
                     return(
                         <>
                     <div className="media user-follower" key={packet._id}>
-                        <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User Avatar" class="media-object pull-left"/>
+                        <img src={Pic} alt="User Avatar" class="media-object pull-left"/>
                         <span className="space">__</span>
                         <div className="media-body">
                             {packet.username}<br/><span class="text-muted username">@{packet.last}</span>
