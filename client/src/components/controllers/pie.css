@@ -11,14 +11,14 @@ div.pie {
   border-radius: 10px;
   margin-top: 10px;
   position: absolute;
-  top: 7px;
-  left: 120px;
+  top: 190px;
+  left: 110px;
   z-index: 100;
-  margin-left: 40px;
+  margin-left: 53px;
   margin-top: 50px;
   padding: 3px;
 }
 .h {
-  margin-left: 15px;
+  margin-left: 100px;
   font-size: 20px;
 }

@@ -260,7 +260,7 @@ const Update = ({match}) => {
         className='deleteIcon'
         onClick={deleteArticle}
         style={{
-          backgroundColor:"black",
+         
           color:"red",
           height:"60px",
           width:"55px",
