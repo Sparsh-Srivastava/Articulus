@@ -198,7 +198,7 @@ const View = (props) => {
               return(
                 <>
               <Link to={"comment/" + comment._id} style={{ textDecoration: 'none' }}>
-              <div className="item" key={comment._id}>
+              <div className="viewitem" key={comment._id}>
                       <div className="cover">{comment.user}<hr/>{comment.comment}{comment.rating}</div>
               </div>
               </Link>
