@@ -419,6 +419,7 @@ Router.get("/quantity/:id", async (req, res) => {
     const user = req.params.id
     const details = await Article.find({user: user}).populate('comments')
     // const length = details.comments.length
+    if(details.length != 0){
     details.forEach((detail) => {
         const title = detail.title
         const comm = detail.comments
@@ -446,6 +447,7 @@ Router.get("/quantity/:id", async (req, res) => {
             title: title,
         })
     })
+
     let a1 = body.slice(-1).pop().one
     let a2 = body.slice(-1).pop().two
     let a3 = body.slice(-1).pop().three
@@ -477,6 +479,7 @@ Router.get("/quantity/:id", async (req, res) => {
         "fill": "#a4de6c"
     })
     res.send(all)
+    }
 })
 
 module.exports = Router

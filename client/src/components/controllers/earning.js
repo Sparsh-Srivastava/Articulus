@@ -55,7 +55,7 @@ const Earn = () => {
 
     return (
         <div className="earn">
-          <p className="ha">MONETARY DISTRIBUTION</p>
+          <p className="ha" style={{color: "#999999"}}>MONETARY DISTRIBUTION</p>
             <AreaChart width={700} height={250} data={bar}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>

@@ -8,6 +8,7 @@ import './userArticles.css'
 import Navbar from "../controllers/sidebar"
 import Icon from '@material-ui/core/Icon';
 import { FaTrash, FaMarker, FaEye } from "react-icons/fa"
+import Null from '../screens/images/NULLEVENTS.svg'
 
 const UserArticles = ({match}) => {
     const [articles, setArticles] = useState([])
@@ -41,7 +42,32 @@ const UserArticles = ({match}) => {
         <>
         <Navbar/>
 
-        
+        {articles.length === 0 && (
+        <div>
+          <div>
+            <h3
+              style={{
+                textAlign: "center",
+                marginTop: "4vh",
+                color: "#999999",
+                marginBottom: "3vh",
+                fontWeight: "500",
+              }}
+            >
+              Nothing to see here! Create a{" "}
+                New Article
+            </h3>
+          </div>
+          <div>
+            <img
+              style={{ margin: "auto", marginLeft: "30%", marginRight: "20%" }}
+              src={Null}
+              height="600"
+              width="800"
+            ></img>
+          </div>
+        </div>
+      )}
       
          <div className="itemsContainer">
          

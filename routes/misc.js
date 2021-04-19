@@ -15,6 +15,7 @@ Router.get("/money/:user", async(req, res) => {
     let earning = 0
     const user = req.params.user
     const details = await Article.find({user: user}).populate('comments')
+    if(details.length != 0){
     details.forEach((detail) => {
         if(detail.status == "Premium"){
         const title = detail.title
@@ -47,6 +48,7 @@ Router.get("/money/:user", async(req, res) => {
     }
     })
     res.send(body)
+}
 })
 
 
@@ -61,6 +63,7 @@ Router.get("/netEarn/:user", async(req, res) => {
     let earning = 0
     const user = req.params.user
     const details = await Article.find({user: user}).populate('comments')
+    if(details.length != 0){
     details.forEach((detail) => {
         if(detail.status == "Premium"){
         const view = detail.views
@@ -90,6 +93,7 @@ Router.get("/netEarn/:user", async(req, res) => {
         })
     }
     })
+}
     let abc = body.reduce((a, b) => +a + +b.earning, 0);
     res.json(abc)
 })

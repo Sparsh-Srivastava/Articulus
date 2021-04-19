@@ -22,8 +22,8 @@ div.text {
 }
 .graph-1 {
   position: absolute;
-  left: 240px;
-  top: 110px;
+  left: 235px;
+  top: 120px;
   width: 200px;
 }
 .chalja {
@@ -224,6 +224,11 @@ width:100px;
 
   border-left: 40px solid #301b3f;
 }
+
+div.graph-c {
+  padding: 200px;
+}
+
 .t {
   display: flex;
   float: right;

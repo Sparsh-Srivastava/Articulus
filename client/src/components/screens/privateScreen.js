@@ -77,7 +77,7 @@ const PrivateScreen = (props) => {
       try {
         // console.log(this.props.match.params.id);
         const { data } = await axios.get(`/netEarn/${localStorage.getItem("id")}`, config2);
-        setMoney(data)
+        setMoney(data.toFixed(2))
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")

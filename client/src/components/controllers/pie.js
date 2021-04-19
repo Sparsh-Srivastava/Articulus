@@ -54,7 +54,7 @@ const Piegraph = () => {
 
     return (
         <div className="pie">
-          <p className="h">TOP 5 VIEWED ARTICLES</p>
+          <p className="h" style={{color: "#999999"}}>TOP 5 VIEWED ARTICLES</p>
             {console.log(pie)}
             {/* <BarChart width={600} height={250} data={bar}>
                 <CartesianGrid strokeDasharray="1 1" />

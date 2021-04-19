@@ -53,7 +53,7 @@ const Circle = () => {
 
     return (
         <div className="circle">
-          <p className="ha">SPLIT UP</p>
+          <p className="ha" style={{color: "#999999"}}>SPLIT UP</p>
           <RadialBarChart
             width={500}
             height={270}
