@@ -1,75 +1,75 @@
 span.view{
-position:absolute;
-left:850px;
-}
-.com-m {
-  padding: 1.5rem;
-  background-color: #7868e6;
-  width: 1000px;
-  position: relative;
-  left: 100px;
-  margin-top: 50px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
-.comment {
-  background-color: #fff;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  border: none;
-  width: 500px;
-  height: 3rem;
-}
-
-.rating {
-  position: absolute;
-  left:570px;
-  top:45px;
-  border: none;
-  padding: 10px;
-}
-.btn-me {
-  transition: all 0.5s;
-  cursor: pointer;
-  width:150px;
-  background-color: #b5fff1;
-  border-radius: 5px;
-  box-shadow: 6px 6px 2px rgba(0, 0, 0, 0.3);
-  font-weight: 600;
-  font-size: 20px;
-  position: absolute;
-  left:440px;
-  top:45px;
+  position:absolute;
+  left:850px;
+  }
+  .com-m {
+    padding: 1.5rem;
+    background-color: #7868e6;
+    width: 1000px;
+    position: relative;
+    left: 100px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .comment {
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border: none;
+    width: 500px;
+    height: 3rem;
+  }
   
-}
-button.fb
-{
-  background-color: #fff;
- 
-  border-radius: 50px;
-}
-
-
-.date-view {
-  color: white;
-  font-size: smaller;
-  text-shadow: 2px 2px 4px blue;
-}
-.art {
-  position: absolute;
-  top: 50px;
-  left: 250px;
-  padding-bottom: 0px;
-}
-.full-view {
-  width: 1000px;
-}
-.item
-{
-  position: absolute;
-  left:80px;
-  top:550px;
-  width:1010px;
-}
+  .rating {
+    position: absolute;
+    left:570px;
+    top:45px;
+    border: none;
+    padding: 10px;
+  }
+  .btn-me {
+    transition: all 0.5s;
+    cursor: pointer;
+    width:150px;
+    background-color: #b5fff1;
+    border-radius: 5px;
+    box-shadow: 6px 6px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    left:440px;
+    top:45px;
+    
+  }
+  button.fb
+  {
+    background-color: #fff;
+   
+    border-radius: 50px;
+  }
+  
+  
+  .date-view {
+    color: white;
+    font-size: smaller;
+    text-shadow: 2px 2px 4px blue;
+  }
+  .art {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    padding-bottom: 0px;
+  }
+  .full-view {
+    width: 1000px;
+  }
+  .viewitem
+  {
+    position: absolute;
+    left:80px;
+    top:550px;
+    width:1010px;
+  }
