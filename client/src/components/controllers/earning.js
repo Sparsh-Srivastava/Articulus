@@ -55,8 +55,8 @@ const Earn = () => {
 
     return (
         <div className="earn">
-          <p className="ha">Monetary Distribution</p>
-            <AreaChart width={730} height={250} data={bar}
+          <p className="ha">MONETARY DISTRIBUTION</p>
+            <AreaChart width={700} height={250} data={bar}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>
                     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">

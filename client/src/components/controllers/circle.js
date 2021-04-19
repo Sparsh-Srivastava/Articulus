@@ -56,9 +56,9 @@ const Circle = () => {
           <p className="ha">SPLIT UP</p>
           <RadialBarChart
             width={500}
-            height={300}
+            height={270}
             cx={150}
-            cy={150}
+            cy={130}
             innerRadius={20}
             outerRadius={140}
             barSize={10}

@@ -46,7 +46,7 @@ const Linegraph = () => {
     return (
         <div className="line">
           <p className="hl">LIKES Vs VIEWS</p>
-            <LineChart width={650} height={250} data={line} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart width={550} height={210} data={line} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="title" />
                 <YAxis />

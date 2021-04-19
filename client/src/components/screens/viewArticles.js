@@ -152,7 +152,7 @@ const View = (props) => {
      <div className="App art">
      <div class="full-view" style={style}>
          {/* {console.log(comments)} */}
-         <button className="fb" onClick={follow}>FOLLOW</button><span className="fv">Views: <span className="fv2">{view}</span></span>
+         <button className="fb" onClick={follow}>+</button><span className="fv">Views: <span className="fv2">{view}</span></span>
          {console.log(view)}
         <h3>{title}</h3>
         <hr/>
@@ -188,7 +188,7 @@ const View = (props) => {
       <br/>
       
       <button type="submit" className=" btn-me fix-btn">
-          <span>Create</span>
+         Create
         </button>
         </div>
       </form>

@@ -109,24 +109,27 @@ const PrivateScreen = (props) => {
        {/* <FaIcons.FaUserFriends/> */}
        </span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div>
-       <span className="t1">Followers</span>{followers}
+       <span className="t1">Followers</span>  <span class="txt">{followers}</span>
        </div>
        <div className="c2"></div>
        <div className="f2">
        <span className="icon123 fas fa-users"></span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t2">Following</span>
-       
+       <span class="txt">
          {following}
+         </span>
       </div>
       <div className="c3"></div>
        <div className="f3">
        <span className="icon123  far fa-newspaper"></span>
-       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t3">Articles</span>  {articles}
+       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div>
+       <span className="t3">Articles</span>  <span class="txt">{articles}</span>
       </div>
       <div className="c4"></div>
        <div className="f4">
        <span className="icon123 far fa-comments"> </span>
-       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t4">Comments</span>  {comments}
+       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div>
+       <span className="t4">Comments</span>   <span class="txt"> {comments}</span>
       </div>
       
      
@@ -155,7 +158,10 @@ const PrivateScreen = (props) => {
        <Money/>
       </div>
      </div>
-     <div className="total">{money}</div>
+     <div className="total"><h5>Total Income</h5>
+    
+     <i class="fas fa-rupee-sign"> {money}</i>
+    </div>
     </div>
     </IconContext.Provider>
      
