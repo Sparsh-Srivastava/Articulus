@@ -158,9 +158,33 @@ const PrivateScreen = (props) => {
        <Money/>
       </div>
      </div>
-     <div className="total"><h5>Total Income</h5>
+     {/* <div className="total"><h5>Total Income</h5>
     
      <i class="fas fa-rupee-sign"> {money}</i>
+    </div> */}
+    <div id="root">
+      <div class="container pt-5">
+        <div class="row align-items-stretch">
+          <div class="c-dashboardInfo col-lg-3 col-md-6">
+            <div class="wrap">
+              <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Earned
+              </h4><span class="hind-font caption-12 c-dashboardInfo__count">{money}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="root">
+      <div class="container pt-5">
+        <div class="row align-items-stretch">
+          <div class="c-dashboardInfo col-lg-3 col-md-6">
+            <div class="wrap1">
+              <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Subscription Valid for
+              </h4><span class="hind-font caption-12 c-dashboardInfo__count">30 Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     </div>
     </IconContext.Provider>

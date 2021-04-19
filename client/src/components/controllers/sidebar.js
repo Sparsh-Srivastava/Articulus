@@ -104,7 +104,7 @@ function Navbar() {
       <h5 class="fs-6 mb-0">
         <a class="text-decoration-none" href="#"><h4>Hi, {privateData.username} {privateData.last}</h4></a>
       </h5>
-      <p class="mt-1 mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="mt-0 mb-0">{privateData.email}</p>
     </div>
   </div>
 

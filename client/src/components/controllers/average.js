@@ -3,15 +3,10 @@ import axios from 'axios'
 import marked from 'marked'
 import parse from "html-react-parser"
 import {
-    LineChart,
-    Line,
     CartesianGrid,
     YAxis,
     XAxis,
-    PieChart,
-    Pie,
     Tooltip,
-    Cell,
     BarChart,
     Legend,
     Bar
@@ -55,11 +50,11 @@ const Average = () => {
     return (
         <div className="bar">
           <p className="ha" style={{color: "#999999"}}>AVERAGE OF TOP 5 ARTICLES</p>
-            <BarChart width={520} height={250} data={bar}>
+            <BarChart width={560} height={250} data={bar}>
                 <CartesianGrid strokeDasharray="1 1" />
                 <XAxis dataKey="title" tick={false} hide reversed type="category"/>
                 <YAxis type="number"/>
-                <Tooltip />
+                <Tooltip cursor={{ stroke: '#999999', strokeWidth: 0.5 }}/>
                 <Legend />
                 <Bar legendType="star" dataKey="average" fill="#c92c3b" barSize={80} />
             </BarChart>
