@@ -6,6 +6,7 @@ import Navbar from "../controllers/sidebar"
 import image from "./cat-3374422_640.jpg"
 import cardimage from "./cheque-guarantee-card-229830_640.jpg"
 import Pic from "./images/fancy-pants.jpg"
+import Null from "./images/NULLEVENTS.svg"
 
 const Pimage = () => {
   <img src="./images/web.svg"/>
@@ -78,6 +79,31 @@ const Profile = ({match}) => {
       <div className="foll">
           <span className="foll1">Followers</span><hr/>
             <div className="wrap1">
+            {followers.length === 0 && (
+              <div>
+                <div>
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4vh",
+                      color: "#999999",
+                      marginBottom: "3vh",
+                      fontWeight: "500",
+                    }}
+                  >
+                    You will see your followers here.
+                  </h3>
+                </div>
+                <div>
+                  <img
+                    style={{ margin: "auto", marginLeft: "20%", marginRight: "15%" }}
+                    src={Null}
+                    height="250px"
+                    width="200px"
+                  ></img>
+                </div>
+              </div>
+            )}
                 {followers.map(packet => {
                     return(
                         <>
@@ -98,6 +124,31 @@ const Profile = ({match}) => {
       <div className="folling">
           <span className="foll2">Following</span><hr/>
           <div className="wrap1">
+          {following.length === 0 && (
+              <div>
+                <div>
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4vh",
+                      color: "#999999",
+                      marginBottom: "3vh",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Follow people to see them here.
+                  </h3>
+                </div>
+                <div>
+                  <img
+                    style={{ margin: "auto", marginLeft: "20%", marginRight: "15%" }}
+                    src={Null}
+                    height="250px"
+                    width="200px"
+                  ></img>
+                </div>
+              </div>
+            )}
               {following.map(packet => {
                     return(
                         <>

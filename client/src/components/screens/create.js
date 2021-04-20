@@ -139,7 +139,7 @@ const Create = ({match}) => {
             name='subtitle'
             id='areacontent'
             className='form'
-            cols='110'
+            cols='123'
             rows='8'
             value={subtitle}
             onChange={(e) => setSubtitle(e.target.value)}

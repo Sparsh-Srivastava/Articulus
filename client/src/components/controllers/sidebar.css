@@ -600,5 +600,7 @@ body {
 .btn-log {
   margin-left: 25px;
   width: 200px;
-  margin-top: 220px;
+  margin-top: 200px;
+  position: fixed;
+  bottom: 20px;
 }

@@ -17,6 +17,7 @@ import {
     Bar
   } from "recharts";
   import './pie.css'
+  import Pic from '../screens/images/NULLEVENTS.svg'
 
 const Piegraph = () => {
     const [pie, setPie] = useState("")
@@ -55,7 +56,32 @@ const Piegraph = () => {
     return (
         <div className="pie">
           <p className="h" style={{color: "#999999"}}>TOP 5 VIEWED ARTICLES</p>
-            {console.log(pie)}
+          {pie.length === 0 && (
+              <div>
+                {/* <div>
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4vh",
+                      color: "#999999",
+                      marginBottom: "3vh",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Nothing to see here! Create a{" "}
+                      New Article
+                  </h3>
+                </div> */}
+                <div>
+                  <img
+                    style={{ margin: "auto", marginLeft: "5%", marginRight: "30%" }}
+                    src={Pic}
+                    height="265px"
+                    width="400px"
+                  ></img>
+                </div>
+              </div>
+            )}
             {/* <BarChart width={600} height={250} data={bar}>
                 <CartesianGrid strokeDasharray="1 1" />
                 <XAxis dataKey="title" tick={false} hide reversed type="category"/>
@@ -64,11 +90,13 @@ const Piegraph = () => {
                 <Legend />
                 <Bar legendType="star" dataKey="average" fill="#c92c3b" barSize={80} />
             </BarChart> */}
+            {pie.length != 0 && (
             <PieChart width={400} height={265}>
                 <Pie data={pie} dataKey="views" nameKey="title" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#6165cf" label />
                 <Tooltip />
                 {/* <Pie data={pie} dataKey="views" nameKey="title" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label /> */}
             </PieChart>
+            )}
             {/* <LineChart width={730} height={250} data={pie} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="title" />

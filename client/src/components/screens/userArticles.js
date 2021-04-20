@@ -52,10 +52,11 @@ const UserArticles = ({match}) => {
                 color: "#999999",
                 marginBottom: "3vh",
                 fontWeight: "500",
+                marginLeft: "20px"
               }}
             >
               Nothing to see here! Create a{" "}
-                New Article
+                <a className="tag" href={`/create/${localStorage.getItem("id")}`}>New Article</a>
             </h3>
           </div>
           <div>

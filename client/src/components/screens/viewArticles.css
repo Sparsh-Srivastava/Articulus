@@ -47,8 +47,12 @@ span.view{
   button.fb
   {
     background-color: #fff;
-   
+   margin-left: 100px;
     border-radius: 50px;
+  }
+
+  span.fv {
+    margin-left: 700px;
   }
   
   

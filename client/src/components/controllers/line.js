@@ -17,6 +17,7 @@ import {
     Bar
   } from "recharts";
   import './line.css'
+  import Pic from '../screens/images/NULLEVENTS.svg'
 
 const Linegraph = () => {
     const [line, setLine] = useState("")
@@ -46,6 +47,33 @@ const Linegraph = () => {
     return (
         <div className="line">
           <p className="hl" style={{color: "#999999"}}>LIKES Vs VIEWS</p>
+          {line.length === 0 && (
+              <div>
+                {/* <div>
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4vh",
+                      color: "#999999",
+                      marginBottom: "3vh",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Nothing to see here! Create a{" "}
+                      New Article
+                  </h3>
+                </div> */}
+                <div>
+                  <img
+                    style={{ margin: "auto", marginLeft: "15%", marginRight: "30%" }}
+                    src={Pic}
+                    height="255px"
+                    width="400px"
+                  ></img>
+                </div>
+              </div>
+            )}
+            {line.length != 0 && (
             <LineChart width={640} height={252} data={line} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="title" />
@@ -55,6 +83,7 @@ const Linegraph = () => {
                 <Line type="monotone" dataKey="views" stroke="#150e56" />
                 <Line type="monotone" dataKey="average" stroke="#7cbd1e" />
             </LineChart>
+            )}
         </div>
     )
 }

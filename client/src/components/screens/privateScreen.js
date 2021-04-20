@@ -109,12 +109,12 @@ const PrivateScreen = (props) => {
        {/* <FaIcons.FaUserFriends/> */}
        </span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div>
-       <span className="t1">Followers</span>  <span class="txt">{followers}</span>
+       <span className="t1" style={{color: "#999999"}}>Followers</span>  <span class="txt">{followers}</span>
        </div>
        <div className="c2"></div>
        <div className="f2">
        <span className="icon123 fas fa-users"></span>
-       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t2">Following</span>
+       <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div><span className="t2" style={{color: "#999999"}}>Following</span>
        <span class="txt">
          {following}
          </span>
@@ -123,13 +123,13 @@ const PrivateScreen = (props) => {
        <div className="f3">
        <span className="icon123  far fa-newspaper"></span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div>
-       <span className="t3">Articles</span>  <span class="txt">{articles}</span>
+       <span className="t3" style={{color: "#999999"}}>Articles</span>  <span class="txt">{articles}</span>
       </div>
       <div className="c4"></div>
        <div className="f4">
        <span className="icon123 far fa-comments"> </span>
        <div style={{borderLeft: '1px solid rgb(169, 170, 169)', height:'30px'}} className="line1"></div>
-       <span className="t4">Comments</span>   <span class="txt"> {comments}</span>
+       <span className="t4" style={{color: "#999999"}}>Comments</span>   <span class="txt"> {comments}</span>
       </div>
       
      
@@ -148,7 +148,7 @@ const PrivateScreen = (props) => {
      <div className="pie"> 
      <Pie/> 
      </div>
-     <div className="circle"> 
+     <div className="circle1"> 
      <Circle/> 
      </div>
      <div className="lineg">

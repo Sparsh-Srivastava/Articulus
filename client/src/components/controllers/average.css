@@ -6,7 +6,8 @@ div.bar {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: fit-content;
+  /* width: fit-content; */
+  width: 580px;
   /* z-index: -10; */
   border-radius: 10px;
   top: 1px;

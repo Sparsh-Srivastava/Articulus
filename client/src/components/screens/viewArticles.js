@@ -150,9 +150,9 @@ const View = (props) => {
     <>
     <Navbar/>
      <div className="App art">
+     <button className="fb" onClick={follow}>+</button><span className="fv">Views: <span className="fv2">{view}</span></span>
      <div class="full-view" style={style}>
          {/* {console.log(comments)} */}
-         <button className="fb" onClick={follow}>+</button><span className="fv">Views: <span className="fv2">{view}</span></span>
          {console.log(view)}
         <h3>{title}</h3>
         <hr/>

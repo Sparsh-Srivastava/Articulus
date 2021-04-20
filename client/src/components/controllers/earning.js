@@ -21,6 +21,7 @@ import {
     Area
   } from "recharts";
 import '../controllers/earning.css'
+import Pic from '../screens/images/NULLEVENTS.svg'
 
 const Earn = () => {
     const [bar, setBar] = useState("")
@@ -56,6 +57,33 @@ const Earn = () => {
     return (
         <div className="earn">
           <p className="ha" style={{color: "#999999"}}>MONETARY DISTRIBUTION</p>
+          {bar.length === 0 && (
+              <div>
+                {/* <div>
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4vh",
+                      color: "#999999",
+                      marginBottom: "3vh",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Nothing to see here! Create a{" "}
+                      New Article
+                  </h3>
+                </div> */}
+                <div>
+                  <img
+                    style={{ margin: "auto", marginLeft: "20%", marginRight: "30%" }}
+                    src={Pic}
+                    height="250px"
+                    width="400px"
+                  ></img>
+                </div>
+              </div>
+            )}
+            {bar.length != 0 && (
             <AreaChart width={700} height={250} data={bar}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>
@@ -74,6 +102,7 @@ const Earn = () => {
                 <Tooltip />
                 <Area type="monotone" dataKey="earning" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
             </AreaChart>
+            )}
         </div>
     )
 }

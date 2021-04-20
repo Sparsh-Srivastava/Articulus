@@ -6,7 +6,8 @@ div.circle {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    width: fit-content;
+    /* width: fit-content; */
+    width: 520px;
     border-radius: 10px;
     margin-top: 10px;
     position: absolute;
@@ -20,4 +21,24 @@ div.circle {
   div.circle .ha{
     margin-left: 189px;
     font-size: 20px;
+  }
+
+  div.circle1 {
+    background-color: rgb(255, 255, 255, 1);
+    /* background: rgba(137, 46, 46, 0.25); */
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* width: fit-content; */
+    border-radius: 10px;
+    margin-top: 10px;
+    position: absolute;
+    top: 10px;
+    left: 425px;
+    z-index: 100;
+    margin-left: 40px;
+    margin-top: 50px;
+    padding: 3px;
   }

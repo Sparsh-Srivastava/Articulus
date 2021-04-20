@@ -92,7 +92,7 @@ function Navbar() {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         
-      <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+      <aside class="sidebar position-fixed top-0 left-0 h-100 float-left" id="show-side-navigation1">
   <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
   <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
     {/* <img
@@ -121,7 +121,7 @@ function Navbar() {
                 </li>
               );
             })}
-            <button onClick={signout} className="btn btn-danger btn-log">Log Out</button>
+            <button onClick={signout} className="btn btn-danger btn-log logout">Log Out</button>
   </ul>
 </aside>
 

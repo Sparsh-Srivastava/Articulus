@@ -19,6 +19,7 @@ import {
     RadialBar
   } from "recharts";
 import '../controllers/circle.css'
+import Pic from '../screens/images/NULLEVENTS.svg'
 
 const Circle = () => {
     const [bar, setBar] = useState("")
@@ -54,6 +55,33 @@ const Circle = () => {
     return (
         <div className="circle">
           <p className="ha" style={{color: "#999999"}}>SPLIT UP</p>
+          {bar.length === 0 && (
+              <div>
+                {/* <div>
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4vh",
+                      color: "#999999",
+                      marginBottom: "3vh",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Nothing to see here! Create a{" "}
+                      New Article
+                  </h3>
+                </div> */}
+                <div>
+                  <img
+                    style={{ margin: "auto", marginLeft: "15%", marginRight: "30%" }}
+                    src={Pic}
+                    height="260px"
+                    width="400px"
+                  ></img>
+                </div>
+              </div>
+            )}
+          {bar.length != 0 && (
           <RadialBarChart
             width={510}
             height={265}
@@ -81,6 +109,7 @@ const Circle = () => {
             />
             <Tooltip />
             </RadialBarChart>
+          )}
         </div>
     )
 }

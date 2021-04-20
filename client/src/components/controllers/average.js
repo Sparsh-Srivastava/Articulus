@@ -11,7 +11,8 @@ import {
     Legend,
     Bar
   } from "recharts";
-  import './average.css'
+import './average.css'
+import Pic from '../screens/images/NULLEVENTS.svg'
 
 const Average = () => {
     const [bar, setBar] = useState("")
@@ -50,14 +51,42 @@ const Average = () => {
     return (
         <div className="bar">
           <p className="ha" style={{color: "#999999"}}>AVERAGE OF TOP 5 ARTICLES</p>
-            <BarChart width={560} height={250} data={bar}>
-                <CartesianGrid strokeDasharray="1 1" />
-                <XAxis dataKey="title" tick={false} hide reversed type="category"/>
-                <YAxis type="number"/>
-                <Tooltip cursor={{ stroke: '#999999', strokeWidth: 0.5 }}/>
-                <Legend />
-                <Bar legendType="star" dataKey="average" fill="#c92c3b" barSize={80} />
-            </BarChart>
+          {bar.length === 0 && (
+              <div>
+                {/* <div>
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "4vh",
+                      color: "#999999",
+                      marginBottom: "3vh",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Nothing to see here! Create a{" "}
+                      New Article
+                  </h3>
+                </div> */}
+                <div>
+                  <img
+                    style={{ margin: "auto", marginLeft: "15%", marginRight: "30%" }}
+                    src={Pic}
+                    height="250px"
+                    width="400px"
+                  ></img>
+                </div>
+              </div>
+            )}
+            {bar.length != 0 && (
+              <BarChart width={560} height={250} data={bar}>
+              <CartesianGrid strokeDasharray="1 1" />
+              <XAxis dataKey="title" tick={false} hide reversed type="category"/>
+              <YAxis type="number"/>
+              <Tooltip cursor={{ stroke: '#999999', strokeWidth: 0.5 }}/>
+              <Legend />
+              <Bar legendType="star" dataKey="average" fill="#c92c3b" barSize={80} />
+              </BarChart>
+            )}
         </div>
     )
 }

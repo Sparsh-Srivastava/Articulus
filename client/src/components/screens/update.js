@@ -189,7 +189,7 @@ const Update = ({match}) => {
             name='subtitle'
             id='areacontent'
             className='form'
-            cols='106'
+            cols='123'
             rows='5'
             value={subtitle}
             onChange={(e) => setSubtitle(e.target.value)}
