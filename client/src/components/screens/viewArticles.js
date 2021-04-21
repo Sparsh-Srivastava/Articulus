@@ -56,7 +56,7 @@ const View = (props) => {
         // console.log(this.props.match.params.id);
         const { data } = await axios.get(`/comment/${props.match.params.id}`, config);
         console.log(props.match.params.id);
-        setInfo(data.comments)
+        setInfo(data)
         setRating(data.rating)
         console.log(data.comments);
       } catch (error) {
@@ -197,8 +197,8 @@ const View = (props) => {
       {info.map(comment => {
               return(
                 <>
-              <Link to={"comment/" + comment._id} style={{ textDecoration: 'none' }}>
-              <div className="viewitem" key={comment._id}>
+              <Link to={"comment/" + comment.id} style={{ textDecoration: 'none' }}>
+              <div className="viewitem" key={comment.id}>
                       <div className="cover">{comment.user}<hr/>{comment.comment}{comment.rating}</div>
               </div>
               </Link>

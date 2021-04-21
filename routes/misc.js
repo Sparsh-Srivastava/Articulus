@@ -98,4 +98,25 @@ Router.get("/netEarn/:user", async(req, res) => {
     res.json(abc)
 })
 
+Router.get("/username/:id", async(req, res) => {
+    let test = []
+    id = req.params.id
+    const ans = await Article.findById(id).populate('comments')
+    const comm = ans.comments
+    // comm.forEach((detail) => {
+    //     const user = detail.populate("user")
+
+    //     test.push({
+    //         user: user
+    //     })
+    // })
+    for (const file of comm) {
+        const contents = await User.findById(file.user)
+        test.push({
+            user: contents.username +" "+ contents.last
+        })
+      }
+    res.send(test)
+})
+
 module.exports = Router

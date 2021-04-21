@@ -83,11 +83,23 @@ Router.get("/user/:id", async(req, res) => {
 })
 
 Router.get("/comment/:id", async(req, res) => {
+    let test = []
     id = req.params.id
     const ans = await Article.findById(id).populate('comments')
-    // const creator = await User.findById(ans.comments._id)
-    // console.log(ans.comments);
-    res.send(ans)
+    const comm = ans.comments
+    for (const file of comm) {
+        const contents = await User.findById(file.user)
+        const comment = file.comment
+        const rating = file.rating
+        const _id = file._id
+        test.push({
+            id: _id,
+            user: contents.username +" "+ contents.last,
+            comment: comment,
+            rating: rating
+        })
+    }
+    res.send(test)
 })
 
 Router.delete("/article/:id", (req, res) => {
@@ -355,19 +367,6 @@ Router.get("/pie/:user", async(req, res) => {
 })
 
 Router.get("/line/:user", async(req, res) => {
-    // let body = []
-    // const user = req.params.user
-    // const details = await Article.find({user: user})
-    // details.forEach((detail) => {
-        // const title = detail.title
-        // const comm = detail.views
-
-    //     body.push({
-    //         title: title,
-    //         views: comm
-    //     })
-    // })
-    // res.send(body)
     let body = []
     var avrating = []
     let all = []
