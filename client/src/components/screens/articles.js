@@ -64,7 +64,6 @@ const Articles = () => {
               
               </div>
          <div className="itemsContainers">
-             {console.log(articles)}
              
             {articles.filter((val) => {
               if (search == ""){

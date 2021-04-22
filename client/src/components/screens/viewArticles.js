@@ -9,6 +9,7 @@ import {Redirect} from 'react-router-dom'
 import '../screens/viewArticles.css'
 import Sidebar from '../controllers/sidebar'
 import Navbar from "../controllers/sidebar"
+import Pic from "./images/fancy-pants.jpg"
 
 const View = (props) => {
   const [data, setData] = useState("")
@@ -55,10 +56,8 @@ const View = (props) => {
       try {
         // console.log(this.props.match.params.id);
         const { data } = await axios.get(`/comment/${props.match.params.id}`, config);
-        console.log(props.match.params.id);
         setInfo(data)
         setRating(data.rating)
-        console.log(data.comments);
       } catch (error) {
         localStorage.removeItem("authToken");
         localStorage.removeItem("id")
@@ -68,7 +67,6 @@ const View = (props) => {
       try {
         // console.log(this.props.match.params.id);
         const { data } = await axios.get(`/view/${props.match.params.id}`, config);
-        console.log(props.match.params.id);
         setView(data.article.views)
       } catch (error) {
         localStorage.removeItem("authToken");
@@ -104,11 +102,8 @@ const View = (props) => {
       localStorage.removeItem("authToken");
       localStorage.removeItem("id")
       setError("You are not authorized please login");
-      console.log(error);
     }
   }
-
-  console.log(props.match.params.id);
 
   const follow = async () => {
 
@@ -129,19 +124,17 @@ const View = (props) => {
       localStorage.removeItem("authToken");
       localStorage.removeItem("id")
       setError("You are not authorized please login");
-      console.log(error);
     }
   }
 
   const style = {
     background: primary,
     backgroundColor: "yellowgreen",
-    margin: "2% 10%",
+    margin: "2% 10% 2% 8%",
     height: "auto",
     color: secondary,
-    padding: "5vh 5vh 0",
+    padding: "5vh 5vh",
     borderRadius: "10px",
-    border: "solid 1px black",
   };
 
   return error ? (
@@ -153,7 +146,6 @@ const View = (props) => {
      <button className="fb" onClick={follow}>+</button><span className="fv">Views: <span className="fv2">{view}</span></span>
      <div class="full-view" style={style}>
          {/* {console.log(comments)} */}
-         {console.log(view)}
         <h3>{title}</h3>
         <hr/>
         <h5>{subtitle}</h5>
@@ -192,14 +184,13 @@ const View = (props) => {
         </button>
         </div>
       </form>
-      {console.log(info.comments)}
 
       {info.map(comment => {
               return(
                 <>
               <Link to={"comment/" + comment.id} style={{ textDecoration: 'none' }}>
               <div className="viewitem" key={comment.id}>
-                      <div className="cover">{comment.user}<hr/>{comment.comment}{comment.rating}</div>
+                      <div className="comment-box"><img src={Pic} height="50px"/><span className="comment-comment">{comment.comment}</span><span className="comment-rating">{comment.rating}</span><br/><span className="comment-name">{comment.user}</span></div>
               </div>
               </Link>
               </>

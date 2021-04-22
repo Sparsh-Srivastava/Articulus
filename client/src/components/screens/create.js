@@ -45,7 +45,7 @@ const Create = ({match}) => {
       );
       history.push(`/myarticles/${localStorage.getItem("id")}`)
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setError(error.response.data.error);
       setTimeout(() => {
         setError("");

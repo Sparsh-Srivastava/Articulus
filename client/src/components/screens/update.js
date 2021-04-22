@@ -46,7 +46,6 @@ const Update = ({match}) => {
       );
       history.push(`/myarticles/${localStorage.getItem("id")}`)
     } catch (error) {
-      console.log(error);
       setError(error.response.data.error);
       setTimeout(() => {
         setError("");
@@ -126,7 +125,6 @@ const Update = ({match}) => {
 
       try {
         const { data } = await axios.delete(`/article/${match.params.id}`, options);
-        console.log(data);
         history.push(`/myarticles/${localStorage.getItem("id")}`)
       } catch (error) {
         localStorage.removeItem("authToken");
@@ -139,7 +137,6 @@ const Update = ({match}) => {
     return (
       <>
       <Navbar/>
-      {console.log(test)}
       <div className='create crtry'>
         <div className="register-screen">
       <form onSubmit={updateArticle} className="update register-screen__form create-form">

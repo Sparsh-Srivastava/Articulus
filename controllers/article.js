@@ -51,7 +51,6 @@ exports.getUser = async (req, res) => {
 }
 
 exports.update = async (req, res) => {
-        console.log(req.body)
         let id = req.params.id
     
         let updated = Article.findByIdAndUpdate(id, {$set: {

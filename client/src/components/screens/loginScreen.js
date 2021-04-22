@@ -34,7 +34,6 @@ const LoginScreen = ({ history }) => {
         setId(data.id)
       localStorage.setItem("authToken", data.token);
       localStorage.setItem("id", data.id)
-        console.log(data);
       history.push(`/dashboard/${data.id}`);
     } catch (error) {
       setError(error.response.data.error);

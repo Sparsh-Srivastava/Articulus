@@ -3,21 +3,25 @@ span.view{
   left:850px;
   }
   .com-m {
-    padding: 1.5rem;
-    background-color: #7868e6;
+    background-color: rgb(112, 112, 112, 0.5);
     width: 1000px;
     position: relative;
     left: 100px;
-    margin-top: 50px;
+    margin-top: 0px;
+    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
   }
   .comment {
     background-color: #fff;
+    padding: 20px;
+    outline: none;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    position: relative;
+    margin-top: 41px;
+    margin-left: 25px;
     border: none;
     width: 500px;
     height: 3rem;
@@ -37,25 +41,38 @@ span.view{
     transition: all 0.5s;
     cursor: pointer;
     width:150px;
-    background-color: #b5fff1;
+    background-color: #292929;
     border-radius: 5px;
-    box-shadow: 6px 6px 2px rgba(0, 0, 0, 0.3);
+    color: white;
     font-weight: 600;
     font-size: 20px;
     position: absolute;
     left:440px;
-    top:45px;
-    
+    top:42px;
+  }
+  .btn-me:hover {
+    transition: all 0.2s;
+    cursor: pointer;
+    width:150px;
+    background-color: #4b4a4a;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    left:440px;
+    top:42px;
   }
   button.fb
   {
     background-color: #fff;
-   margin-left: 100px;
+    margin-left: 100px;
     border-radius: 50px;
   }
 
   span.fv {
-    margin-left: 700px;
+    position: absolute;
+    right: 180px;
   }
   
   
@@ -79,4 +96,37 @@ span.view{
     margin-top: 10px;
    margin-left: 100px; 
     width:999px;
+  }
+
+  .comment-box{
+    width: 999px;
+    margin-left: 100px;
+    margin-top: 10px;
+    color: rgb(53, 53, 53);
+    background-color: white;
+    padding: 25px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .comment-comment {
+    margin-left: 20px;
+  }
+
+  .comment-name{
+    font-weight: 600;
+    margin-left: 70px;
+  }
+
+  .comment-rating{
+    background-color: red;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    float: right;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
   }

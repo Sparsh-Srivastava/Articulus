@@ -71,8 +71,6 @@ const UserArticles = ({match}) => {
       )}
       
          <div className="itemsContainer">
-         
-             {console.log(articles)}
             {articles.map(article => {
                 return(
                 <div className="it-em" key={article._id}>

@@ -36,8 +36,6 @@ const Cal = () => {
         getCal();
       }, []);
 
-      console.log(cal.length);
-
       var myEventsList = []
 
       cal.map(item => {
@@ -47,8 +45,6 @@ const Cal = () => {
             end: new Date(item.year, item.month, item.day, item.h, item.m, item.s, item.mm),
           });
     })
-
-    console.log(myEventsList);
 
     return (
         <div className="cal">
