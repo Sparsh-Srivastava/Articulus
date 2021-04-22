@@ -28,7 +28,16 @@ section:before {
   border-radius: 0 0 50% 50%/0 0 100% 100%;
   transform: scale(1.5);
 }
-
+.top h1{
+  position: absolute;
+  top:180px;
+  left:650px;
+}
+.top p{
+  position: absolute;
+  top:280px;
+  left:280px;
+}
 section .content {
   /* position: relative; */
   z-index: 1;
@@ -53,17 +62,19 @@ section .content p {
 }
 .signin {
   width: 150px;
-  display: inline-block;
+
   /* padding: 1% 2%; */
-  margin-left: 170px;
-  margin-bottom: 225px;
+  /* margin-left: 170px;
+  margin-bottom: 225px; */
+  position: absolute;
+  top:30px;
+  left:1100px;
 }
 .signup {
   width: 150px;
-  display: inline-block;
-  /* padding: 1% 2%; */
-  margin-left: 70px;
-  margin-bottom: 225px;
+  position: absolute;
+  top:30px;
+  left:1300px;
 }
 
 /* Footer */
@@ -222,7 +233,7 @@ i {
   padding: 0;
 }
 
-body {
+/* body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -240,7 +251,7 @@ h3 {
   font-size: 24px;
   color: #333;
   font-weight: bold;
-}
+} */
 div.team-heading {
   margin-left: 700px;
 }

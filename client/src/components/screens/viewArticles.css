@@ -22,7 +22,10 @@ span.view{
     width: 500px;
     height: 3rem;
   }
-  
+  .cover
+  {
+    display: block;
+  }
   .rating {
     position: absolute;
     left:570px;
@@ -70,10 +73,10 @@ span.view{
   .full-view {
     width: 1000px;
   }
-  .viewitem
+ 
+  .cover
   {
-    position: absolute;
-    left:80px;
-    top:550px;
-    width:1010px;
+    margin-top: 10px;
+   margin-left: 100px; 
+    width:999px;
   }
