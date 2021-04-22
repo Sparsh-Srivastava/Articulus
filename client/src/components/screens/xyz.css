@@ -11,13 +11,21 @@ body {
 display: grid;
 grid-template-columns: repeat(3,1fr);
 } */
-.itemsContainer {
+.itemsContainers {
   width: 80%;
-  margin: 0 auto;
+  margin-left: 240px;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
+
+.cover.c
+{
+   height: 200px;
+    width:600px;
+    margin-left: 30px;
+}
+
 .search {
   margin: 3rem 36rem;
   display: flex;
@@ -49,6 +57,7 @@ input[type="search"]:hover {
 } */
 
 .cover {
+  width: 50%;
   color: rgb(53, 53, 53);
   margin-left: 2%;
   background-color: rgb(246, 246, 246);

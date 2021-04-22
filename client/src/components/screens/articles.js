@@ -63,7 +63,7 @@ const Articles = () => {
                     }}/>
               
               </div>
-         <div className="itemsContainer">
+         <div className="itemsContainers">
              {console.log(articles)}
              
             {articles.filter((val) => {
@@ -76,9 +76,9 @@ const Articles = () => {
               if(user.sub == "Premium"){
               return(
                 <>
-              <div className="item" key={article._id}>
+              <div className="item-z" key={article._id}>
                   <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
-                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/></div>
+                      <div className="cover c">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/></div>
                   </Link>
               </div>
               </>
@@ -87,9 +87,9 @@ const Articles = () => {
             if(article.status == "Free"){
               return(
                 <>
-              <div className="item" key={article._id}>
+              <div className="item-z" key={article._id}>
                   <Link to={"item/" + article._id} style={{ textDecoration: 'none' }}>
-                      <div className="cover">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/></div>
+                      <div className="cover c">{parse(marked(article.title))}<hr/>{parse(marked(article.subtitle))}<br/><br/></div>
                   </Link>
               </div>
               </>

@@ -14,7 +14,16 @@ const landingScreen = () => {
      <Link to="/register"><button type="button" className="btn btn-dark btn-lg signup">Sign Up</button></Link>
      </div>
     <h1>ARTICULUS</h1><br />
-    <p>READ YOUR HEART. </p>
+    <p>Articulus is an easy to use
+portal for every reading
+enthusiast. <br/>It's so much more
+than just a web application, it's
+a community of like minded
+scholars.<br/> You want something
+to read here, be it political
+articles or web development
+tutorials fret not, we got you
+covered.<br/><br/>READ YOUR HEART. </p>
     </div>
      </section>
      
@@ -23,12 +32,12 @@ const landingScreen = () => {
     New York is Sunny today at 60°.
   </div>
 </div> */}
-<div class="card-holder2">
+{/* <div class="card-holder2">
   <div class="card2 bg-news">
     Breaking News <br/> 
     Apple launches the new iPhone.
   </div>
-</div>
+</div> */}
 {/* <div class="card-holder2">
   <div class="card2 bg-germany">
      Germany! Germany! Germany!!
