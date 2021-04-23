@@ -47,6 +47,20 @@ npm run dev
 localhost:3000
 ```
 
+## Screenshots
+![Dashboard#1](https://github.com/Sparsh-Srivastava/Articulus/blob/main/demonstration/dash%231.png?raw=true)
+---
+![Dashboard#2](https://github.com/Sparsh-Srivastava/Articulus/blob/main/demonstration/dash%232.png?raw=true)
+---
+![Create_page](https://github.com/Sparsh-Srivastava/Articulus/blob/main/demonstration/create.png?raw=true)
+---
+![View_page](https://github.com/Sparsh-Srivastava/Articulus/blob/main/demonstration/view.png?raw=true)
+---
+![Scheduler](https://github.com/Sparsh-Srivastava/Articulus/blob/main/demonstration/scheduler.png?raw=true)
+---
+![Profile_page](https://github.com/Sparsh-Srivastava/Articulus/blob/main/demonstration/profile.png?raw=true)
+---
+
 ## Useful Resources
 
 - [NodeJS Docs](https://nodejs.org/docs/latest-v12.x/api/)
