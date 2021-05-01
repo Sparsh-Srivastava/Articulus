@@ -168,7 +168,7 @@ const PrivateScreen = (props) => {
           <div class="c-dashboardInfo col-lg-3 col-md-6">
             <div class="wrap">
               <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Earned
-              </h4><span class="hind-font caption-12 c-dashboardInfo__count">{money}</span>
+              </h4><span class="hind-font caption-12 c-dashboardInfo__count">₹ {money}</span>
             </div>
           </div>
         </div>

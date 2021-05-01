@@ -16,6 +16,7 @@ const Create = ({match}) => {
   const [number, setNumber] = useState(1);
   const [status, setStatus] = useState("");
   const [error, setError] = useState("")
+  const [sub, setSub] = useState("")
 
   let history = useHistory();
 
@@ -58,7 +59,7 @@ const Create = ({match}) => {
     background: primary,
     margin: "1%",
     width: "1005px",
-    marginBottom:"0px;",
+    marginBottom:"0px",
     height: "auto",
     color: secondary,
     padding: "5vh",
@@ -67,6 +68,29 @@ const Create = ({match}) => {
     alignItems: "center",
     zIndex: "-1"
   };
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        },
+      };
+
+      try {
+        let id = localStorage.getItem("id")
+        const { data } = await axios.get(`/api/private/getuser/${localStorage.getItem("id")}`, config);
+        setSub(data.sub);
+        // console.log(data);
+      } catch (error) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("id")
+        setError("You are not authorized please login");
+      }
+    }
+    fetchUserData();
+  }, []);
 
   // const paras = number => {
   //   let content = [];
@@ -181,7 +205,7 @@ const Create = ({match}) => {
             >
               <option className="stat" value=' '>---Choose---</option>
               <option className="stat" value='Free'>Free</option>
-              <option className="stat" value='Premium'>Premium</option>
+              <option className="stat" value='Premium' disabled={sub == "free"}>Premium</option>
         </select>
           </div>
           
