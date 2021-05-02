@@ -604,9 +604,16 @@ p.awesome_line {
   color: rgb(20, 19, 19);
   margin-bottom: 0;
 }
+a.art1{
+  text-decoration: none;
+}
 .artl {
-  height: 250px;
-  width: 250px;
-  margin-right: 1000px;
-  margin-bottom: 200px;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  left:200px;
+  top:-50px;
+  margin-right: 700px;
+
+  color: #fff;
 }

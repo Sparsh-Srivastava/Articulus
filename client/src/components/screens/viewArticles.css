@@ -72,7 +72,15 @@ span.view{
 
   span.fv {
     position: absolute;
-    right: 180px;
+   /* right: 180px; */
+    border: 1px solid #52575d;
+    background-color: #41444b;
+    color: #fddb3a;
+    width:180px;
+    border-radius: 20px;
+    padding: 5px 25px;
+    font-size: 24px;
+    left:900px
   }
   
   
