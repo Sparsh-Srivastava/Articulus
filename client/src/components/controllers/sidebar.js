@@ -31,7 +31,8 @@ function Navbar() {
       title: 'Home',
       path: `/dashboard/${id}`,
       icon: <AiIcons.AiFillHome />,
-      cName: 'nav-text'
+      cName: 'nav-text',
+      className : 'side-option'
     },
     {
       title: 'Create',

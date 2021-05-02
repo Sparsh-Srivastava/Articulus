@@ -239,7 +239,10 @@ div.space3 {
 }
 
 .stat {
-  background-color: #e4fbff;
+  background-color: #fff;
+}
+.stat:hover {
+  background-color: rgb(194, 76, 76);
 }
 .crtry {
   margin-left: 4.8rem;
