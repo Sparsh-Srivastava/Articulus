@@ -17,7 +17,7 @@ import {
     Bar
   } from "recharts";
   import './pie.css'
-  import Pic from '../screens/images/NULLEVENTS.svg'
+  import Pic from '../screens/images/pie.svg'
 
 const Piegraph = () => {
     const [pie, setPie] = useState("")

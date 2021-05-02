@@ -17,7 +17,7 @@ import {
     Bar
   } from "recharts";
   import './line.css'
-  import Pic from '../screens/images/NULLEVENTS.svg'
+  import Pic from '../screens/images/line.svg'
 
 const Linegraph = () => {
     const [line, setLine] = useState("")
