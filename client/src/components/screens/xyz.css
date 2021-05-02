@@ -14,7 +14,7 @@ grid-template-columns: repeat(3,1fr);
 .itemsContainers {
   width: 80%;
   margin-left: 240px;
-  padding: 20px;
+  padding: 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -23,7 +23,7 @@ grid-template-columns: repeat(3,1fr);
 {
    height: 200px;
     width:600px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .search {

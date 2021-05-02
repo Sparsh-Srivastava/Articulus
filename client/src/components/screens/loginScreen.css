@@ -45,12 +45,12 @@
 }
 
 .login-screen__form {
-  width: 380px;
+  width: 400px;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   /* background-color:rgb(9, 37, 50,0.2); */
-  background-color: rgba(225, 225, 225);
+  background-color: #fff;
   /* opacity: 10; */
 }
 
