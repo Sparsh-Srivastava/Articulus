@@ -8,9 +8,9 @@ const landingScreen = () => {
         <>
         <div class="whole">
         <section className="top">
-        
-        <div className="content">
         <img src={LOGO} className="artl"></img>
+        <div className="content">
+        
         <div class="btn-sign">
      <Link to="/login"><button type="button" className="btn btn-dark btn-lg signin">Sign In</button></Link>
      <Link to="/register"><button type="button" className="btn btn-dark btn-lg signup">Sign Up</button></Link>
