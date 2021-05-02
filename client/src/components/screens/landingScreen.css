@@ -28,20 +28,20 @@ section:before {
   border-radius: 0 0 50% 50%/0 0 100% 100%;
   transform: scale(1.5);
 }
-.top h1{
+.top h1 {
   position: absolute;
-  top:180px;
-  left:650px;
+  top: 180px;
+  left: 650px;
 }
-.top p{
+.top p {
   position: absolute;
-  top:280px;
-  left:280px;
+  top: 280px;
+  left: 280px;
 }
 section .content {
   /* position: relative; */
   z-index: 1;
-  margin: 20px auto;
+  margin: 20px 5px;
   max-width: 900px;
   text-align: center;
 }
@@ -67,14 +67,14 @@ section .content p {
   /* margin-left: 170px;
   margin-bottom: 225px; */
   position: absolute;
-  top:30px;
-  left:1100px;
+  top: 30px;
+  left: 1100px;
 }
 .signup {
   width: 150px;
   position: absolute;
-  top:30px;
-  left:1300px;
+  top: 30px;
+  left: 1300px;
 }
 
 /* Footer */
@@ -603,4 +603,10 @@ p.awesome_line {
   font-size: 13px;
   color: rgb(20, 19, 19);
   margin-bottom: 0;
+}
+.artl {
+  height: 250px;
+  width: 250px;
+  margin-right: 1000px;
+  margin-bottom: 200px;
 }

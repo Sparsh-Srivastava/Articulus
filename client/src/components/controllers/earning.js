@@ -21,7 +21,7 @@ import {
     Area
   } from "recharts";
 import '../controllers/earning.css'
-import Pic from '../screens/images/NULLEVENTS.svg'
+import Pic from '../screens/images/money.svg'
 
 const Earn = () => {
     const [bar, setBar] = useState("")

@@ -12,7 +12,7 @@ import {
     Bar
   } from "recharts";
 import './average.css'
-import Pic from '../screens/images/NULLEVENTS.svg'
+import Pic from '../screens/images/avg.svg'
 
 const Average = () => {
     const [bar, setBar] = useState("")

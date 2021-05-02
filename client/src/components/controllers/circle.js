@@ -19,7 +19,7 @@ import {
     RadialBar
   } from "recharts";
 import '../controllers/circle.css'
-import Pic from '../screens/images/NULLEVENTS.svg'
+import Pic from '../screens/images/bar.svg'
 
 const Circle = () => {
     const [bar, setBar] = useState("")
