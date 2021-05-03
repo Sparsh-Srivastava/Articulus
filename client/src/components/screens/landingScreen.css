@@ -12,7 +12,7 @@ section.top {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 section:before {
   content: "";
@@ -612,8 +612,8 @@ a.art1{
   height: 300px;
   width: 300px;
   position: absolute;
-  left:200px;
-  top:-50px;
+  left:40px;
+  top:-70px;
   margin-right: 700px;
 
   color: #fff;
