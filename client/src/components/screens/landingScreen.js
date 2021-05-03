@@ -8,10 +8,13 @@ const landingScreen = () => {
         <>
         <div class="whole">
         <section className="top">
+
         
         <div className="content">
         <a href="#">
         <img src={LOGO} className="artl"></img></a>
+
+       
         <div class="btn-sign">
      <Link to="/login"><button type="button" className="btn btn-dark btn-lg signin">Sign In</button></Link>
      <Link to="/register"><button type="button" className="btn btn-dark btn-lg signup">Sign Up</button></Link>

@@ -608,6 +608,7 @@ a.art1{
   text-decoration: none;
 }
 .artl {
+
   height: 300px;
   width: 300px;
   position: absolute;
@@ -616,4 +617,5 @@ a.art1{
   margin-right: 700px;
 
   color: #fff;
+
 }
