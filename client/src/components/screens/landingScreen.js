@@ -1,16 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './landingScreen.css';
-import LOGO from './images/artl.png'
+import LOGO from './images/Art.png'
 
 const landingScreen = () => {
     return (
         <>
         <div class="whole">
         <section className="top">
-        <img src={LOGO} className="artl"></img>
-        <div className="content">
+
         
+        <div className="content">
+        <a href="#">
+        <img src={LOGO} className="artl"></img></a>
+
+       
         <div class="btn-sign">
      <Link to="/login"><button type="button" className="btn btn-dark btn-lg signin">Sign In</button></Link>
      <Link to="/register"><button type="button" className="btn btn-dark btn-lg signup">Sign Up</button></Link>
